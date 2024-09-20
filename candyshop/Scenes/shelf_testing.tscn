@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bm7y4p7u37mpf"]
 
-[ext_resource type="PackedScene" uid="uid://i42712y6cm6s" path="res://Scenes/shelf_buttons.tscn" id="1_e3ccn"]
+[ext_resource type="PackedScene" uid="uid://i42712y6cm6s" path="res://Scenes/Testing/shelf_buttons.tscn" id="1_e3ccn"]
 
 [sub_resource type="GDScript" id="GDScript_n6tol"]
 script/source = "extends Node2D

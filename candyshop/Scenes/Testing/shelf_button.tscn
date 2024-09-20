@@ -1,15 +1,15 @@
 [gd_scene load_steps=4 format=3 uid="uid://50ulbpx2eish"]
 
-[ext_resource type="Script" path="res://shelf_button.gd" id="1_r7klx"]
-[ext_resource type="Texture2D" uid="uid://brwfm50gyafys" path="res://Assets/icon.svg" id="1_yom23"]
+[ext_resource type="Texture2D" uid="uid://brwfm50gyafys" path="res://Assets/icon.svg" id="1_jta0u"]
+[ext_resource type="Script" path="res://Script/Testing Scripts/shelf_button.gd" id="2_crit1"]
 
 [sub_resource type="Theme" id="Theme_ch4m7"]
 
 [node name="ShelfButton" type="TextureButton" node_paths=PackedStringArray("itemName")]
 offset_right = 40.0
 offset_bottom = 40.0
-texture_normal = ExtResource("1_yom23")
-script = ExtResource("1_r7klx")
+texture_normal = ExtResource("1_jta0u")
+script = ExtResource("2_crit1")
 itemName = NodePath("ItemName")
 
 [node name="ItemName" type="RichTextLabel" parent="."]

@@ -3,7 +3,7 @@ extends GridContainer
 var holdingCorn : bool
 @export var shelfResource : ShelfResource
 
-var button_preload = preload('res://Scenes/shelf_button.tscn')
+var button_preload = preload("res://Scenes/Testing/shelf_button.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
