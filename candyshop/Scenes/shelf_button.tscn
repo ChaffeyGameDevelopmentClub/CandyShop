@@ -23,7 +23,7 @@ theme = SubResource("Theme_ch4m7")
 text = "Name"
 fit_content = true
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+[node name="ItemAmount" type="RichTextLabel" parent="."]
 layout_mode = 0
 offset_left = 25.0
 offset_top = 66.0
