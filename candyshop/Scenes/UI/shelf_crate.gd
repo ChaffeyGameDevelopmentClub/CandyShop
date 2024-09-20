@@ -10,13 +10,15 @@ func initName(tempname):
 	var nameFin = '[center]' + name + '[/center]'
 	itemName.text = nameFin
 	
-	#Img
+	
 func initAmount(tempAmount):
 	#Amount
 	var amount = '[center]' + str(tempAmount) + '[/center]'
 	itemAmount.text = amount
 	
-	
+func initImg(Img):
+	#Img
+	Img = img.texture
 
 func _on_button_down() -> void:
 	print(name + ' Down')
