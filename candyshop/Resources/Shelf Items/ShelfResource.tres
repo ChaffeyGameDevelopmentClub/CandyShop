@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="ShelfResource" load_steps=4 format=3 uid="uid://druc3sg2s4krw"]
+[gd_resource type="Resource" script_class="ShelfResource" load_steps=5 format=3 uid="uid://druc3sg2s4krw"]
 
 [ext_resource type="Script" path="res://Script/ShelfScripts/itemResources.gd" id="1_mbjvb"]
-[ext_resource type="Resource" uid="uid://goyyxjxo3ak5" path="res://Resources/Shelf Items/CandyCorn.tres" id="2_l3bvo"]
+[ext_resource type="Resource" uid="uid://goyyxjxo3ak5" path="res://Resources/Shelf Items/Items/CandyCorn.tres" id="2_st3nf"]
 [ext_resource type="Script" path="res://Script/ShelfScripts/shelfResource.gd" id="2_utoy6"]
+[ext_resource type="Resource" uid="uid://tlx2db5obodf" path="res://Resources/Shelf Items/Items/GummyBear.tres" id="3_k6uy0"]
 
 [resource]
 script = ExtResource("2_utoy6")
-item_array = Array[ExtResource("1_mbjvb")]([ExtResource("2_l3bvo")])
+item_array = Array[ExtResource("1_mbjvb")]([ExtResource("2_st3nf"), ExtResource("3_k6uy0")])
