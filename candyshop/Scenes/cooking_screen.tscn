@@ -1,3 +1,27 @@
-[gd_scene format=3 uid="uid://chfxragkwjgxi"]
+[gd_scene load_steps=3 format=3 uid="uid://chfxragkwjgxi"]
+
+[ext_resource type="Script" path="res://CookingObjects/Scripts/pot.gd" id="1_l2esl"]
+[ext_resource type="Texture2D" uid="uid://brwfm50gyafys" path="res://Assets/icon.svg" id="2_vbl2o"]
 
 [node name="Cooking Screen" type="Node2D"]
+
+[node name="Pot" type="Node2D" parent="."]
+script = ExtResource("1_l2esl")
+
+[node name="PotSprite" type="Sprite2D" parent="Pot"]
+position = Vector2(583, 288)
+texture = ExtResource("2_vbl2o")
+
+[node name="GrowTimer" type="Timer" parent="Pot"]
+wait_time = 4.0
+autostart = true
+
+[node name="ProgressBar1" type="ProgressBar" parent="Pot"]
+offset_left = 489.0
+offset_top = 352.0
+offset_right = 692.0
+offset_bottom = 379.0
+max_value = 4.0
+fill_mode = 1
+
+[connection signal="timeout" from="Pot/GrowTimer" to="Pot" method="_on_grow_timer_timeout"]
