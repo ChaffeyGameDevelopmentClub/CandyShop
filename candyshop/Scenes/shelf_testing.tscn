@@ -1,3 +1,16 @@
-[gd_scene format=3 uid="uid://bm7y4p7u37mpf"]
+[gd_scene load_steps=2 format=3 uid="uid://bm7y4p7u37mpf"]
+
+[ext_resource type="PackedScene" uid="uid://i42712y6cm6s" path="res://Scenes/shelf_buttons.tscn" id="1_e3ccn"]
 
 [node name="Shelf testing" type="Node2D"]
+
+[node name="Shelf Buttons" parent="." instance=ExtResource("1_e3ccn")]
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 150.0
+offset_top = 506.0
+offset_right = 150.0
+offset_bottom = 506.0
