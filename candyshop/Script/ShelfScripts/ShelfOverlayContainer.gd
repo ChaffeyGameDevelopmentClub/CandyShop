@@ -11,7 +11,8 @@ func _ready() -> void:
 	
 	for i in 1:
 		var newbutton = button_preload.instantiate()
-		newbutton.init(shelfResource.item_array[i].Name)
+		newbutton.initName(shelfResource.item_array[i].Name)
+		newbutton.initAmount(shelfResource.item_array[i].Amount)
 		add_child(newbutton)
 	#GameManager.updateAmount(i,10)
 func example(index,amount):
