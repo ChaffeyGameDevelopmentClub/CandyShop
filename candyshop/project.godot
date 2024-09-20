@@ -12,4 +12,12 @@ config_version=5
 
 config/name="CandyShop"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Assets/icon.svg"
+
+[file_customization]
+
+folder_colors={
+"res://Assets/": "green",
+"res://Scenes/": "orange",
+"res://Script/": "red"
+}
