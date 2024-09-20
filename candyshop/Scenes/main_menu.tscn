@@ -1,4 +1,7 @@
-[gd_scene format=3 uid="uid://cgvwnh3goli7e"]
+[gd_scene load_steps=3 format=3 uid="uid://cgvwnh3goli7e"]
+
+[ext_resource type="Script" path="res://Script/main_menu.gd" id="1_gswy7"]
+[ext_resource type="Texture2D" uid="uid://brwfm50gyafys" path="res://Assets/icon.svg" id="2_uiji0"]
 
 [node name="Main Menu" type="Control"]
 layout_mode = 3
@@ -7,3 +10,45 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_gswy7")
+
+[node name="PlayButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 512.0
+offset_top = 240.0
+offset_right = -512.0
+offset_bottom = -280.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("2_uiji0")
+
+[node name="OptionsButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 512.0
+offset_top = 368.0
+offset_right = -512.0
+offset_bottom = -151.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("2_uiji0")
+
+[node name="QuitButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 512.0
+offset_top = 496.0
+offset_right = -512.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("2_uiji0")
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
