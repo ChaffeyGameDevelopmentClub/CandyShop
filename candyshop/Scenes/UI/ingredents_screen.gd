@@ -115,7 +115,15 @@ func combine():
 		clearpot()
 	#lvl4
 	#Caramel Apples
-	
+	if ingredents.has('Chocolate Forest') and ingredents.has('Gummy Bears') and ingredents.has('Swedish Fish') and ingredents.has('Candy Corn'):
+		addToStorage('Caramel Apples')
+		clearpot()
 	#Ginger Bread Man
+	if ingredents.has('Gummy-Pops') and ingredents.has('Gummy Bears') and ingredents.has('Licorice') and ingredents.has('Gummy Candy Corn'):
+		addToStorage('Ginger Bread Man')
+		clearpot()
 	#lvl5
 	#Fun Dip
+	if ingredents.has('Ginger Bread Man') and ingredents.has('Caramel Apples') and ingredents.has('Gummy Army') and ingredents.has('Gummy Sharks'):
+		addToStorage('Ginger Bread Man')
+		clearpot()
