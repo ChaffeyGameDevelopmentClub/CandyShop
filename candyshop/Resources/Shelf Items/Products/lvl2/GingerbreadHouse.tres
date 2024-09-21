@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://11pdtt6jfxmn"]
+
+[ext_resource type="Script" path="res://Script/ShelfScripts/itemResources.gd" id="1_bnf4m"]
+
+[resource]
+script = ExtResource("1_bnf4m")
+Name = "Gingerbread House"
+Amount = 0

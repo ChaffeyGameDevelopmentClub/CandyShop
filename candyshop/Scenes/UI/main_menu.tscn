@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cgvwnh3goli7e"]
 
-[ext_resource type="Script" path="res://Script/main_menu.gd" id="1_gswy7"]
-[ext_resource type="Texture2D" uid="uid://brwfm50gyafys" path="res://Assets/icon.svg" id="2_uiji0"]
+[ext_resource type="Script" path="res://Script/main_menu.gd" id="1_lvh0n"]
+[ext_resource type="Texture2D" uid="uid://brwfm50gyafys" path="res://Assets/icon.svg" id="2_njfv4"]
 
 [node name="Main Menu" type="Control"]
 layout_mode = 3
@@ -10,7 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_gswy7")
+script = ExtResource("1_lvh0n")
 
 [node name="PlayButton" type="TextureButton" parent="."]
 layout_mode = 1
@@ -23,7 +23,7 @@ offset_right = -512.0
 offset_bottom = -280.0
 grow_horizontal = 2
 grow_vertical = 2
-texture_normal = ExtResource("2_uiji0")
+texture_normal = ExtResource("2_njfv4")
 
 [node name="OptionsButton" type="TextureButton" parent="."]
 layout_mode = 1
@@ -36,7 +36,7 @@ offset_right = -512.0
 offset_bottom = -151.0
 grow_horizontal = 2
 grow_vertical = 2
-texture_normal = ExtResource("2_uiji0")
+texture_normal = ExtResource("2_njfv4")
 
 [node name="QuitButton" type="TextureButton" parent="."]
 layout_mode = 1
@@ -49,7 +49,7 @@ offset_right = -512.0
 offset_bottom = -24.0
 grow_horizontal = 2
 grow_vertical = 2
-texture_normal = ExtResource("2_uiji0")
+texture_normal = ExtResource("2_njfv4")
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="OptionsButton" to="." method="_on_options_button_pressed"]

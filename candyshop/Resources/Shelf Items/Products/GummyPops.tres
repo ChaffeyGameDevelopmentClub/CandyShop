@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://mjl0ujgrsg6r"]
+
+[ext_resource type="Script" path="res://Script/ShelfScripts/itemResources.gd" id="1_qx3l5"]
+
+[resource]
+script = ExtResource("1_qx3l5")
+Name = "Gummy-Pops"
+Amount = 0

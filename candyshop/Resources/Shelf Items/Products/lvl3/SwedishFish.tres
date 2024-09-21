@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://coy6dornwup8g"]
+
+[ext_resource type="Script" path="res://Script/ShelfScripts/itemResources.gd" id="1_opbco"]
+
+[resource]
+script = ExtResource("1_opbco")
+Name = "Swedish Fish"
+Amount = 0

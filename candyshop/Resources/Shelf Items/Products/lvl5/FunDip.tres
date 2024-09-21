@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://bxwv4xr4brv2l"]
+
+[ext_resource type="Script" path="res://Script/ShelfScripts/itemResources.gd" id="1_e83fy"]
+
+[resource]
+script = ExtResource("1_e83fy")
+Name = "Fun Dip"
+Amount = 0

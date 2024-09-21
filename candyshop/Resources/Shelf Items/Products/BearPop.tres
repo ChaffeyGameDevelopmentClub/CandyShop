@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://u444trm8jryt"]
+
+[ext_resource type="Script" path="res://Script/ShelfScripts/itemResources.gd" id="1_8xo48"]
+
+[resource]
+script = ExtResource("1_8xo48")
+Name = "Bear Pop"
+Amount = 0
