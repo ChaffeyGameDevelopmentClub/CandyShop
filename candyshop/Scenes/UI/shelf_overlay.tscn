@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://cp1a0a6itp7yd"]
+[gd_scene load_steps=8 format=3 uid="uid://cp1a0a6itp7yd"]
 
 [ext_resource type="Script" path="res://Script/ShelfScripts/ShelfOverlayContainer.gd" id="1_78kgt"]
 [ext_resource type="Script" path="res://Script/ShelfScripts/MouseSensorPot.gd" id="1_amly7"]
+[ext_resource type="Texture2D" uid="uid://bdli5de6jykhm" path="res://Assets/Cooking_Screen.png" id="1_gs24o"]
 [ext_resource type="Resource" uid="uid://druc3sg2s4krw" path="res://Resources/Shelf Items/ShelfResource.tres" id="2_68g84"]
 [ext_resource type="Resource" uid="uid://dpqceg5trpq1e" path="res://Resources/Shelf Items/ShelfProdResource.tres" id="3_vkqmb"]
 [ext_resource type="Script" path="res://Scenes/UI/ingredents_screen.gd" id="5_ko00x"]
@@ -17,7 +18,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_gs24o")
+
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -35,10 +43,11 @@ offset_bottom = 351.0
 
 [node name="Pot" type="ColorRect" parent="."]
 layout_mode = 0
-offset_left = 584.0
-offset_top = 569.0
-offset_right = 978.0
-offset_bottom = 767.0
+offset_left = 592.0
+offset_top = 713.0
+offset_right = 1138.0
+offset_bottom = 1044.0
+color = Color(1, 1, 1, 0)
 script = ExtResource("1_amly7")
 
 [node name="GridContainer" type="GridContainer" parent="."]
@@ -46,12 +55,7 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 15.0
-offset_top = -80.0
-offset_right = 15.0
-offset_bottom = -80.0
 grow_vertical = 0
-scale = Vector2(1.25, 1.25)
 columns = 3
 script = ExtResource("1_78kgt")
 shelfResource = ExtResource("2_68g84")
@@ -63,23 +67,18 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -188.0
-offset_top = -123.0
-offset_right = -188.0
-offset_bottom = -123.0
 grow_horizontal = 0
 grow_vertical = 0
-scale = Vector2(1.25, 1.25)
 columns = 5
 script = ExtResource("1_78kgt")
 shelfResource = ExtResource("3_vkqmb")
 
 [node name="Ingredents screen" type="Control" parent="." node_paths=PackedStringArray("ing1Label", "ing2Label", "ing3Label", "ing4Label")]
 anchors_preset = 0
-offset_left = 492.0
-offset_top = 130.0
-offset_right = 1059.0
-offset_bottom = 478.0
+offset_left = 603.0
+offset_top = 322.0
+offset_right = 1170.0
+offset_bottom = 670.0
 script = ExtResource("5_ko00x")
 ing1Label = NodePath("Ing1/Ing1")
 ing2Label = NodePath("Ing2/Ing2")
