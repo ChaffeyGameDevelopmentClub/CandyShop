@@ -6,6 +6,7 @@ extends TextureButton
 var amount
 var held : bool
 var hover : bool
+signal addItem
 
 func initName(tempname):
 	#Name
@@ -41,6 +42,9 @@ func _on_button_up() -> void:
 	print(name + ' Up')
 	if amount == 0:
 		pass
+	elif hover:
+		amount -= 1
+		emit_signal('addItem',name)
 	else:
 		amount += 1
 	itemAmount.text = '[center]' + str(amount) + '[/center]'
