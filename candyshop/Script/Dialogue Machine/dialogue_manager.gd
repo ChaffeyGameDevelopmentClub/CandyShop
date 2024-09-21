@@ -15,4 +15,5 @@ func orderStart():
 	#how many npcs we have in Dialogue Array
 	var npc = randi_range(0,0)
 	print(npc)
-	pass
+	
+	
