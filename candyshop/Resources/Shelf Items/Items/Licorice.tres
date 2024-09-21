@@ -5,4 +5,4 @@
 [resource]
 script = ExtResource("1_a42vt")
 Name = "Licorice"
-Amount = 0
+Amount = 25

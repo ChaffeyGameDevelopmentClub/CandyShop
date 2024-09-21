@@ -29,18 +29,18 @@ func initImg(Img):
 
 func _on_button_down() -> void:
 	held = true
-	print(name + ' Down')
+	#print(name + ' Down')
 	if amount == 0:
 		pass
 	else:
 		amount -= 1
 	itemAmount.text = '[center]' + str(amount) + '[/center]'
-	print(amount)
+	#print(amount)
 
 func _on_button_up() -> void:
 	held = false
-	print(name + ' Up')
-	print(isHover)
+	#print(name + ' Up')
+	#print(isHover)
 	if amount == 0:
 		pass
 	elif isHover and !full:
@@ -49,11 +49,12 @@ func _on_button_up() -> void:
 	else:
 		amount += 1
 	itemAmount.text = '[center]' + str(amount) + '[/center]'
-	print(amount)
+	#print(amount)
 	
 func _ready() -> void:
 	GameManager.connect('checkHover', check_Hover)
 	GameManager.connect("pot_full", check_full)
+	GameManager.connect("sendAmount", addTo)
 	
 func check_Hover(hover):
 	if hover == true:
@@ -65,3 +66,11 @@ func check_Hover(hover):
 
 func check_full():
 	full = true
+	
+func addTo(nameOf):
+	#print(nameOf)
+	#print(name)
+	if nameOf == name:
+		amount += 1
+		print(amount)
+	itemAmount.text = '[center]' + str(amount) + '[/center]'

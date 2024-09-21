@@ -5,4 +5,4 @@
 [resource]
 script = ExtResource("1_dbqbe")
 Name = "Cholate"
-Amount = 0
+Amount = 25
