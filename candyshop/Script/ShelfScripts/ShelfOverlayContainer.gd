@@ -16,5 +16,8 @@ func _ready() -> void:
 		newbutton.initImg(shelfResource.item_array[i].img)
 		add_child(newbutton)
 	#GameManager.updateAmount(i,10)
-func example(index,amount):
-	pass
+var num = 1
+func example(index):
+	print('hello' + str(index))
+	num += 1
+	print(num)
