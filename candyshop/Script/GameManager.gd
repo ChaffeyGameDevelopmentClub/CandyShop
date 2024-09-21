@@ -6,6 +6,7 @@ var hover
 signal update_amount
 signal checkHover
 signal addItem
+signal pot_full
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -34,3 +35,6 @@ func check_Hover():
 	
 func sendName(nametxt):
 	emit_signal('addItem',nametxt)
+func potFull():
+	print('full')
+	emit_signal('pot_full')

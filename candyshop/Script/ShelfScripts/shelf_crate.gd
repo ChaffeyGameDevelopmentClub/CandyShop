@@ -6,6 +6,7 @@ extends TextureButton
 var amount
 var held : bool
 var isHover : bool
+var full : bool
 
 func initName(tempname):
 	#Name
@@ -42,7 +43,7 @@ func _on_button_up() -> void:
 	print(isHover)
 	if amount == 0:
 		pass
-	elif isHover:
+	elif isHover and !full:
 		#adds item to pot
 		GameManager.sendName(name)
 	else:
@@ -52,6 +53,8 @@ func _on_button_up() -> void:
 	
 func _ready() -> void:
 	GameManager.connect('checkHover', check_Hover)
+	GameManager.connect("pot_full", check_full)
+	
 func check_Hover(hover):
 	if hover == true:
 		isHover = true
@@ -59,3 +62,6 @@ func check_Hover(hover):
 	if hover == false:
 		isHover = false
 		#print(isHover)
+
+func check_full():
+	full = true

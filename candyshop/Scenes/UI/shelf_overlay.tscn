@@ -217,5 +217,14 @@ offset_right = 428.0
 offset_bottom = 106.0
 text = "Name"
 
+[node name="Button" type="Button" parent="Ingredents screen"]
+layout_mode = 0
+offset_left = 203.0
+offset_top = 329.0
+offset_right = 355.0
+offset_bottom = 361.0
+text = "Clear"
+
 [connection signal="mouse_entered" from="Pot" to="Pot" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Pot" to="Pot" method="_on_mouse_exited"]
+[connection signal="pressed" from="Ingredents screen/Button" to="Ingredents screen" method="_on_button_pressed"]

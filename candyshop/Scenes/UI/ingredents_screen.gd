@@ -25,5 +25,16 @@ func changeText(nameText):
 		ing3Label.text = nameText
 	if ingNum == 4:
 		ing4Label.text = nameText
+	if ingNum > 4:
+		GameManager.potFull()
 	ingNum += 1
 	
+	
+
+
+func _on_button_pressed() -> void:
+	ingNum = 1
+	ing1Label.text = 'Empty'
+	ing2Label.text = 'Empty'
+	ing3Label.text = 'Empty'
+	ing4Label.text = 'Empty'
