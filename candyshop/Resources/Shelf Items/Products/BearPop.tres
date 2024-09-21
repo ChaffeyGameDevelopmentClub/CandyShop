@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://u444trm8jryt"]
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://chmou54melgd6"]
 
 [ext_resource type="Script" path="res://Script/ShelfScripts/itemResources.gd" id="1_8xo48"]
+[ext_resource type="Texture2D" uid="uid://brwfm50gyafys" path="res://Assets/icon.svg" id="1_kthpu"]
 
 [resource]
 script = ExtResource("1_8xo48")
+img = ExtResource("1_kthpu")
 Name = "Bear Pop"
 Amount = 0

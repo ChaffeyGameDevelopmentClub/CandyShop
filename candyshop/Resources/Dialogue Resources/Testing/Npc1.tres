@@ -4,6 +4,5 @@
 
 [resource]
 script = ExtResource("1_1b4wj")
-NPCnum = 0
 Name = "Candy Girl"
 text = Array[String](["Hello I want ur stuff!", "Give me a Chocolate Latte!"])
