@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://dgeb52ifhaayc"]
+
+[ext_resource type="Script" path="res://Script/ShelfScripts/itemResources.gd" id="1_vmsrn"]
+
+[resource]
+script = ExtResource("1_vmsrn")
+Name = "Ginger Bread Man"
+Amount = 0
