@@ -18,10 +18,16 @@ config/icon="res://Assets/icon.svg"
 
 GameManager="*res://Script/GameManager.gd"
 
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+
 [file_customization]
 
 folder_colors={
 "res://Assets/": "green",
 "res://Scenes/": "orange",
+"res://Scenes/UI/": "teal",
 "res://Script/": "red"
 }

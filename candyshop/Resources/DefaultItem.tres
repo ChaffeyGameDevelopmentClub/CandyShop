@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://dadog2j2ypmfg"]
-
-[ext_resource type="Script" path="res://Script/itemResources.gd" id="1_2ldan"]
-
-[resource]
-script = ExtResource("1_2ldan")
-Name = "Candy Corn"
-Amount = 5
