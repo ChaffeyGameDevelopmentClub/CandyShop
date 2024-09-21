@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="ShelfResource" load_steps=8 format=3 uid="uid://druc3sg2s4krw"]
+[gd_resource type="Resource" script_class="ShelfResource" load_steps=9 format=3 uid="uid://druc3sg2s4krw"]
 
 [ext_resource type="Script" path="res://Script/ShelfScripts/itemResources.gd" id="1_mbjvb"]
 [ext_resource type="Resource" uid="uid://goyyxjxo3ak5" path="res://Resources/Shelf Items/Items/CandyCorn.tres" id="2_st3nf"]
@@ -7,7 +7,8 @@
 [ext_resource type="Resource" uid="uid://brbj33630tq80" path="res://Resources/Shelf Items/Items/Chocolate.tres" id="4_qypyk"]
 [ext_resource type="Resource" uid="uid://412rd3bnf1xy" path="res://Resources/Shelf Items/Items/Licorice.tres" id="5_ptacw"]
 [ext_resource type="Resource" uid="uid://bqgyetp3h1rcf" path="res://Resources/Shelf Items/Items/LoliPop.tres" id="6_8kq8v"]
+[ext_resource type="Resource" uid="uid://bx6u827jnwi8u" path="res://Resources/Shelf Items/Items/GummyWorms.tres" id="7_bvbjc"]
 
 [resource]
 script = ExtResource("2_utoy6")
-item_array = Array[ExtResource("1_mbjvb")]([ExtResource("2_st3nf"), ExtResource("3_k6uy0"), ExtResource("4_qypyk"), ExtResource("5_ptacw"), ExtResource("6_8kq8v")])
+item_array = Array[ExtResource("1_mbjvb")]([ExtResource("2_st3nf"), ExtResource("3_k6uy0"), ExtResource("4_qypyk"), ExtResource("5_ptacw"), ExtResource("6_8kq8v"), ExtResource("7_bvbjc")])

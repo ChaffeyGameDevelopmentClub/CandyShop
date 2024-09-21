@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://1yb8wjsobrt8"]
+
+[ext_resource type="Script" path="res://Script/ShelfScripts/itemResources.gd" id="1_366d0"]
+
+[resource]
+script = ExtResource("1_366d0")
+Name = "Chocolate Bears"
+Amount = 0

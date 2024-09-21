@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cp1a0a6itp7yd"]
+[gd_scene load_steps=4 format=3 uid="uid://cp1a0a6itp7yd"]
 
 [ext_resource type="Script" path="res://Script/ShelfScripts/ShelfOverlayContainer.gd" id="1_78kgt"]
 [ext_resource type="Resource" uid="uid://druc3sg2s4krw" path="res://Resources/Shelf Items/ShelfResource.tres" id="2_68g84"]
+[ext_resource type="Resource" uid="uid://dpqceg5trpq1e" path="res://Resources/Shelf Items/ShelfProdResource.tres" id="3_vkqmb"]
 
 [node name="ShelfOverlay" type="Control"]
 layout_mode = 3
@@ -13,12 +14,23 @@ grow_vertical = 2
 
 [node name="GridContainer" type="GridContainer" parent="."]
 layout_mode = 1
-anchors_preset = 12
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+grow_vertical = 0
+columns = 3
+script = ExtResource("1_78kgt")
+shelfResource = ExtResource("2_68g84")
+
+[node name="GridContainer2" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-grow_horizontal = 2
+grow_horizontal = 0
 grow_vertical = 0
-columns = 4
+columns = 5
 script = ExtResource("1_78kgt")
-shelfResource = ExtResource("2_68g84")
+shelfResource = ExtResource("3_vkqmb")
