@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://ckmwygrvgfwj"]
+[gd_scene load_steps=5 format=3 uid="uid://ckmwygrvgfwj"]
 
+[ext_resource type="Script" path="res://Script/Dialogue Machine/dialogue_manager.gd" id="1_2icc2"]
 [ext_resource type="Texture2D" uid="uid://cih1jdby83aeo" path="res://Assets/candshopFRONT.png" id="1_12vlv"]
 [ext_resource type="Texture2D" uid="uid://g574hnxfs5yy" path="res://Assets/chat test.png" id="2_ct2mw"]
 
@@ -13,6 +14,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_2icc2")
 
 [node name="Del Later" type="TextureRect" parent="."]
 layout_mode = 1
