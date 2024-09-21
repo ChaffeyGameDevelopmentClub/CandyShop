@@ -1,5 +1,5 @@
 extends Control
-#var shelf_crate = "res://Script/ShelfScripts/shelf_crate.gd"
+@onready var testfunc = $"res://Script/testing.gd"
 @export var ing1Label : RichTextLabel
 @export var ing2Label : RichTextLabel
 @export var ing3Label : RichTextLabel
@@ -9,7 +9,6 @@ var ingNum = 1
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	GameManager.connect('addItem',changeText)
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -29,12 +28,18 @@ func changeText(nameText):
 		GameManager.potFull()
 	ingNum += 1
 	
-	
-
-
 func _on_button_pressed() -> void:
 	ingNum = 1
 	ing1Label.text = 'Empty'
 	ing2Label.text = 'Empty'
 	ing3Label.text = 'Empty'
 	ing4Label.text = 'Empty'
+	
+	
+#combineing scripts
+
+func _on_cook_pressed() -> void:
+	combine()
+
+func combine():
+	pass
