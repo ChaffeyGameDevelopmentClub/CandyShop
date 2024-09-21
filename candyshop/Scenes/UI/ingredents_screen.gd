@@ -103,5 +103,19 @@ func combine():
 	#lvl3
 	#Chocolate Latte
 	if ingredents.has('Cholate') and ingredents.has('Chocolate Forest') and ingredents.has('Bear Pop'):
-		addToStorage('Strawberry Fields')
+		addToStorage('Chocolate Latte')
 		clearpot()
+	#Gummy Candy Corn
+	if ingredents.has('Gummy Bears') and ingredents.has('Gummy Worms') and ingredents.has('Candy Corn'):
+		addToStorage('Gummy Candy Corn')
+		clearpot()
+	#Swedish Fish
+	if ingredents.has('Strawberry Fields') and ingredents.has('Chocolate Forest') and ingredents.has('Bear Pop'):
+		addToStorage('Swedish Fish')
+		clearpot()
+	#lvl4
+	#Caramel Apples
+	
+	#Ginger Bread Man
+	#lvl5
+	#Fun Dip
