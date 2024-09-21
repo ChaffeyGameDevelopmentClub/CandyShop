@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bdli5de6jykhm" path="res://Assets/Cooking_Screen.png" id="1_gs24o"]
 [ext_resource type="Resource" uid="uid://druc3sg2s4krw" path="res://Resources/Shelf Items/ShelfResource.tres" id="2_68g84"]
 [ext_resource type="Resource" uid="uid://dpqceg5trpq1e" path="res://Resources/Shelf Items/ShelfProdResource.tres" id="3_vkqmb"]
-[ext_resource type="Script" path="res://Scenes/UI/ingredents_screen.gd" id="5_ko00x"]
+[ext_resource type="Script" path="res://Script/ShelfScripts/ingredents_screen.gd" id="5_ko00x"]
 
 [sub_resource type="Theme" id="Theme_ssx1o"]
 default_font_size = 30

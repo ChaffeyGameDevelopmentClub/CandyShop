@@ -28,6 +28,7 @@ window/size/viewport_height=1080
 folder_colors={
 "res://Assets/": "green",
 "res://Scenes/": "orange",
+"res://Scenes/Dialogue Machine/": "green",
 "res://Scenes/UI/": "teal",
 "res://Script/": "red"
 }
