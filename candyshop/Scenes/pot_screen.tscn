@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://ckogg5yl6ddpk"]
+
+[ext_resource type="Script" path="res://CookingObjects/Pot/pot_screen.gd" id="1_7aekk"]
+[ext_resource type="Script" path="res://CookingObjects/Pot/pot_state_machine.gd" id="2_yvkic"]
+[ext_resource type="Script" path="res://CookingObjects/Pot/growing_state.gd" id="3_b8ts2"]
+[ext_resource type="Script" path="res://CookingObjects/Pot/rotting_state.gd" id="4_xlety"]
+
+[node name="PotScreen" type="Node2D"]
+script = ExtResource("1_7aekk")
+
+[node name="Sprout" type="Sprite2D" parent="."]
+
+[node name="Pot" type="Sprite2D" parent="."]
+
+[node name="Grown" type="Sprite2D" parent="."]
+
+[node name="GrowTimer" type="Timer" parent="."]
+
+[node name="RotTimer" type="Timer" parent="."]
+
+[node name="PotStateMachine" type="Node" parent="."]
+script = ExtResource("2_yvkic")
+
+[node name="GrowingState" type="Node" parent="PotStateMachine"]
+script = ExtResource("3_b8ts2")
+
+[node name="RottingState" type="Node" parent="PotStateMachine"]
+script = ExtResource("4_xlety")
