@@ -5,4 +5,4 @@
 [resource]
 script = ExtResource("1_1b4wj")
 Name = "Candy Girl"
-text = Array[String](["Hello I want ur stuff!", "Give me a Chocolate Latte!"])
+text = Array[String](["Hello I want ur stuff!", "Give me a Chocolate Latte!", "Lol Silly"])
