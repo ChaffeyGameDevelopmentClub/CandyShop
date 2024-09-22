@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://i42712y6cm6s"]
+
+[ext_resource type="Script" path="res://Script/Testing Scripts/shelf_buttons.gd" id="1_skubl"]
+[ext_resource type="Resource" uid="uid://e03pcq83cvif" path="res://Resources/Testing/DefaultShelf.tres" id="2_bevsj"]
+
+[node name="Shelf Buttons" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Container" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 4
+script = ExtResource("1_skubl")
+shelfResource = ExtResource("2_bevsj")

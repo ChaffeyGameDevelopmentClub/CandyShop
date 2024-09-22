@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ix50l6q8vmw7"
-path="res://.godot/imported/Gummy bear army.png-15d2387b91d6a6b62e2e92754ac34c29.ctex"
+uid="uid://g574hnxfs5yy"
+path="res://.godot/imported/chat test.png-8dc6000256813d728ade98dfdc8fc2b6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Gummy bear army.png"
-dest_files=["res://.godot/imported/Gummy bear army.png-15d2387b91d6a6b62e2e92754ac34c29.ctex"]
+source_file="res://Assets/chat test.png"
+dest_files=["res://.godot/imported/chat test.png-8dc6000256813d728ade98dfdc8fc2b6.ctex"]
 
 [params]
 

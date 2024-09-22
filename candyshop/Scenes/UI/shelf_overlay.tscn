@@ -1,0 +1,246 @@
+[gd_scene load_steps=8 format=3 uid="uid://cp1a0a6itp7yd"]
+
+[ext_resource type="Script" path="res://Script/ShelfScripts/ShelfOverlayContainer.gd" id="1_78kgt"]
+[ext_resource type="Script" path="res://Script/ShelfScripts/MouseSensorPot.gd" id="1_amly7"]
+[ext_resource type="Texture2D" uid="uid://bdli5de6jykhm" path="res://Assets/Cooking_Screen.png" id="1_gs24o"]
+[ext_resource type="Resource" uid="uid://druc3sg2s4krw" path="res://Resources/Shelf Items/ShelfResource.tres" id="2_68g84"]
+[ext_resource type="Resource" uid="uid://dpqceg5trpq1e" path="res://Resources/Shelf Items/ShelfProdResource.tres" id="3_vkqmb"]
+[ext_resource type="Script" path="res://Script/ShelfScripts/ingredents_screen.gd" id="5_ko00x"]
+
+[sub_resource type="Theme" id="Theme_ssx1o"]
+default_font_size = 30
+
+[node name="ShelfOverlay" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_gs24o")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -355.0
+offset_right = 516.0
+grow_vertical = 0
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 1037.0
+offset_top = -191.0
+offset_right = 1920.0
+offset_bottom = 351.0
+
+[node name="Pot" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 592.0
+offset_top = 713.0
+offset_right = 1138.0
+offset_bottom = 1044.0
+color = Color(1, 1, 1, 0)
+script = ExtResource("1_amly7")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = -19.0
+offset_right = 15.0
+offset_bottom = -19.0
+grow_vertical = 0
+columns = 3
+script = ExtResource("1_78kgt")
+shelfResource = ExtResource("2_68g84")
+
+[node name="GridContainer2" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -16.0
+offset_top = -15.0
+offset_right = -16.0
+offset_bottom = -15.0
+grow_horizontal = 0
+grow_vertical = 0
+columns = 5
+script = ExtResource("1_78kgt")
+shelfResource = ExtResource("3_vkqmb")
+
+[node name="Ingredents screen" type="Control" parent="." node_paths=PackedStringArray("ing1Label", "ing2Label", "ing3Label", "ing4Label")]
+anchors_preset = 0
+offset_left = 603.0
+offset_top = 322.0
+offset_right = 1170.0
+offset_bottom = 670.0
+script = ExtResource("5_ko00x")
+ing1Label = NodePath("Ing1/Ing1")
+ing2Label = NodePath("Ing2/Ing2")
+ing3Label = NodePath("Ing3/Ing3")
+ing4Label = NodePath("Ing4/Ing4")
+
+[node name="ColorRect" type="ColorRect" parent="Ingredents screen"]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 33.0
+offset_right = 507.0
+offset_bottom = 319.0
+color = Color(0, 0, 0, 1)
+
+[node name="Ing1" type="Control" parent="Ingredents screen"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Ingredents screen/Ing1"]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 49.0
+offset_right = 485.0
+offset_bottom = 105.0
+color = Color(0.2484, 0.2484, 0.2484, 1)
+
+[node name="Label1" type="RichTextLabel" parent="Ingredents screen/Ing1"]
+layout_mode = 0
+offset_left = 138.0
+offset_top = 57.0
+offset_right = 188.0
+offset_bottom = 109.0
+theme = SubResource("Theme_ssx1o")
+text = "1"
+
+[node name="Ing1" type="RichTextLabel" parent="Ingredents screen/Ing1"]
+layout_mode = 1
+offset_left = 224.0
+offset_top = 62.0
+offset_right = 428.0
+offset_bottom = 106.0
+text = "Name"
+
+[node name="Ing2" type="Control" parent="Ingredents screen"]
+anchors_preset = 0
+offset_top = 64.0
+offset_right = 40.0
+offset_bottom = 104.0
+
+[node name="ColorRect" type="ColorRect" parent="Ingredents screen/Ing2"]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 49.0
+offset_right = 485.0
+offset_bottom = 105.0
+color = Color(0.2484, 0.2484, 0.2484, 1)
+
+[node name="Label2" type="RichTextLabel" parent="Ingredents screen/Ing2"]
+layout_mode = 0
+offset_left = 138.0
+offset_top = 57.0
+offset_right = 188.0
+offset_bottom = 109.0
+theme = SubResource("Theme_ssx1o")
+text = "2"
+
+[node name="Ing2" type="RichTextLabel" parent="Ingredents screen/Ing2"]
+layout_mode = 1
+offset_left = 224.0
+offset_top = 62.0
+offset_right = 428.0
+offset_bottom = 106.0
+text = "Name"
+
+[node name="Ing3" type="Control" parent="Ingredents screen"]
+anchors_preset = 0
+offset_top = 127.0
+offset_right = 40.0
+offset_bottom = 167.0
+
+[node name="ColorRect" type="ColorRect" parent="Ingredents screen/Ing3"]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 49.0
+offset_right = 485.0
+offset_bottom = 105.0
+color = Color(0.2484, 0.2484, 0.2484, 1)
+
+[node name="Label3" type="RichTextLabel" parent="Ingredents screen/Ing3"]
+layout_mode = 0
+offset_left = 138.0
+offset_top = 57.0
+offset_right = 188.0
+offset_bottom = 109.0
+theme = SubResource("Theme_ssx1o")
+text = "3"
+
+[node name="Ing3" type="RichTextLabel" parent="Ingredents screen/Ing3"]
+layout_mode = 0
+offset_left = 224.0
+offset_top = 62.0
+offset_right = 428.0
+offset_bottom = 106.0
+text = "Name"
+
+[node name="Ing4" type="Control" parent="Ingredents screen"]
+anchors_preset = 0
+offset_top = 192.0
+offset_right = 40.0
+offset_bottom = 232.0
+
+[node name="ColorRect" type="ColorRect" parent="Ingredents screen/Ing4"]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 49.0
+offset_right = 485.0
+offset_bottom = 105.0
+color = Color(0.2484, 0.2484, 0.2484, 1)
+
+[node name="Label4" type="RichTextLabel" parent="Ingredents screen/Ing4"]
+layout_mode = 0
+offset_left = 138.0
+offset_top = 57.0
+offset_right = 188.0
+offset_bottom = 109.0
+theme = SubResource("Theme_ssx1o")
+text = "4"
+
+[node name="Ing4" type="RichTextLabel" parent="Ingredents screen/Ing4"]
+layout_mode = 0
+offset_left = 224.0
+offset_top = 62.0
+offset_right = 428.0
+offset_bottom = 106.0
+text = "Name"
+
+[node name="Clear" type="Button" parent="Ingredents screen"]
+layout_mode = 0
+offset_left = 203.0
+offset_top = 329.0
+offset_right = 355.0
+offset_bottom = 361.0
+text = "Clear"
+
+[node name="Cook" type="Button" parent="Ingredents screen"]
+layout_mode = 0
+offset_left = 221.0
+offset_top = 365.0
+offset_right = 335.0
+offset_bottom = 398.0
+text = "Cook"
+
+[connection signal="mouse_entered" from="Pot" to="Pot" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Pot" to="Pot" method="_on_mouse_exited"]
+[connection signal="pressed" from="Ingredents screen/Clear" to="Ingredents screen" method="_on_button_pressed"]
+[connection signal="pressed" from="Ingredents screen/Cook" to="Ingredents screen" method="_on_cook_pressed"]

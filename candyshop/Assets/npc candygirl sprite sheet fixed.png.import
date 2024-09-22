@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ix50l6q8vmw7"
-path="res://.godot/imported/Gummy bear army.png-15d2387b91d6a6b62e2e92754ac34c29.ctex"
+uid="uid://cktcmrp8uavic"
+path="res://.godot/imported/npc candygirl sprite sheet fixed.png-896adf520bae3dc8b4aeea7ef5517358.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Gummy bear army.png"
-dest_files=["res://.godot/imported/Gummy bear army.png-15d2387b91d6a6b62e2e92754ac34c29.ctex"]
+source_file="res://Assets/npc candygirl sprite sheet fixed.png"
+dest_files=["res://.godot/imported/npc candygirl sprite sheet fixed.png-896adf520bae3dc8b4aeea7ef5517358.ctex"]
 
 [params]
 

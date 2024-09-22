@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://bx6u827jnwi8u"]
+
+[ext_resource type="Script" path="res://Script/ShelfScripts/itemResources.gd" id="1_0us4k"]
+
+[resource]
+script = ExtResource("1_0us4k")
+Name = "Gummy Worms"
+Amount = 25

@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://bm7y4p7u37mpf"]
+
+[ext_resource type="PackedScene" uid="uid://i42712y6cm6s" path="res://Scenes/Testing/shelf_buttons.tscn" id="1_e3ccn"]
+
+[sub_resource type="GDScript" id="GDScript_n6tol"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+
+
+
+func _on_texture_button_button_down() -> void:
+	pass # Replace with function body.
+"
+
+[node name="Shelf testing" type="Node2D"]
+script = SubResource("GDScript_n6tol")
+
+[node name="Shelf Buttons" parent="." instance=ExtResource("1_e3ccn")]
+offset_left = 150.0
+offset_top = 506.0
+offset_right = 150.0
+offset_bottom = 506.0

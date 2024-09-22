@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://brbj33630tq80"]
+
+[ext_resource type="Script" path="res://Script/ShelfScripts/itemResources.gd" id="1_dbqbe"]
+
+[resource]
+script = ExtResource("1_dbqbe")
+Name = "Cholate"
+Amount = 25
