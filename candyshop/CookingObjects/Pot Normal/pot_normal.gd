@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 @export var pot: Sprite2D
 @export var sprout: Sprite2D
@@ -10,7 +10,8 @@ extends Node2D
 var growing = true
 var rotting = false
 
-
+func addToStorage(nameOf):
+	GameManager.send_Amount(nameOf)
 
 func switchSprite():
 	if (growing == true):
@@ -19,7 +20,7 @@ func switchSprite():
 	elif(rotting == true):
 		plant.visible = true
 		rottingTimer.start()
-
+		addToStorage('GummyArmy')
 
 
 func _on_growing_timer_timeout():
@@ -33,6 +34,7 @@ func _on_rotting_timer_timeout():
 	growing = true
 	plant.visible = false
 	switchSprite()
+	
 
-func	_ready():
+func _ready():
 	switchSprite()

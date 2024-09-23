@@ -5,7 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://ix50l6q8vmw7" path="res://Assets/Gummy bear army.png" id="3_no4fs"]
 [ext_resource type="Texture2D" uid="uid://cktcmrp8uavic" path="res://Assets/npc candygirl sprite sheet fixed.png" id="4_b84a2"]
 
-[node name="Pot_Normal" type="Node2D" node_paths=PackedStringArray("pot", "sprout", "plant", "growingTimer", "rottingTimer")]
+[node name="Pot_Normal" type="Control" node_paths=PackedStringArray("pot", "sprout", "plant", "growingTimer", "rottingTimer")]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_176sy")
 pot = NodePath("pot")
 sprout = NodePath("Sporut")

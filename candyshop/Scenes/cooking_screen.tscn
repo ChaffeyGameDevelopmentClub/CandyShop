@@ -1,7 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://chfxragkwjgxi"]
+[gd_scene load_steps=3 format=3 uid="uid://chfxragkwjgxi"]
 
 [ext_resource type="PackedScene" uid="uid://cp1a0a6itp7yd" path="res://Scenes/UI/shelf_overlay.tscn" id="1_khe47"]
+[ext_resource type="PackedScene" uid="uid://mflkbq06ie5g" path="res://CookingObjects/Pot Normal/pot_normal.tscn" id="2_jwhus"]
 
 [node name="Cooking Screen" type="Node2D"]
 
 [node name="ShelfOverlay" parent="." instance=ExtResource("1_khe47")]
+metadata/_edit_use_anchors_ = true
+
+[node name="Pot_Normal" parent="." instance=ExtResource("2_jwhus")]
+offset_left = 282.0
+offset_top = 178.0
+offset_right = 282.0
+offset_bottom = 178.0
