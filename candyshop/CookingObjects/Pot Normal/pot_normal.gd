@@ -6,9 +6,10 @@ extends Control
 @export var growingTimer: Timer
 @export var rottingTimer: Timer
 
-
+var Chocolate
 var growing = true
 var rotting = false
+var collected = false
 
 func addToStorage(nameOf):
 	GameManager.send_Amount(nameOf)
@@ -20,7 +21,12 @@ func switchSprite():
 	elif(rotting == true):
 		plant.visible = true
 		rottingTimer.start()
-		addToStorage('GummyArmy')
+		if (collected == true):
+			print("cool")
+			collected == false
+			
+			addToStorage(Chocolate)
+	
 
 
 func _on_growing_timer_timeout():
@@ -38,3 +44,8 @@ func _on_rotting_timer_timeout():
 
 func _ready():
 	switchSprite()
+
+
+func _on_collect_button_button_down():
+	print("worked")
+	collected = true
