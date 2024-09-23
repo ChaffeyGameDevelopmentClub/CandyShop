@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://mflkbq06ie5g"]
+
+[ext_resource type="Script" path="res://CookingObjects/Pot Normal/pot_normal.gd" id="1_176sy"]
+[ext_resource type="Texture2D" uid="uid://brwfm50gyafys" path="res://Assets/icon.svg" id="2_jpjcl"]
+[ext_resource type="Texture2D" uid="uid://ix50l6q8vmw7" path="res://Assets/Gummy bear army.png" id="3_no4fs"]
+[ext_resource type="Texture2D" uid="uid://cktcmrp8uavic" path="res://Assets/npc candygirl sprite sheet fixed.png" id="4_b84a2"]
+
+[node name="Pot_Normal" type="Node2D" node_paths=PackedStringArray("pot", "sprout", "plant", "growingTimer", "rottingTimer")]
+script = ExtResource("1_176sy")
+pot = NodePath("pot")
+sprout = NodePath("Sporut")
+plant = NodePath("Plant")
+growingTimer = NodePath("Growing Timer")
+rottingTimer = NodePath("Rotting Timer")
+
+[node name="pot" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(935, 603)
+texture = ExtResource("2_jpjcl")
+
+[node name="Sporut" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(921, 569)
+scale = Vector2(0.434, 0.3435)
+texture = ExtResource("3_no4fs")
+
+[node name="Plant" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1158, 637)
+scale = Vector2(0.59375, 0.3835)
+texture = ExtResource("4_b84a2")
+
+[node name="Growing Timer" type="Timer" parent="."]
+wait_time = 4.0
+
+[node name="Rotting Timer" type="Timer" parent="."]
+wait_time = 6.823
+
+[connection signal="timeout" from="Growing Timer" to="." method="_on_growing_timer_timeout"]
+[connection signal="timeout" from="Rotting Timer" to="." method="_on_rotting_timer_timeout"]
