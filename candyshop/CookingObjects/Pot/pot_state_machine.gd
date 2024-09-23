@@ -1,6 +1,8 @@
 extends Node
 
 class_name PotStateMachine
+@export var pot:Node2D
+@export var sprout:Sprite2D
 
 @export var current_state : State
 
@@ -10,17 +12,13 @@ func _ready():
 	for child in get_children():
 		if(child is State):
 			states.append(child)
-		
-		
 		else:
-		
-		
 			push_warning("Child " + child.name + "is not a State for PotStateMachine")
 			
 
-func check_shown():
-	return current_state.Show_Sprout
-	return current_state.Show_Grown
+#func check_shown():
+	#return current_state.Show_Sprout
+	#return current_state.Show_Grown
 
 func switch_states(new_state : State):
 	if(current_state != null):

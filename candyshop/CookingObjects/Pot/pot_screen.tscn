@@ -6,9 +6,10 @@
 [ext_resource type="Script" path="res://CookingObjects/Pot/growing_state.gd" id="3_b8ts2"]
 [ext_resource type="Script" path="res://CookingObjects/Pot/rotting_state.gd" id="4_xlety"]
 
-[node name="PotScreen" type="Node2D"]
+[node name="PotScreen" type="Node2D" node_paths=PackedStringArray("state_machine")]
 position = Vector2(1012, 530)
 script = ExtResource("1_7aekk")
+state_machine = NodePath("PotStateMachine")
 
 [node name="Sprout" type="Sprite2D" parent="."]
 visible = false
@@ -22,13 +23,16 @@ texture = ExtResource("2_fmfbe")
 
 [node name="RotTimer" type="Timer" parent="."]
 
-[node name="PotStateMachine" type="Node" parent="." node_paths=PackedStringArray("current_state")]
+[node name="PotStateMachine" type="Node" parent="." node_paths=PackedStringArray("pot", "sprout", "current_state")]
 script = ExtResource("2_yvkic")
+pot = NodePath("..")
+sprout = NodePath("../Sprout")
 current_state = NodePath("GrowingState")
 
-[node name="GrowingState" type="Node" parent="PotStateMachine"]
+[node name="GrowingState" type="Node" parent="PotStateMachine" node_paths=PackedStringArray("sprout")]
 script = ExtResource("3_b8ts2")
-Show_Grown = false
+sprout = NodePath("../../Sprout")
 
-[node name="RottingState" type="Node" parent="PotStateMachine"]
+[node name="RottingState" type="Node" parent="PotStateMachine" node_paths=PackedStringArray("sprout")]
 script = ExtResource("4_xlety")
+sprout = NodePath("../../Sprout")

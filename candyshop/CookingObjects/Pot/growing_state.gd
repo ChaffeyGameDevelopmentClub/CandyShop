@@ -2,16 +2,15 @@ extends State
 
 class_name GrowingState
 
-@onready var Sprout =get_node("Sprout")
-
-func state_proccess(delta):
-	pass
-	
+func _ready() -> void:
+	print("pls")
+	sprout.visible = true
 
 
-func on_enter():
-	pass
-	
+#func on_enter():
+#	print("pls")
+#	sprout.visible = true
+#	
 
-func on_exit():
-	pass
+#func on_exit():
+#	pass
