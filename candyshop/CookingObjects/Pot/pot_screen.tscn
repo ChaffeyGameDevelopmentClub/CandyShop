@@ -20,6 +20,9 @@ texture = ExtResource("2_fmfbe")
 [node name="Grown" type="Sprite2D" parent="."]
 
 [node name="GrowTimer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
 
 [node name="RotTimer" type="Timer" parent="."]
 
@@ -36,3 +39,5 @@ sprout = NodePath("../../Sprout")
 [node name="RottingState" type="Node" parent="PotStateMachine" node_paths=PackedStringArray("sprout")]
 script = ExtResource("4_xlety")
 sprout = NodePath("../../Sprout")
+
+[connection signal="timeout" from="GrowTimer" to="PotStateMachine/GrowingState" method="_on_grow_timer_timeout"]

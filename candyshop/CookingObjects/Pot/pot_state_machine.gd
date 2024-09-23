@@ -4,6 +4,8 @@ class_name PotStateMachine
 @export var pot:Node2D
 @export var sprout:Sprite2D
 
+
+
 @export var current_state : State
 
 var states : Array[State]

@@ -7,10 +7,6 @@ func _ready() -> void:
 	sprout.visible = true
 
 
-#func on_enter():
-#	print("pls")
-#	sprout.visible = true
-#	
-
-#func on_exit():
-#	pass
+func _on_grow_timer_timeout() -> void:
+	print("done")
+	sprout.visible = false
