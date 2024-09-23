@@ -1,6 +1,6 @@
 extends TextureButton
 @export var itemName : RichTextLabel
-@export var img : TextureRect
+@export var texturerect : TextureRect
 @export var itemAmount : RichTextLabel
 
 var amount
@@ -23,7 +23,9 @@ func initAmount(tempAmount):
 	
 func initImg(Img):
 	#Img
-	Img = img.texture
+	#print(Img)
+	#Img = texturerect.texture
+	pass
 	
 
 

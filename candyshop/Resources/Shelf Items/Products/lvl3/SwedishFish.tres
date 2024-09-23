@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://coy6dornwup8g"]
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://coy6dornwup8g"]
 
+[ext_resource type="Texture2D" uid="uid://brwfm50gyafys" path="res://Assets/icon.svg" id="1_0qvws"]
 [ext_resource type="Script" path="res://Script/ShelfScripts/itemResources.gd" id="1_opbco"]
 
 [resource]
 script = ExtResource("1_opbco")
+img = ExtResource("1_0qvws")
 Name = "Swedish Fish"
 Amount = 0

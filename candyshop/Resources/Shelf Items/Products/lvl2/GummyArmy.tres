@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://cosq5ela7c8x0"]
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://cosq5ela7c8x0"]
 
+[ext_resource type="Texture2D" uid="uid://ix50l6q8vmw7" path="res://Assets/Gummy bear army.png" id="1_4o2jh"]
 [ext_resource type="Script" path="res://Script/ShelfScripts/itemResources.gd" id="1_dhynu"]
 
 [resource]
 script = ExtResource("1_dhynu")
+img = ExtResource("1_4o2jh")
 Name = "Gummy Army"
 Amount = 0

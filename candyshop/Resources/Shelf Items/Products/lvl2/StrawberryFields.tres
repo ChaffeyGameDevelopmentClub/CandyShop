@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://p7cpfwnyjuk1"]
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://p7cpfwnyjuk1"]
 
 [ext_resource type="Script" path="res://Script/ShelfScripts/itemResources.gd" id="1_6naac"]
+[ext_resource type="Texture2D" uid="uid://brwfm50gyafys" path="res://Assets/icon.svg" id="1_pqsje"]
 
 [resource]
 script = ExtResource("1_6naac")
+img = ExtResource("1_pqsje")
 Name = "Strawberry Fields"
 Amount = 0
