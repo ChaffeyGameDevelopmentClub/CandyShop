@@ -21,11 +21,19 @@ func _process(delta):
 	camera.position = camera.position.lerp(target_position, 0.1)
 	if (sell+miss == customers):
 		if (sell >= 3):
-			pass
+			print("won")
+			
+		elif (sell<3):
+			print("lost")
 
 
 
 
 func _on_sell_button_down() -> void:
-	pass
+	sell += 1
 	
+	
+
+
+func _on_miss_button_down() -> void:
+	miss += 1
