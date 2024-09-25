@@ -5,7 +5,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	orderStart()
+	pass#orderStart()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -35,8 +35,14 @@ func playText():
 		timer.start()
 		print
 		i += 1
+	if arrayamount-1 < i:
+		get_tree().current_scene.get_node("Customer").dialogueEnd()
 
 
 func _on_dialogue_timer_timeout() -> void:
 	print('timeout')
 	playText()
+
+
+func _on_dialogue_start_timer_timeout():
+	orderStart()
