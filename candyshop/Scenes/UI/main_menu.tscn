@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Script/main_menu.gd" id="1_lvh0n"]
 [ext_resource type="Texture2D" uid="uid://brwfm50gyafys" path="res://Assets/icon.svg" id="2_njfv4"]
-[ext_resource type="Texture2D" uid="uid://oep8g0ywsxhb" path="res://Resources/Main Menu/360_F_146062503_SKhVeah2NFWSauxFm4qEvkgBJMMBOYCh.jpg" id="2_ruvww"]
+[ext_resource type="Texture2D" uid="uid://oep8g0ywsxhb" path="res://Assets/Main Menu/360_F_146062503_SKhVeah2NFWSauxFm4qEvkgBJMMBOYCh.jpg" id="2_ruvww"]
 
 [node name="Main Menu" type="Control"]
 layout_mode = 3
