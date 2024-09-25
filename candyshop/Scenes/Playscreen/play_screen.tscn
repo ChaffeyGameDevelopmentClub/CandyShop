@@ -28,6 +28,9 @@ position = Vector2(-957.485, -535)
 timeLimit = NodePath("TimeLimitTimer")
 resourceArray = ExtResource("5_cogks")
 
+[node name="DialogueManager" parent="ShopScreen" index="3" node_paths=PackedStringArray("Customer")]
+Customer = NodePath("../Customer")
+
 [node name="Customer" parent="ShopScreen" index="4" node_paths=PackedStringArray("order", "dialogueManager", "shopScreen", "timeLimit")]
 order = NodePath("../OrderRect")
 dialogueManager = NodePath("../DialogueManager")
