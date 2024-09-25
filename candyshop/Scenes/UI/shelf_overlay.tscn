@@ -32,8 +32,8 @@
 [ext_resource type="Texture2D" uid="uid://dqyv3ti44chvq" path="res://Assets/Plants/chocolate plant reup.png" id="27_4j4fx"]
 [ext_resource type="Texture2D" uid="uid://btfpsqi5dk4ws" path="res://Assets/Plants/baby gummy bear plant.png" id="28_nxxrr"]
 [ext_resource type="Texture2D" uid="uid://bhihv5eqyucnx" path="res://Assets/Plants/adult gummy bear plant.png" id="29_pf0au"]
-[ext_resource type="Texture2D" uid="uid://dgbsryjrt83mk" path="res://Assets/Plants/baby gummy worm plant.png" id="30_pw7ix"]
-[ext_resource type="Texture2D" uid="uid://dbo4d1bqaett5" path="res://Assets/smaller gummy worm plant.png" id="31_i2d3o"]
+[ext_resource type="Texture2D" uid="uid://ckhhwordm2b0n" path="res://Assets/gummy worm plant 2.png" id="30_wee36"]
+[ext_resource type="Texture2D" uid="uid://bdq5e12iab8l3" path="res://Assets/gummy worm plant 1.png" id="31_chqfr"]
 [ext_resource type="Texture2D" uid="uid://cc2176h2ome1s" path="res://Assets/Plants/baby licorice plant.png" id="32_fqhlk"]
 [ext_resource type="Texture2D" uid="uid://decn3so7nwwbo" path="res://Assets/Plants/adult licorice plant.png" id="33_t8ilc"]
 [ext_resource type="Texture2D" uid="uid://ctrxihn1g6f2j" path="res://Assets/Plants/baby lollipop plant.png" id="34_jmb3q"]
@@ -334,8 +334,8 @@ offset_top = 324.0
 offset_right = 1411.0
 offset_bottom = 324.0
 plantType = "Gummy Worms"
-sproutTexture = ExtResource("30_pw7ix")
-plantTexture = ExtResource("31_i2d3o")
+sproutTexture = ExtResource("30_wee36")
+plantTexture = ExtResource("31_chqfr")
 
 [node name="Pot_Normal2" parent="Pots/Right Pots" instance=ExtResource("10_dwvl6")]
 offset_left = 1587.0
