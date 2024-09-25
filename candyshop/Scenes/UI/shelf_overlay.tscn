@@ -340,7 +340,7 @@ array2 = ExtResource("3_vkqmb")
 
 [node name="Control" type="Control" parent="DragScript"]
 anchors_preset = 0
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.7, 0.7)
 
 [node name="TextureRect" type="TextureRect" parent="DragScript/Control"]
 visible = false
