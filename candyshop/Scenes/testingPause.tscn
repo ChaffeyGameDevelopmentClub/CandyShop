@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5n6pyce2q8o6"]
+
+[ext_resource type="PackedScene" uid="uid://dc4qd116vb2mi" path="res://Scenes/pause_menu.tscn" id="1_bqota"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1708.0
+offset_bottom = 968.0
+color = Color(0.473976, 0.473976, 0.473976, 1)
+
+[node name="Pause Menu" parent="." instance=ExtResource("1_bqota")]
+visible = false
+layout_mode = 1
+offset_left = -106.0
+offset_top = -56.0
+offset_right = -2026.0
+offset_bottom = -1136.0
