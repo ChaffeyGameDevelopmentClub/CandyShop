@@ -122,5 +122,5 @@ func combine():
 	#lvl5
 	#Fun Dip
 	if ingredents.has('Ginger Bread Man') and ingredents.has('Caramel Apples') and ingredents.has('Gummy Army') and ingredents.has('Gummy Sharks'):
-		addToStorage('Ginger Bread Man')
+		addToStorage('Fun Dip')
 		clearpot()
