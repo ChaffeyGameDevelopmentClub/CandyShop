@@ -3,9 +3,13 @@
 [ext_resource type="Script" path="res://Scenes/CookingObjects/Pot Normal/pot_normal.gd" id="1_176sy"]
 [ext_resource type="Texture2D" uid="uid://brwfm50gyafys" path="res://Assets/icon.svg" id="2_jpjcl"]
 
-[node name="Pot_Normal" type="Control" node_paths=PackedStringArray("pot", "sprout", "plant", "growingTimer", "rottingTimer")]
+[node name="Pot_Normal" type="Control" node_paths=PackedStringArray("pot", "sprout", "plant", "growingTimer", "rottingTimer", "GrotProgress")]
 layout_mode = 3
 anchors_preset = 0
+offset_left = 737.0
+offset_top = 347.0
+offset_right = 737.0
+offset_bottom = 347.0
 script = ExtResource("1_176sy")
 pot = NodePath("pot")
 sprout = NodePath("Sporut")
@@ -14,8 +18,13 @@ growingTimer = NodePath("Growing Timer")
 rottingTimer = NodePath("Rotting Timer")
 sproutTexture = ExtResource("2_jpjcl")
 plantTexture = ExtResource("2_jpjcl")
+GrotProgress = NodePath("Grot Progress")
+growColor = Color(0.116556, 0.61172, 0.306117, 1)
+rotColor = Color(0.714657, 0.173585, 0.00119181, 1)
+clickedColor = Color(0.941708, 0.578565, 0.595345, 1)
 
 [node name="pot" type="Sprite2D" parent="."]
+position = Vector2(7, 1)
 texture = ExtResource("2_jpjcl")
 
 [node name="Sporut" type="Sprite2D" parent="."]
@@ -39,18 +48,33 @@ one_shot = true
 
 [node name="CollectButton" type="TextureButton" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -78.0
-offset_top = -200.0
-offset_right = 425.0
-offset_bottom = 145.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_left = -88.0
+offset_top = -179.0
+offset_right = 525.0
+offset_bottom = 166.0
 scale = Vector2(0.308214, 0.79763)
+
+[node name="Grot ProgressBar" type="TextureProgressBar" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -97.0
+offset_top = -136.0
+offset_right = 116.0
+offset_bottom = -96.0
+fill_mode = 4
+radial_initial_angle = 90.0
+radial_fill_degrees = 270.0
+texture_under = ExtResource("2_jpjcl")
+texture_over = ExtResource("2_jpjcl")
+texture_progress = ExtResource("2_jpjcl")
+
+[node name="Grot Progress" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = -119.0
+offset_top = 65.0
+offset_right = 142.0
+offset_bottom = 149.0
+show_percentage = false
 
 [connection signal="timeout" from="Growing Timer" to="." method="_on_growing_timer_timeout"]
 [connection signal="timeout" from="Rotting Timer" to="." method="_on_rotting_timer_timeout"]
