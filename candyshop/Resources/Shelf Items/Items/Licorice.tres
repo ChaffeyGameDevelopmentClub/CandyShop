@@ -5,6 +5,6 @@
 
 [resource]
 script = ExtResource("1_a42vt")
-img = ExtResource("1_20tja")
+image = ExtResource("1_20tja")
 Name = "Licorice"
 Amount = 25

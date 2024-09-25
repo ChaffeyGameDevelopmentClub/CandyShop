@@ -23,7 +23,7 @@ func initAmount(tempAmount):
 	
 func initImg(Img):
 	#Img
-	print(Img)
+	print(name)
 	texturerect.texture = Img
 	pass
 	

@@ -5,6 +5,6 @@
 
 [resource]
 script = ExtResource("1_mbnsa")
-img = ExtResource("1_aulio")
+image = ExtResource("1_aulio")
 Name = "Chocolate Forest"
 Amount = 0

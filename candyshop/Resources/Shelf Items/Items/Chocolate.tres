@@ -5,6 +5,6 @@
 
 [resource]
 script = ExtResource("1_dbqbe")
-img = ExtResource("1_qihfn")
+image = ExtResource("1_qihfn")
 Name = "Cholate"
 Amount = 25

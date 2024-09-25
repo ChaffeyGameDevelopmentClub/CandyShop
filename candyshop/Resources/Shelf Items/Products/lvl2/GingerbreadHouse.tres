@@ -5,6 +5,6 @@
 
 [resource]
 script = ExtResource("1_bnf4m")
-img = ExtResource("1_uldox")
+image = ExtResource("1_uldox")
 Name = "Gingerbread House"
 Amount = 0

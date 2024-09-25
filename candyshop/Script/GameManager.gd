@@ -44,6 +44,7 @@ func potFull():
 func send_Amount(nameAmount):
 	emit_signal('sendAmount', nameAmount)
 func checkHeldItem(nameOf):
+	print('signal: ' + nameOf)
 	emit_signal('heldItem',nameOf)
 func checkIfHeld(isHeld):
 	emit_signal('held',isHeld)

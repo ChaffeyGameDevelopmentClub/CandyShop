@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://fhbg06io7grq"]
+[gd_scene load_steps=29 format=3 uid="uid://fhbg06io7grq"]
 
 [ext_resource type="Script" path="res://Script/ShelfScripts/ShelfOverlayContainer.gd" id="1_78kgt"]
 [ext_resource type="Script" path="res://Script/ShelfScripts/MouseSensorPot.gd" id="1_amly7"]
@@ -9,97 +9,81 @@
 [ext_resource type="Script" path="res://Script/ShelfScripts/ingredents_screen.gd" id="5_ko00x"]
 [ext_resource type="Script" path="res://Script/ShelfScripts/shelfResource.gd" id="5_t007n"]
 [ext_resource type="Texture2D" uid="uid://brwfm50gyafys" path="res://Assets/icon.svg" id="6_lfo4h"]
-[ext_resource type="Texture2D" uid="uid://ix50l6q8vmw7" path="res://Assets/Ingredent Assets/Gummy bear army.png" id="7_lvns0"]
 [ext_resource type="PackedScene" uid="uid://mflkbq06ie5g" path="res://Scenes/CookingObjects/Pot Normal/pot_normal.tscn" id="10_dwvl6"]
 [ext_resource type="Script" path="res://Scenes/UI/drag_script.gd" id="11_mkv1l"]
 
 [sub_resource type="Resource" id="Resource_jhmpc"]
 script = ExtResource("4_c5av3")
-img = ExtResource("6_lfo4h")
 Name = "Chocolate Bears"
 Amount = 0
 
 [sub_resource type="Resource" id="Resource_1xadm"]
 script = ExtResource("4_c5av3")
-img = ExtResource("6_lfo4h")
 Name = "Bear Pop"
 Amount = 0
 
 [sub_resource type="Resource" id="Resource_hulo0"]
 script = ExtResource("4_c5av3")
-img = ExtResource("6_lfo4h")
 Name = "Chcolate Popcorn"
 Amount = 0
 
 [sub_resource type="Resource" id="Resource_l0v42"]
 script = ExtResource("4_c5av3")
-img = ExtResource("6_lfo4h")
 Name = "Gummy-Pops"
 Amount = 0
 
 [sub_resource type="Resource" id="Resource_qpysa"]
 script = ExtResource("4_c5av3")
-img = ExtResource("6_lfo4h")
 Name = "Gummy Sharks"
 Amount = 0
 
 [sub_resource type="Resource" id="Resource_ecx1x"]
 script = ExtResource("4_c5av3")
-img = ExtResource("6_lfo4h")
 Name = "Chocolate Forest"
 Amount = 0
 
 [sub_resource type="Resource" id="Resource_guqbt"]
 script = ExtResource("4_c5av3")
-img = ExtResource("6_lfo4h")
 Name = "Gingerbread House"
 Amount = 0
 
 [sub_resource type="Resource" id="Resource_4qyis"]
 script = ExtResource("4_c5av3")
-img = ExtResource("7_lvns0")
 Name = "Gummy Army"
 Amount = 0
 
 [sub_resource type="Resource" id="Resource_1ghy1"]
 script = ExtResource("4_c5av3")
-img = ExtResource("6_lfo4h")
 Name = "Strawberry Fields"
 Amount = 0
 
 [sub_resource type="Resource" id="Resource_ocdvx"]
 script = ExtResource("4_c5av3")
-img = ExtResource("6_lfo4h")
 Name = "Chocolate Latte"
 Amount = 0
 
 [sub_resource type="Resource" id="Resource_eosbt"]
 script = ExtResource("4_c5av3")
-img = ExtResource("6_lfo4h")
 Name = "Gummy Candy Corn"
 Amount = 0
 
 [sub_resource type="Resource" id="Resource_3yspv"]
 script = ExtResource("4_c5av3")
-img = ExtResource("6_lfo4h")
 Name = "Swedish Fish"
 Amount = 0
 
 [sub_resource type="Resource" id="Resource_gwfbs"]
 script = ExtResource("4_c5av3")
-img = ExtResource("6_lfo4h")
 Name = "Caramel Apples"
 Amount = 0
 
 [sub_resource type="Resource" id="Resource_7o8ka"]
 script = ExtResource("4_c5av3")
-img = ExtResource("6_lfo4h")
 Name = "Ginger Bread Man"
 Amount = 0
 
 [sub_resource type="Resource" id="Resource_gq08j"]
 script = ExtResource("4_c5av3")
-img = ExtResource("6_lfo4h")
 Name = "Fun Dip"
 Amount = 0
 

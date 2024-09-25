@@ -5,6 +5,6 @@
 
 [resource]
 script = ExtResource("1_vmsrn")
-img = ExtResource("1_iluah")
+image = ExtResource("1_iluah")
 Name = "Ginger Bread Man"
 Amount = 0

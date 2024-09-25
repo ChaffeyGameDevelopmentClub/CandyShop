@@ -5,6 +5,6 @@
 
 [resource]
 script = ExtResource("1_vohy8")
-img = ExtResource("1_0jwjm")
+image = ExtResource("1_0jwjm")
 Name = "Chcolate Popcorn"
 Amount = 0

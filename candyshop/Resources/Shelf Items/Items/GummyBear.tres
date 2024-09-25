@@ -5,6 +5,6 @@
 
 [resource]
 script = ExtResource("1_kyhnd")
-img = ExtResource("1_gu2wx")
+image = ExtResource("1_gu2wx")
 Name = "Gummy Bears"
 Amount = 25

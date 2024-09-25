@@ -5,6 +5,6 @@
 
 [resource]
 script = ExtResource("1_3br5k")
-img = ExtResource("1_pfnwr")
+image = ExtResource("1_pfnwr")
 Name = "Loli-Pop"
 Amount = 25
