@@ -35,9 +35,13 @@ func playText():
 		timer.start()
 		print
 		i += 1
-	if arrayamount-1 < i:
+	elif arrayamount-1 < i:
 		get_tree().current_scene.get_node("Customer").dialogueEnd()
+		print(str(i) + " arrayamount")
+		i = 0
 
+func completeOrder():
+	textLabel.text = "yummers"
 
 func _on_dialogue_timer_timeout() -> void:
 	print('timeout')

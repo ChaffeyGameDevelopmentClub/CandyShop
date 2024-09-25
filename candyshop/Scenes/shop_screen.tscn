@@ -47,6 +47,7 @@ offset_bottom = -297.0
 
 [node name="dialogueTimer" parent="DialogueManager" index="2"]
 wait_time = 3.0
+one_shot = true
 
 [node name="dialogueStartTimer" type="Timer" parent="DialogueManager"]
 wait_time = 3.0
@@ -67,6 +68,15 @@ offset_bottom = 1061.0
 theme_override_font_sizes/font_size = 35
 text = "Next"
 script = ExtResource("3_60a7r")
+
+[node name="ServeButton" type="Button" parent="."]
+visible = false
+offset_left = 1005.0
+offset_top = 931.0
+offset_right = 1424.0
+offset_bottom = 1060.0
+theme_override_font_sizes/font_size = 35
+text = "Serve Order"
 
 [node name="OrderRect" type="ColorRect" parent="."]
 visible = false
@@ -103,5 +113,6 @@ texture = ExtResource("1_ikxkj")
 
 [connection signal="timeout" from="DialogueManager/dialogueStartTimer" to="DialogueManager" method="_on_dialogue_start_timer_timeout"]
 [connection signal="pressed" from="NextButton" to="NextButton" method="_on_pressed"]
+[connection signal="pressed" from="ServeButton" to="." method="_on_serve_button_pressed"]
 
 [editable path="DialogueManager"]
