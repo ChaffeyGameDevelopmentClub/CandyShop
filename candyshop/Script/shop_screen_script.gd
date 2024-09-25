@@ -19,6 +19,9 @@ var have3 = 0
 var have4 = 0
 var have5 = 0
 
+@export var totalOrders:int
+var orders = 0
+
 @export var Customer : Sprite2D
 @export var DialogueManager : Control
 @export var orderItem1 : Sprite2D
@@ -26,6 +29,20 @@ var have5 = 0
 
 @export var resourceArray : ShelfResource
 var items1 = []
+
+func endDay():
+	if money >= moneyNeed:
+		print("won")
+		get_tree().change_scene_to_file("res://Scenes/DaySystem/Levels/level_1.tscn")
+		#show next day 
+		#win
+	else:
+		get_tree().change_scene_to_file("res://Scenes/DaySystem/Levels/lose.tscn")
+		
+	pass
+	
+	
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -40,37 +57,41 @@ func _makeOrder():
 		itemOrdered = items1[rng.randf_range(0,4)]
 		have1 +=1
 		sellAmount = 10
+		orders += 1
 		print("ordered: " + itemOrdered)
 		setItem1()
 	elif have2 != need2:
 		itemOrdered = items1[rng.randf_range(5,8)]
 		have2 +=1
 		sellAmount = 15
+		orders += 1
 		print("ordered: " + itemOrdered)
 		setItem1()
 	elif have3 != need3:
 		itemOrdered = items1[rng.randf_range(9,11)]
 		have3 +=1
 		sellAmount = 20
-		
+		orders += 1
 		print("ordered: " + itemOrdered)
 		setItem1()
 	elif have4 != need4:
 		itemOrdered = items1[rng.randf_range(12,13)]
 		have4 +=1
 		sellAmount = 25
+		orders += 1
 		print("ordered: " + itemOrdered)
 		setItem1()
-	if have5 != need5:
+	elif have5 != need5:
 		itemOrdered = items1[rng.randf_range(14,14)]
 		have5 +=1
 		sellAmount = 1000
+		orders += 1
 		print("ordered: " + itemOrdered)
 		setItem1()
-	
-	
+	elif orders == totalOrders:
+		endDay()
 	else:
-		#end day func
+		
 		print("oof")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

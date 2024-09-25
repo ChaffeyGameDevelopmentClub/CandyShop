@@ -18,13 +18,15 @@ position = Vector2(1920, 7)
 texture = ExtResource("2_m25bt")
 
 [node name="CandshopFront" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(1, 7)
 texture = ExtResource("3_i640e")
 
 [node name="ShopScreen" parent="." node_paths=PackedStringArray("timeLimit") instance=ExtResource("4_6pvsj")]
 position = Vector2(-957.485, -535)
+moneyNeed = 20
 need1 = 2
-need2 = 1
+totalOrders = 2
 timeLimit = NodePath("TimeLimitTimer")
 
 [node name="Customer" parent="ShopScreen" index="4" node_paths=PackedStringArray("timeLimit")]
@@ -42,6 +44,7 @@ offset_left = 962.0
 offset_top = -538.0
 offset_right = 962.0
 offset_bottom = -538.0
+metadata/_edit_use_anchors_ = true
 
 [node name="Control" type="Control" parent="ShelfOverlay"]
 anchors_preset = 0
@@ -61,6 +64,7 @@ offset_top = 53.0
 offset_right = 959.0
 offset_bottom = 130.0
 text = "To back"
+metadata/_edit_use_anchors_ = true
 
 [node name="To Front" type="Button" parent="."]
 offset_left = 960.0
@@ -69,10 +73,13 @@ offset_right = 1223.0
 offset_bottom = 136.0
 text = "To fornt
 "
+metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="."]
+visible = false
 offset_right = 8.0
 offset_bottom = 8.0
+metadata/_edit_use_anchors_ = true
 
 [connection signal="mouse_entered" from="ShelfOverlay/Control/ColorRect" to="ShelfOverlay/Control" method="_on_color_rect_mouse_entered"]
 [connection signal="mouse_exited" from="ShelfOverlay/Control/ColorRect" to="ShelfOverlay/Control" method="_on_color_rect_mouse_exited"]

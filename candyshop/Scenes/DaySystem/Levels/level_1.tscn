@@ -1,13 +1,83 @@
-[gd_scene load_steps=3 format=3 uid="uid://cjvdeqdmogw76"]
+[gd_scene load_steps=5 format=3 uid="uid://ddn3scrpt3dti"]
 
-[ext_resource type="PackedScene" uid="uid://dw8j6pg76fxjd" path="res://Scenes/Playscreen/play_screen.tscn" id="1_68jgn"]
-[ext_resource type="Texture2D" uid="uid://brwfm50gyafys" path="res://Assets/icon.svg" id="2_jo500"]
+[ext_resource type="Script" path="res://level_1.gd" id="1_xi1gc"]
+[ext_resource type="PackedScene" uid="uid://38pe832setc0" path="res://Scenes/shop_screen.tscn" id="2_7ofcf"]
+[ext_resource type="PackedScene" uid="uid://fhbg06io7grq" path="res://Scenes/UI/shelf_overlay.tscn" id="3_sd1ui"]
+[ext_resource type="Script" path="res://Scenes/Playscreen/control.gd" id="4_do3wh"]
 
-[node name="Level1" type="Node2D"]
+[node name="Level 1" type="Node2D" node_paths=PackedStringArray("camera", "front", "back")]
+position = Vector2(-968, 544)
+script = ExtResource("1_xi1gc")
+camera = NodePath("Camera")
+front = NodePath("To Front")
+back = NodePath("To Back")
 
-[node name="PlayScreen" parent="." instance=ExtResource("1_68jgn")]
-customers = 7
+[node name="ShopScreen" parent="." node_paths=PackedStringArray("timeLimit") instance=ExtResource("2_7ofcf")]
+position = Vector2(-957.485, -535)
+need1 = 2
+need2 = 1
+timeLimit = NodePath("TimeLimitTimer")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-427, 434)
-texture = ExtResource("2_jo500")
+[node name="Customer" parent="ShopScreen" index="4" node_paths=PackedStringArray("timeLimit")]
+timeLimit = NodePath("../TimeLimitTimer")
+
+[node name="TimeLimitTimer" type="Timer" parent="ShopScreen"]
+wait_time = 60.0
+one_shot = true
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2(1, 6)
+
+[node name="ShelfOverlay" parent="." instance=ExtResource("3_sd1ui")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 962.0
+offset_top = -538.0
+offset_right = 962.0
+offset_bottom = -538.0
+grow_horizontal = 1
+grow_vertical = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Control" type="Control" parent="ShelfOverlay"]
+anchors_preset = 0
+offset_top = 420.0
+offset_right = 143.0
+offset_bottom = 561.0
+script = ExtResource("4_do3wh")
+
+[node name="ColorRect" type="ColorRect" parent="ShelfOverlay/Control"]
+layout_mode = 0
+offset_right = 156.0
+offset_bottom = 138.0
+
+[node name="To Back" type="Button" parent="."]
+offset_left = 725.0
+offset_top = 53.0
+offset_right = 959.0
+offset_bottom = 130.0
+text = "To back"
+metadata/_edit_use_anchors_ = true
+
+[node name="To Front" type="Button" parent="."]
+offset_left = 960.0
+offset_top = 53.0
+offset_right = 1223.0
+offset_bottom = 136.0
+text = "To fornt
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+metadata/_edit_use_anchors_ = true
+
+[connection signal="mouse_entered" from="ShelfOverlay/Control/ColorRect" to="ShelfOverlay/Control" method="_on_color_rect_mouse_entered"]
+[connection signal="mouse_exited" from="ShelfOverlay/Control/ColorRect" to="ShelfOverlay/Control" method="_on_color_rect_mouse_exited"]
+[connection signal="pressed" from="To Back" to="." method="_on_to_back_pressed"]
+[connection signal="pressed" from="To Front" to="." method="_on_to_front_pressed"]
+
+[editable path="ShopScreen"]
+[editable path="ShopScreen/DialogueManager"]
