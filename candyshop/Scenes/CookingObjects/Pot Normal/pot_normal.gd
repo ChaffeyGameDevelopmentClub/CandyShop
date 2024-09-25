@@ -73,7 +73,7 @@ func _on_growing_timer_timeout():
 func _process(delta: float) -> void:
 	if grotSwitch: 
 		GrotProgress.value += (100/growingTimer.wait_time) * delta
-		print(growingTimer.wait_time)
+		#print(growingTimer.wait_time)
 		
 	elif not grotSwitch:
 		GrotProgress.value -= (100/rottingTimer.wait_time) * delta
