@@ -1,35 +1,17 @@
-[gd_scene load_steps=8 format=3 uid="uid://cgvwnh3goli7e"]
+[gd_scene load_steps=2 format=3 uid="uid://cgvwnh3goli7e"]
 
 [ext_resource type="Script" path="res://Script/main_menu.gd" id="1_lvh0n"]
-[ext_resource type="Texture2D" uid="uid://cb1u2cd6a5f6s" path="res://Resources/Main Menu/candybgtest5.png" id="2_dompv"]
-[ext_resource type="Texture2D" uid="uid://oep8g0ywsxhb" path="res://Resources/Main Menu/360_F_146062503_SKhVeah2NFWSauxFm4qEvkgBJMMBOYCh.jpg" id="2_ruvww"]
-[ext_resource type="Texture2D" uid="uid://dv6k46df7ups1" path="res://Resources/Main Menu/chocobarcondensed.png" id="3_b0ppt"]
-[ext_resource type="Texture2D" uid="uid://btmc0snif4xws" path="res://Resources/Main Menu/eatenchoco1condensed.png" id="4_wbq50"]
-[ext_resource type="Texture2D" uid="uid://b13j41k5dclom" path="res://Resources/Main Menu/candycaneswirlcondensed.png" id="5_cmkxl"]
-[ext_resource type="Texture2D" uid="uid://cu4rm8wwvvk7h" path="res://Resources/Main Menu/gumdropscondensed.png" id="6_mn0k6"]
 
 [node name="Main Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 291.0
-offset_top = 468.0
-offset_right = 316.0
-offset_bottom = 229.0
+offset_right = -1920.0
+offset_bottom = -1080.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_lvh0n")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(670, 69)
-scale = Vector2(1.96421, 1.70002)
-texture = ExtResource("2_dompv")
-
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(665, 73)
-scale = Vector2(1.40422, 1.79444)
-texture = ExtResource("2_ruvww")
 
 [node name="PlayButton" type="TextureButton" parent="."]
 layout_mode = 1
@@ -44,9 +26,6 @@ offset_right = 3.44495
 offset_bottom = 8.916
 grow_horizontal = 2
 grow_vertical = 2
-texture_normal = ExtResource("3_b0ppt")
-texture_pressed = ExtResource("4_wbq50")
-texture_hover = ExtResource("4_wbq50")
 stretch_mode = 0
 
 [node name="OptionsButton" type="TextureButton" parent="."]
@@ -62,7 +41,6 @@ offset_right = 29.785
 offset_bottom = -206.814
 grow_horizontal = 2
 grow_vertical = 2
-texture_normal = ExtResource("5_cmkxl")
 stretch_mode = 0
 
 [node name="QuitButton" type="TextureButton" parent="."]
@@ -78,8 +56,19 @@ offset_right = 23.785
 offset_bottom = -181.399
 grow_horizontal = 2
 grow_vertical = 2
-texture_normal = ExtResource("6_mn0k6")
 stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(48.1173, 26.843)
+expand_mode = 1
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="OptionsButton" to="." method="_on_options_button_pressed"]
