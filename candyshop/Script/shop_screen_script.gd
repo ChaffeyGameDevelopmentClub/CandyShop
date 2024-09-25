@@ -3,6 +3,8 @@ var itemOrdered
 var rng = RandomNumberGenerator.new()
 #var items1 = ["Chocolate Popcorn", "Chocolate Bears", "Bear Pop", "Gummy-Pops", "Gummy Sharks", "Chocolate Forest", "Gingerbread House", "Gummy Army", "Strawberry Fields", "Chocolate Latte", "Gummy Candy Corn", "Swedish Fish", "Caramel Apples", "Ginger Bread Man", "last"]
 var items2 = []
+@export var NextLevel:StringName
+
 @export var moneyNeed: int
 var money = 0
 var sellAmount = 0
@@ -33,7 +35,7 @@ var items1 = []
 func endDay():
 	if money >= moneyNeed:
 		print("won")
-		get_tree().change_scene_to_file("res://Scenes/DaySystem/Levels/level_1.tscn")
+		get_tree().change_scene_to_file(NextLevel)
 		#show next day 
 		#win
 	else:

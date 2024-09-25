@@ -1,7 +1,7 @@
 extends Node2D
+
 @export var camera: Camera2D  
-@export var front: Button
-@export var back: Button
+
 var target_position: Vector2
 
 func _ready():
