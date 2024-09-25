@@ -2,7 +2,7 @@ extends Control
 @export var dialogueArray : DialogueArray
 @export var textLabel : RichTextLabel
 @export var timer : Timer
-
+@export var Customer : Sprite2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass#orderStart()
@@ -36,7 +36,7 @@ func playText():
 		print
 		i += 1
 	elif arrayamount-1 < i:
-		get_tree().current_scene.get_node("ShopScreen").get_node("Customer").dialogueEnd()
+		Customer.dialogueEnd()
 		print(str(i) + " arrayamount")
 		i = 0
 
