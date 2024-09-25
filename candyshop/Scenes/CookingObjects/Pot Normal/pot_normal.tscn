@@ -54,20 +54,6 @@ offset_right = 525.0
 offset_bottom = 166.0
 scale = Vector2(0.308214, 0.79763)
 
-[node name="Grot ProgressBar" type="TextureProgressBar" parent="."]
-visible = false
-layout_mode = 0
-offset_left = -97.0
-offset_top = -136.0
-offset_right = 116.0
-offset_bottom = -96.0
-fill_mode = 4
-radial_initial_angle = 90.0
-radial_fill_degrees = 270.0
-texture_under = ExtResource("2_jpjcl")
-texture_over = ExtResource("2_jpjcl")
-texture_progress = ExtResource("2_jpjcl")
-
 [node name="Grot Progress" type="ProgressBar" parent="."]
 layout_mode = 0
 offset_left = -119.0
