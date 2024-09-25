@@ -8,9 +8,10 @@
 [ext_resource type="Script" path="res://Script/order_rect.gd" id="4_2n1j5"]
 [ext_resource type="PackedScene" uid="uid://ckmwygrvgfwj" path="res://Scenes/UI/dialogue_manager.tscn" id="5_t5acm"]
 
-[node name="ShopScreen" type="Node2D" node_paths=PackedStringArray("Customer", "DialogueManager", "orderItem1", "timeLimit")]
+[node name="ShopScreen" type="Node2D" node_paths=PackedStringArray("dayCounter", "Customer", "DialogueManager", "orderItem1", "timeLimit")]
 position = Vector2(-1925, 5)
 script = ExtResource("1_hri7p")
+dayCounter = NodePath("Money&day")
 Customer = NodePath("Customer")
 DialogueManager = NodePath("DialogueManager")
 orderItem1 = NodePath("OrderRect/OrderItem1")
@@ -114,6 +115,7 @@ NextButton = NodePath("../NextButton")
 ServeButton = NodePath("../ServeButton")
 
 [node name="OrderLabel" type="Label" parent="OrderRect"]
+visible = false
 layout_mode = 0
 offset_left = 52.0
 offset_top = 21.0
@@ -121,7 +123,7 @@ offset_right = 262.0
 offset_bottom = 96.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 60
-text = "Order:"
+text = "Order: "
 
 [node name="OrderItem1" type="Sprite2D" parent="OrderRect"]
 visible = false
@@ -144,6 +146,16 @@ texture = ExtResource("1_ikxkj")
 [node name="TimerLimitTimer" type="Timer" parent="."]
 wait_time = 60.0
 one_shot = true
+
+[node name="Money&day" type="Label" parent="."]
+offset_left = 542.0
+offset_top = 378.0
+offset_right = 1036.0
+offset_bottom = 474.0
+theme_override_font_sizes/font_size = 30
+text = "dawdaw"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [connection signal="timeout" from="DialogueManager/dialogueStartTimer" to="DialogueManager" method="_on_dialogue_start_timer_timeout"]
 [connection signal="pressed" from="NextButton" to="NextButton" method="_on_pressed"]

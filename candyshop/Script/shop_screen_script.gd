@@ -3,6 +3,10 @@ var itemOrdered
 var rng = RandomNumberGenerator.new()
 #var items1 = ["Chocolate Popcorn", "Chocolate Bears", "Bear Pop", "Gummy-Pops", "Gummy Sharks", "Chocolate Forest", "Gingerbread House", "Gummy Army", "Strawberry Fields", "Chocolate Latte", "Gummy Candy Corn", "Swedish Fish", "Caramel Apples", "Ginger Bread Man", "last"]
 var items2 = []
+
+@export var day: String
+@export var dayCounter: Label
+
 @export var NextLevel:StringName
 
 @export var moneyNeed: int
@@ -49,6 +53,7 @@ func endDay():
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	print("hello")
+	dayCounter.text = "day: " + str(day) + " money: " + str(money) + " money needed:" + str(moneyNeed)
 	GameManager.connect('sendOut',sendTo)
 	for i in resourceArray.item_array.size():
 		items1.append(resourceArray.item_array[i].Name)
@@ -56,7 +61,7 @@ func _ready():
 	print(resourceArray.item_array[0].Amount)
 func _makeOrder():
 	if have1 != need1:
-		itemOrdered = items1[rng.randf_range(1,1)]
+		itemOrdered = items1[rng.randf_range(0,4)]
 		have1 +=1
 		sellAmount = 10
 		orders += 1
@@ -107,6 +112,7 @@ func _on_serve_button_pressed():
 		print("Order Complete")
 		money += sellAmount
 		print(money)
+		dayCounter.text = "day: " + str(day) + "money: " + str(money)
 		Customer.completeOrder()
 		DialogueManager.completeOrder()
 	else:
@@ -122,6 +128,9 @@ func _on_time_limit_timer_timeout():
 
 func setItem1():
 	orderItem1.visible = true
+	
+	
+	
 	if(itemOrdered == "Bear Pop"):
 		orderItem1.set_texture(preload("res://Assets/Ingredent Assets/bear pop.png"))
 	elif(itemOrdered == "Candy Corn"):

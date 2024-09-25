@@ -7,6 +7,7 @@
 [node name="lv2" type="Node2D"]
 
 [node name="ShopScreen" parent="." instance=ExtResource("1_6wnng")]
+day = "2"
 NextLevel = &"res://Scenes/DaySystem/Levels/lv_3.tscn"
 moneyNeed = 70
 need1 = 6
