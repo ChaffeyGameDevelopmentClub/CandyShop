@@ -1,3 +1,9 @@
-[gd_scene format=3 uid="uid://dm0yytkubjq5c"]
+[gd_scene load_steps=2 format=3 uid="uid://dm0yytkubjq5c"]
+
+[ext_resource type="Texture2D" uid="uid://dy7q6ieb5ow8k" path="res://Assets/you won screen.png" id="1_2nuwx"]
 
 [node name="Win" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(908, 421)
+texture = ExtResource("1_2nuwx")

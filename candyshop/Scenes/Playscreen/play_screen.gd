@@ -1,8 +1,8 @@
 extends Node2D
 
+@export var customers:int
 @export var camera: Camera2D  
 var target_position: Vector2
-var customers = 5
 var sell = 0
 var miss  = 0
 
@@ -22,7 +22,7 @@ func _process(delta):
 	if (sell+miss == customers):
 		if (sell >= 3):
 			print("won")
-			
+			get_tree().change_scene_to_file("res://Scenes/DaySystem/Levels/level_1.tscn")
 		elif (sell<3):
 			print("lost")
 
@@ -31,7 +31,7 @@ func _process(delta):
 
 func _on_sell_button_down() -> void:
 	sell += 1
-	
+	print(customers)
 	
 
 

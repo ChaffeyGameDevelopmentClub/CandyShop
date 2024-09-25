@@ -9,6 +9,7 @@
 [node name="PlayScreen" type="Node2D" node_paths=PackedStringArray("camera")]
 position = Vector2(-959.515, 536)
 script = ExtResource("1_shwib")
+customers = 5
 camera = NodePath("Camera")
 
 [node name="CookingScreen" type="Sprite2D" parent="."]
@@ -57,9 +58,9 @@ text = "To fornt
 "
 
 [node name="sell" type="Button" parent="."]
-offset_left = -40.0
+offset_left = -40.485
 offset_top = -351.0
-offset_right = 265.0
+offset_right = 264.515
 offset_bottom = -236.0
 text = "sell"
 
