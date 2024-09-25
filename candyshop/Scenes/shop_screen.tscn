@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Script/shop_screen_script.gd" id="1_hri7p"]
 [ext_resource type="Texture2D" uid="uid://brwfm50gyafys" path="res://Assets/icon.svg" id="1_ikxkj"]
 [ext_resource type="Script" path="res://Script/shopCustomer.gd" id="2_6vssm"]
-[ext_resource type="Resource" uid="uid://druc3sg2s4krw" path="res://Resources/Shelf Items/ShelfResource.tres" id="2_bwgol"]
+[ext_resource type="Resource" uid="uid://dpqceg5trpq1e" path="res://Resources/Shelf Items/ShelfProdResource.tres" id="2_kv0lh"]
 [ext_resource type="Script" path="res://Script/next_button.gd" id="3_60a7r"]
 [ext_resource type="Script" path="res://Script/order_rect.gd" id="4_2n1j5"]
 [ext_resource type="PackedScene" uid="uid://ckmwygrvgfwj" path="res://Scenes/UI/dialogue_manager.tscn" id="5_t5acm"]
@@ -13,7 +13,7 @@ script = ExtResource("1_hri7p")
 Customer = NodePath("Customer")
 DialogueManager = NodePath("DialogueManager")
 orderItem1 = NodePath("OrderRect/OrderItem1")
-resourceArray = ExtResource("2_bwgol")
+resourceArray = ExtResource("2_kv0lh")
 
 [node name="BGRect" type="ColorRect" parent="."]
 offset_right = 1152.0

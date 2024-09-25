@@ -1,11 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://dw8j6pg76fxjd"]
+[gd_scene load_steps=7 format=3 uid="uid://dw8j6pg76fxjd"]
 
 [ext_resource type="Script" path="res://Scenes/Playscreen/play_screen.gd" id="1_shwib"]
 [ext_resource type="Texture2D" uid="uid://bdli5de6jykhm" path="res://Assets/Cooking_Screen.png" id="2_m25bt"]
 [ext_resource type="Texture2D" uid="uid://cih1jdby83aeo" path="res://Assets/candshopFRONT.png" id="3_i640e"]
 [ext_resource type="PackedScene" uid="uid://fhbg06io7grq" path="res://Scenes/UI/shelf_overlay.tscn" id="4_5qjal"]
 [ext_resource type="PackedScene" uid="uid://38pe832setc0" path="res://Scenes/shop_screen.tscn" id="4_6pvsj"]
-[ext_resource type="Resource" uid="uid://dpqceg5trpq1e" path="res://Resources/Shelf Items/ShelfProdResource.tres" id="5_cogks"]
 [ext_resource type="Script" path="res://Scenes/Playscreen/control.gd" id="5_ips3f"]
 
 [node name="PlayScreen" type="Node2D" node_paths=PackedStringArray("camera")]
@@ -24,21 +23,12 @@ texture = ExtResource("3_i640e")
 
 [node name="ShopScreen" parent="." node_paths=PackedStringArray("timeLimit") instance=ExtResource("4_6pvsj")]
 position = Vector2(-957.485, -535)
+need1 = 2
+need2 = 1
 timeLimit = NodePath("TimeLimitTimer")
-resourceArray = ExtResource("5_cogks")
 
-[node name="DialogueManager" parent="ShopScreen" index="3" node_paths=PackedStringArray("Customer")]
-Customer = NodePath("../Customer")
-
-[node name="Customer" parent="ShopScreen" index="4" node_paths=PackedStringArray("order", "dialogueManager", "shopScreen", "timeLimit")]
-order = NodePath("../OrderRect")
-dialogueManager = NodePath("../DialogueManager")
-shopScreen = NodePath("..")
+[node name="Customer" parent="ShopScreen" index="4" node_paths=PackedStringArray("timeLimit")]
 timeLimit = NodePath("../TimeLimitTimer")
-
-[node name="OrderRect" parent="ShopScreen" index="7" node_paths=PackedStringArray("NextButton", "ServeButton")]
-NextButton = NodePath("../NextButton")
-ServeButton = NodePath("../ServeButton")
 
 [node name="TimeLimitTimer" type="Timer" parent="ShopScreen"]
 wait_time = 60.0

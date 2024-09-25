@@ -3,6 +3,21 @@ var itemOrdered
 var rng = RandomNumberGenerator.new()
 #var items1 = ["Chocolate Popcorn", "Chocolate Bears", "Bear Pop", "Gummy-Pops", "Gummy Sharks", "Chocolate Forest", "Gingerbread House", "Gummy Army", "Strawberry Fields", "Chocolate Latte", "Gummy Candy Corn", "Swedish Fish", "Caramel Apples", "Ginger Bread Man", "last"]
 var items2 = []
+@export var moneyNeed: int
+var money = 0
+var sellAmount = 0
+
+@export var need1: int
+@export var need2: int
+@export var need3: int
+@export var need4: int
+@export var need5: int
+
+var have1 = 0
+var have2 = 0
+var have3 = 0 
+var have4 = 0
+var have5 = 0
 
 @export var Customer : Sprite2D
 @export var DialogueManager : Control
@@ -21,10 +36,42 @@ func _ready():
 	print(items1)
 	print(resourceArray.item_array[0].Amount)
 func _makeOrder():
-	itemOrdered = items1[rng.randf_range(0,4)]
-	print("ordered: " + itemOrdered)
-	setItem1()
+	if have1 != need1:
+		itemOrdered = items1[rng.randf_range(0,4)]
+		have1 +=1
+		sellAmount = 10
+		print("ordered: " + itemOrdered)
+		setItem1()
+	elif have2 != need2:
+		itemOrdered = items1[rng.randf_range(5,8)]
+		have2 +=1
+		sellAmount = 15
+		print("ordered: " + itemOrdered)
+		setItem1()
+	elif have3 != need3:
+		itemOrdered = items1[rng.randf_range(9,11)]
+		have3 +=1
+		sellAmount = 20
+		
+		print("ordered: " + itemOrdered)
+		setItem1()
+	elif have4 != need4:
+		itemOrdered = items1[rng.randf_range(12,13)]
+		have4 +=1
+		sellAmount = 25
+		print("ordered: " + itemOrdered)
+		setItem1()
+	if have5 != need5:
+		itemOrdered = items1[rng.randf_range(14,14)]
+		have5 +=1
+		sellAmount = 1000
+		print("ordered: " + itemOrdered)
+		setItem1()
 	
+	
+	else:
+		#end day func
+		print("oof")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
@@ -35,6 +82,10 @@ func _on_serve_button_pressed():
 	timeLimit.stop()
 	if items2.has(itemOrdered):
 		print("Order Complete")
+		money += sellAmount
+		print(money)
+		
+		
 		Customer.completeOrder()
 		DialogueManager.completeOrder()
 	else:
