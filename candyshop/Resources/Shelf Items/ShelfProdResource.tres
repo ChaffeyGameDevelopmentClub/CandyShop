@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="ShelfResource" load_steps=19 format=3 uid="uid://dpqceg5trpq1e"]
+[gd_resource type="Resource" script_class="ShelfResource" load_steps=18 format=3 uid="uid://dpqceg5trpq1e"]
 
 [ext_resource type="Script" path="res://Script/ShelfScripts/itemResources.gd" id="1_m8kl5"]
 [ext_resource type="Resource" uid="uid://1yb8wjsobrt8" path="res://Resources/Shelf Items/Products/CholoateBears.tres" id="2_65sh5"]
@@ -18,11 +18,6 @@
 [ext_resource type="Resource" uid="uid://dgeb52ifhaayc" path="res://Resources/Shelf Items/Products/lvl4/GingerBreadMan.tres" id="15_lqtpr"]
 [ext_resource type="Resource" uid="uid://bxwv4xr4brv2l" path="res://Resources/Shelf Items/Products/lvl5/FunDip.tres" id="16_3sru0"]
 
-[sub_resource type="Resource" id="Resource_lhp6n"]
-script = ExtResource("1_m8kl5")
-Name = "fasdf"
-Amount = 0
-
 [resource]
 script = ExtResource("2_jvt4n")
-item_array = Array[ExtResource("1_m8kl5")]([ExtResource("2_65sh5"), ExtResource("3_58une"), ExtResource("4_50lfd"), ExtResource("5_2cfhv"), ExtResource("6_jbx8w"), ExtResource("7_yugu2"), ExtResource("8_4bw3n"), ExtResource("9_v4t3m"), ExtResource("10_5iqes"), ExtResource("11_eyiad"), ExtResource("12_dlsim"), ExtResource("13_wqm2p"), ExtResource("14_hfmwx"), ExtResource("15_lqtpr"), ExtResource("16_3sru0"), SubResource("Resource_lhp6n")])
+item_array = Array[ExtResource("1_m8kl5")]([ExtResource("2_65sh5"), ExtResource("3_58une"), ExtResource("4_50lfd"), ExtResource("5_2cfhv"), ExtResource("6_jbx8w"), ExtResource("7_yugu2"), ExtResource("8_4bw3n"), ExtResource("9_v4t3m"), ExtResource("10_5iqes"), ExtResource("11_eyiad"), ExtResource("12_dlsim"), ExtResource("13_wqm2p"), ExtResource("14_hfmwx"), ExtResource("15_lqtpr"), ExtResource("16_3sru0")])
