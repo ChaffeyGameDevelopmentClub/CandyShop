@@ -11,7 +11,6 @@
 [node name="PlayScreen" type="Node2D" node_paths=PackedStringArray("camera")]
 position = Vector2(-959.515, 536)
 script = ExtResource("1_shwib")
-customers = 5
 camera = NodePath("Camera")
 
 [node name="CookingScreen" type="Sprite2D" parent="."]
