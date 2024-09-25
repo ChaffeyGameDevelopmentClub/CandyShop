@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cp1a0a6itp7yd"]
+[gd_scene load_steps=8 format=3 uid="uid://fhbg06io7grq"]
 
 [ext_resource type="Script" path="res://Script/ShelfScripts/ShelfOverlayContainer.gd" id="1_78kgt"]
 [ext_resource type="Script" path="res://Script/ShelfScripts/MouseSensorPot.gd" id="1_amly7"]
