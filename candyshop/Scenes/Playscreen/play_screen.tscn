@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://fhbg06io7grq" path="res://Scenes/UI/shelf_overlay.tscn" id="4_5qjal"]
 
 [node name="PlayScreen" type="Node2D" node_paths=PackedStringArray("camera")]
-position = Vector2(960, 536)
+position = Vector2(-959.515, 536)
 script = ExtResource("1_shwib")
 camera = NodePath("Camera")
 
@@ -19,7 +19,7 @@ position = Vector2(1, 7)
 texture = ExtResource("3_i640e")
 
 [node name="Camera" type="Camera2D" parent="."]
-position = Vector2(8, -2)
+position = Vector2(1, 6)
 
 [node name="ShelfOverlay" parent="." instance=ExtResource("4_5qjal")]
 offset_left = 962.0
