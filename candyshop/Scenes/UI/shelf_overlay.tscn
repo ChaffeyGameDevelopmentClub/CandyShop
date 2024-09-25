@@ -281,7 +281,6 @@ offset_right = 161.0
 offset_bottom = 322.0
 scale = Vector2(0.739777, 0.553983)
 plantType = "Candy Corn"
-growColor = Color(0.143635, 0.788046, 0.397102, 1)
 
 [node name="Pot_Normal2" parent="Pots/Left Pots" instance=ExtResource("10_dwvl6")]
 offset_left = 322.0
@@ -290,7 +289,6 @@ offset_right = 322.0
 offset_bottom = 324.0
 scale = Vector2(0.739777, 0.553983)
 plantType = "Cholate"
-growColor = Color(0.143635, 0.788046, 0.397102, 1)
 
 [node name="Pot_Normal3" parent="Pots/Left Pots" instance=ExtResource("10_dwvl6")]
 offset_left = 500.0
@@ -299,7 +297,6 @@ offset_right = 500.0
 offset_bottom = 326.0
 scale = Vector2(0.739777, 0.553983)
 plantType = "Gummy Bears"
-growColor = Color(0.143635, 0.788046, 0.397102, 1)
 
 [node name="Right Pots" type="Control" parent="Pots"]
 anchors_preset = 0
@@ -313,7 +310,6 @@ offset_right = 1411.0
 offset_bottom = 324.0
 scale = Vector2(0.739777, 0.553983)
 plantType = "Gummy Worms"
-growColor = Color(0.143635, 0.788046, 0.397102, 1)
 
 [node name="Pot_Normal2" parent="Pots/Right Pots" instance=ExtResource("10_dwvl6")]
 offset_left = 1587.0
@@ -322,7 +318,6 @@ offset_right = 1587.0
 offset_bottom = 331.0
 scale = Vector2(0.739777, 0.553983)
 plantType = "Licorice"
-growColor = Color(0.143635, 0.788046, 0.397102, 1)
 
 [node name="Pot_Normal3" parent="Pots/Right Pots" instance=ExtResource("10_dwvl6")]
 offset_left = 1778.0
