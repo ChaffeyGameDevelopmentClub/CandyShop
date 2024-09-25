@@ -28,11 +28,8 @@ window/size/viewport_height=1080
 
 folder_colors={
 "res://Assets/": "green",
-"res://CookingObjects/": "purple",
-"res://Resources/": "blue",
 "res://Scenes/": "orange",
 "res://Scenes/Dialogue Machine/": "green",
-"res://Scenes/Playscreen/": "pink",
 "res://Scenes/UI/": "teal",
 "res://Script/": "red"
 }
