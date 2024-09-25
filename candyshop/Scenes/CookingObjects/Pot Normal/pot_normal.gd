@@ -58,7 +58,6 @@ func switchSprite():
 		plant.visible = true
 		#print('rotting')
 		#*if the pot should be rotting starts the timer then shows the sprite
-
 func _on_rotting_timer_timeout():
 	#print("rotting timer")
 	rotting = false #\ changes states by switching the varables from false and true 

@@ -335,10 +335,10 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Pot_Normal" parent="Pots/Left Pots" instance=ExtResource("10_dwvl6")]
-offset_left = 152.0
-offset_top = 324.0
-offset_right = 152.0
-offset_bottom = 324.0
+offset_left = 161.0
+offset_top = 322.0
+offset_right = 161.0
+offset_bottom = 322.0
 scale = Vector2(0.739777, 0.553983)
 plantType = "Candy Corn"
 
@@ -386,6 +386,7 @@ offset_right = 1778.0
 offset_bottom = 327.0
 scale = Vector2(0.739777, 0.553983)
 plantType = "Loli-Pop"
+growColor = Color(0.143082, 0.783175, 0.39463, 1)
 
 [node name="DragScript" type="Control" parent="." node_paths=PackedStringArray("node", "textureRect")]
 anchors_preset = 0

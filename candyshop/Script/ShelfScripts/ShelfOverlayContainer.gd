@@ -13,7 +13,7 @@ func _ready() -> void:
 		var newbutton = button_preload.instantiate()
 		newbutton.initName(shelfResource.item_array[i].Name)
 		newbutton.initAmount(shelfResource.item_array[i].Amount)
-		newbutton.initImg(shelfResource.item_array[i].img)
+		newbutton.initImg(shelfResource.item_array[i].image)
 		add_child(newbutton)
 	#GameManager.updateAmount(i,10)
 var num = 1
