@@ -15,7 +15,7 @@ grow_vertical = 2
 script = ExtResource("1_isvj5")
 
 [node name="PauseButtons" type="Control" parent="."]
-process_mode = 2
+visible = false
 layout_mode = 1
 anchors_preset = 0
 scale = Vector2(2.03, 2.03)
