@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://ckogg5yl6ddpk"]
 
-[ext_resource type="Script" path="res://CookingObjects/Pot/pot_screen.gd" id="1_7aekk"]
+[ext_resource type="Script" path="res://Scenes/CookingObjects/Pot/pot_screen.gd" id="1_7aekk"]
 [ext_resource type="Texture2D" uid="uid://brwfm50gyafys" path="res://Assets/icon.svg" id="2_fmfbe"]
-[ext_resource type="Script" path="res://CookingObjects/Pot/pot_state_machine.gd" id="2_yvkic"]
-[ext_resource type="Script" path="res://CookingObjects/Pot/growing_state.gd" id="3_b8ts2"]
-[ext_resource type="Script" path="res://CookingObjects/Pot/rotting_state.gd" id="4_xlety"]
+[ext_resource type="Script" path="res://Scenes/CookingObjects/Pot/pot_state_machine.gd" id="2_yvkic"]
+[ext_resource type="Script" path="res://Scenes/CookingObjects/Pot/growing_state.gd" id="3_b8ts2"]
+[ext_resource type="Script" path="res://Scenes/CookingObjects/Pot/rotting_state.gd" id="4_xlety"]
 
 [node name="PotScreen" type="Node2D" node_paths=PackedStringArray("state_machine")]
 position = Vector2(1012, 530)

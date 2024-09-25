@@ -5,11 +5,14 @@ extends Control
 @export var plant: Sprite2D
 @export var growingTimer: Timer
 @export var rottingTimer: Timer
+@export var sproutTexture : Texture
+@export var plantTexture : Texture
 
 var Chocolate = 1
 var growing = true
 var rotting = false
 var collected = false
+
 
 func collecting():
 	if (collected == true): # if the varible for when it's clicked is true then do ...
@@ -58,6 +61,8 @@ func _on_growing_timer_timeout():
 
 func _ready(): # to start everything
 	switchSprite() 
+	sprout.texture = sproutTexture
+	plant.texture = plantTexture
 
 
 func _on_collect_button_button_down():

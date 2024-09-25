@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3lp15qu8o7yu"
-path="res://.godot/imported/360_F_171058201_KFR9cLbr3VKoQIFtGFY7t9PvfmdXjv5t.jpg-2adbcfa0278a018a576ecc07c56a8cbc.ctex"
+uid="uid://befw6tl63j35r"
+path="res://.godot/imported/abstract-smooth-curve-line-on-pink-gradient-lighting-color-background-vector.jpg-74a993470a337bc3e3ba28b8f30be648.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Main Menu/360_F_171058201_KFR9cLbr3VKoQIFtGFY7t9PvfmdXjv5t.jpg"
-dest_files=["res://.godot/imported/360_F_171058201_KFR9cLbr3VKoQIFtGFY7t9PvfmdXjv5t.jpg-2adbcfa0278a018a576ecc07c56a8cbc.ctex"]
+source_file="res://Assets/Main Menu/abstract-smooth-curve-line-on-pink-gradient-lighting-color-background-vector.jpg"
+dest_files=["res://.godot/imported/abstract-smooth-curve-line-on-pink-gradient-lighting-color-background-vector.jpg-74a993470a337bc3e3ba28b8f30be648.ctex"]
 
 [params]
 
