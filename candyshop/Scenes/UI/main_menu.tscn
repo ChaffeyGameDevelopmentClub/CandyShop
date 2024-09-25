@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://cgvwnh3goli7e"]
 
 [ext_resource type="Script" path="res://Script/main_menu.gd" id="1_lvh0n"]
-[ext_resource type="Texture2D" uid="uid://cb1u2cd6a5f6s" path="res://Resources/Main Menu/candybgtest5.png" id="2_dompv"]
-[ext_resource type="Texture2D" uid="uid://dv6k46df7ups1" path="res://Resources/Main Menu/chocobarcondensed.png" id="3_b0ppt"]
-[ext_resource type="Texture2D" uid="uid://3lp15qu8o7yu" path="res://Resources/Main Menu/360_F_171058201_KFR9cLbr3VKoQIFtGFY7t9PvfmdXjv5t.jpg" id="3_ffglk"]
-[ext_resource type="Texture2D" uid="uid://btmc0snif4xws" path="res://Resources/Main Menu/eatenchoco1condensed.png" id="4_wbq50"]
-[ext_resource type="Texture2D" uid="uid://b13j41k5dclom" path="res://Resources/Main Menu/candycaneswirlcondensed.png" id="5_cmkxl"]
-[ext_resource type="Texture2D" uid="uid://cu4rm8wwvvk7h" path="res://Resources/Main Menu/gumdropscondensed.png" id="6_mn0k6"]
+[ext_resource type="Texture2D" uid="uid://bb57tnypxnyq3" path="res://Assets/Main Menu/candybgtest5.png" id="2_dompv"]
+[ext_resource type="Texture2D" uid="uid://c2wfhwfvjelnj" path="res://Assets/Main Menu/chocobarcondensed.png" id="3_b0ppt"]
+[ext_resource type="Texture2D" uid="uid://3lp15qu8o7yu" path="res://Assets/Main Menu/360_F_171058201_KFR9cLbr3VKoQIFtGFY7t9PvfmdXjv5t.jpg" id="3_ffglk"]
+[ext_resource type="Texture2D" uid="uid://dk7j8bmq8s3ro" path="res://Assets/Main Menu/eatenchoco1condensed.png" id="4_wbq50"]
+[ext_resource type="Texture2D" uid="uid://cppqeemanlpfw" path="res://Assets/Main Menu/candycaneswirlcondensed.png" id="5_cmkxl"]
+[ext_resource type="Texture2D" uid="uid://b7owh7k1eb8tk" path="res://Assets/Main Menu/gumdropscondensed.png" id="6_mn0k6"]
 
 [node name="Main Menu" type="Control"]
 layout_mode = 3
