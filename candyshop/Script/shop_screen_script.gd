@@ -56,7 +56,7 @@ func _ready():
 	print(resourceArray.item_array[0].Amount)
 func _makeOrder():
 	if have1 != need1:
-		itemOrdered = items1[rng.randf_range(0,4)]
+		itemOrdered = items1[rng.randf_range(1,1)]
 		have1 +=1
 		sellAmount = 10
 		orders += 1
