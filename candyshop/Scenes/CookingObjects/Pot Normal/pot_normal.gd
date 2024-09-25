@@ -7,7 +7,12 @@ extends Control
 @export var rottingTimer: Timer
 @export var sproutTexture : Texture
 @export var plantTexture : Texture
+@export var GrotProgress: ProgressBar
+@export var growColor: Color
+@export var rotColor: Color
+@export var clickedColor:Color
 
+var grotSwitch = true
 var Chocolate = 1
 var growing = true
 var rotting = false
@@ -34,17 +39,22 @@ func resetTimer():
 func switchSprite():
 	plant.visible = false
 	sprout.visible = false
-	#*makes both sprites hiden both showing correct one
+	#*makes both sprites hiden then showing correct one
 	
 	
 	if (growing == true):
 		growingTimer.start()
+		#GrotProgress.max_value = growingTimer.time_left
+		GrotProgress.set_deferred("self_modulate",growColor)
+		grotSwitch = true
 		sprout.visible = true
 		#print("growing")
 		#print(collected)
 		#*if the pot should be growing starts the timer then shows the sprite
 	elif(rotting == true):
 		rottingTimer.start()
+		GrotProgress.set_deferred("self_modulate",rotColor)
+		grotSwitch = false
 		plant.visible = true
 		#print('rotting')
 		#*if the pot should be rotting starts the timer then shows the sprite
@@ -61,7 +71,13 @@ func _on_growing_timer_timeout():
 	rotting = true  #/
 	switchSprite()
 
-
+func _process(delta: float) -> void:
+	if grotSwitch: 
+		GrotProgress.value += (100/growingTimer.wait_time) * delta
+		print(growingTimer.wait_time)
+		
+	elif not grotSwitch:
+		GrotProgress.value -= (100/rottingTimer.wait_time) * delta
 func _ready(): # to start everything
 	switchSprite() 
 	sprout.texture = sproutTexture
@@ -74,6 +90,10 @@ func _on_collect_button_button_down():
 		collected = true  # to prevent spaming to earn more might not be needed idk lol
 		rotting = false #\ - changing states
 		growing = true  #/
+		
+		GrotProgress.set_deferred("self_modulate",clickedColor)
+		GrotProgress.value = 0
+		
 		collecting() 
 		resetTimer() # with out restarting timer it will bug out
 		switchSprite() 
