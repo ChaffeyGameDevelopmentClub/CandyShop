@@ -38,6 +38,7 @@ offset_bottom = 88.0
 
 [node name="ChatBG" type="TextureRect" parent="Control"]
 layout_mode = 1
+anchors_preset = -1
 offset_right = 757.0
 offset_bottom = 252.0
 texture = ExtResource("2_ct2mw")
