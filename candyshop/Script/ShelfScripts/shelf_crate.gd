@@ -32,6 +32,7 @@ func initImg(Img):
 func _on_button_down() -> void:
 	held = true
 	#print(name + ' Down')
+	GameManager.checkHeldItem(name)
 	if amount == 0:
 		pass
 	else:

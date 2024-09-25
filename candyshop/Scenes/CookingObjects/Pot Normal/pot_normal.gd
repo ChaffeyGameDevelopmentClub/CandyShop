@@ -18,8 +18,8 @@ var collected = false
 func collecting():
 	if (collected == true): # if the varible for when it's clicked is true then do ...
 			addToStorage(plantType)
-			print("collected")
-			print(Chocolate)
+			#print("collected")
+			#print(Chocolate)
 			growingTimer.wait_time = randi_range(4,8)
 
 func addToStorage(nameOf):
@@ -40,23 +40,23 @@ func switchSprite():
 	if (growing == true):
 		growingTimer.start()
 		sprout.visible = true
-		print("growing")
-		print(collected)
+		#print("growing")
+		#print(collected)
 		#*if the pot should be growing starts the timer then shows the sprite
 	elif(rotting == true):
 		rottingTimer.start()
 		plant.visible = true
-		print('rotting')
+		#print('rotting')
 		#*if the pot should be rotting starts the timer then shows the sprite
 
 func _on_rotting_timer_timeout():
-	print("rotting timer")
+	#print("rotting timer")
 	rotting = false #\ changes states by switching the varables from false and true 
 	growing = true	#/ then goes into switchsprite functaion with new varavbles
 	switchSprite()
 
 func _on_growing_timer_timeout(): 
-	print('growing timer')
+	#print('growing timer')
 	growing = false #\ changes states
 	rotting = true  #/
 	switchSprite()
@@ -70,7 +70,7 @@ func _ready(): # to start everything
 
 func _on_collect_button_button_down():
 	if (rotting == true): # so if it's in rotting state it can collect
-		print("can collect") 
+		#print("can collect") 
 		collected = true  # to prevent spaming to earn more might not be needed idk lol
 		rotting = false #\ - changing states
 		growing = true  #/
@@ -78,9 +78,9 @@ func _on_collect_button_button_down():
 		resetTimer() # with out restarting timer it will bug out
 		switchSprite() 
 	else:
-		print("can't collect yet")
-
+		#print("can't collect yet")
+		pass
 func _on_collect_button_button_up() -> void:
 	
 	collected = false #again to prevent spaming
-	print("done" + str(collected))
+	#print("done" + str(collected))
