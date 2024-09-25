@@ -34,9 +34,11 @@ texture = ExtResource("4_b84a2")
 
 [node name="Growing Timer" type="Timer" parent="."]
 wait_time = 4.0
+one_shot = true
 
 [node name="Rotting Timer" type="Timer" parent="."]
-wait_time = 6.823
+wait_time = 4.047
+one_shot = true
 
 [node name="CollectButton" type="TextureButton" parent="."]
 layout_mode = 0
@@ -48,3 +50,4 @@ offset_bottom = 771.0
 [connection signal="timeout" from="Growing Timer" to="." method="_on_growing_timer_timeout"]
 [connection signal="timeout" from="Rotting Timer" to="." method="_on_rotting_timer_timeout"]
 [connection signal="button_down" from="CollectButton" to="." method="_on_collect_button_button_down"]
+[connection signal="button_up" from="CollectButton" to="." method="_on_collect_button_button_up"]
