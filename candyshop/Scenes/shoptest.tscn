@@ -19,7 +19,7 @@ NextButton = NodePath("../NextButton")
 ServeButton = NodePath("../ServeButton")
 
 [node name="TimeLimitTimer" type="Timer" parent="ShopScreen"]
-wait_time = 10.0
+wait_time = 1000.0
 one_shot = true
 
 [connection signal="timeout" from="ShopScreen/TimeLimitTimer" to="ShopScreen" method="_on_time_limit_timer_timeout"]
