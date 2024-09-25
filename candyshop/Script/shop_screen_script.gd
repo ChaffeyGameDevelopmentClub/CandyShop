@@ -107,8 +107,6 @@ func _on_serve_button_pressed():
 		print("Order Complete")
 		money += sellAmount
 		print(money)
-		
-		
 		Customer.completeOrder()
 		DialogueManager.completeOrder()
 	else:
