@@ -7,9 +7,12 @@ var items2 = []
 @export var DialogueManager : Control
 @export var orderItem1 : Sprite2D
 @export var timeLimit : Timer
+
+@export var resourceArray : ShelfResource
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	print("hello")
+	GameManager.connect('sendOut',sendTo)
 
 func _makeOrder():
 	itemOrdered = items1[rng.randf_range(0,14)]
@@ -22,7 +25,7 @@ func _process(delta):
 
 
 func _on_serve_button_pressed():
-	items2.append(itemOrdered)
+	#items2.append(itemOrdered)
 	timeLimit.stop()
 	if items2.has(itemOrdered):
 		print("Order Complete")
@@ -56,3 +59,7 @@ func setItem1():
 	else:
 		orderItem1.set_texture(preload("res://Assets/icon.svg"))
 	orderItem1.scale = Vector2(100, 100) / orderItem1.texture.get_size()
+
+func sendTo(nameOf):
+	print("sendto: " + nameOf)
+	items2.append(nameOf)
