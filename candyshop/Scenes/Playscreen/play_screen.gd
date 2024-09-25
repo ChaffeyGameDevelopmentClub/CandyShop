@@ -12,10 +12,10 @@ func _ready():
 	target_position = camera.position  
 
 func front_pressed():
-	target_position.x -= 2000 
+	target_position.x -= 1922 
 
 func back_pressed():
-	target_position.x += 2000  
+	target_position.x += 1922  
 
 func _process(delta):
 	camera.position = camera.position.lerp(target_position, 0.1)

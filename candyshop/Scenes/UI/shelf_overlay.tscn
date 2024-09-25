@@ -75,6 +75,7 @@ color = Color(1, 1, 1, 0)
 script = ExtResource("1_amly7")
 
 [node name="GridContainer" type="GridContainer" parent="."]
+top_level = true
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -89,6 +90,7 @@ script = ExtResource("1_78kgt")
 shelfResource = ExtResource("2_68g84")
 
 [node name="GridContainer2" type="GridContainer" parent="."]
+top_level = true
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
