@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://bmuvjt32fi3de"]
+
+[ext_resource type="Script" path="res://CookingObjects/Pot/pot_screen.gd" id="1_igmad"]
+[ext_resource type="Texture2D" uid="uid://brwfm50gyafys" path="res://Assets/icon.svg" id="2_5yssl"]
+[ext_resource type="Script" path="res://CookingObjects/Pot/pot_state_machine.gd" id="3_5glda"]
+[ext_resource type="Script" path="res://CookingObjects/Pot/growing_state.gd" id="4_m2g3l"]
+[ext_resource type="Script" path="res://CookingObjects/Pot/rotting_state.gd" id="5_8ivhp"]
+
+[node name="PotScreen" type="Node2D" node_paths=PackedStringArray("state_machine")]
+position = Vector2(1012, 530)
+script = ExtResource("1_igmad")
+state_machine = NodePath("PotStateMachine")
+
+[node name="Sprout" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_5yssl")
+
+[node name="Pot" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_5yssl")
+
+[node name="Grown" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-443, -279)
+texture = ExtResource("2_5yssl")
+
+[node name="GrowTimer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[node name="RotTimer" type="Timer" parent="."]
+
+[node name="PotStateMachine" type="Node" parent="." node_paths=PackedStringArray("pot", "current_state")]
+script = ExtResource("3_5glda")
+pot = NodePath("..")
+current_state = NodePath("GrowingState")
+
+[node name="GrowingState" type="Node" parent="PotStateMachine" node_paths=PackedStringArray("rotting_state", "sprout", "plant")]
+script = ExtResource("4_m2g3l")
+rotting_state = NodePath("../RottingState")
+sprout = NodePath("../../Sprout")
+plant = NodePath("../../Grown")
+
+[node name="RottingState" type="Node" parent="PotStateMachine" node_paths=PackedStringArray("growing_state", "sprout", "plant")]
+script = ExtResource("5_8ivhp")
+growing_state = NodePath("../GrowingState")
+sprout = NodePath("../../Sprout")
+plant = NodePath("../../Grown")
+
+[connection signal="timeout" from="GrowTimer" to="PotStateMachine/GrowingState" method="_on_grow_timer_timeout"]
