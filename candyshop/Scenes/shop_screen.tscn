@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://38pe832setc0"]
+[gd_scene load_steps=8 format=3 uid="uid://38pe832setc0"]
 
 [ext_resource type="Script" path="res://Script/shop_screen_script.gd" id="1_hri7p"]
 [ext_resource type="Texture2D" uid="uid://brwfm50gyafys" path="res://Assets/icon.svg" id="1_ikxkj"]
 [ext_resource type="Script" path="res://Script/shopCustomer.gd" id="2_6vssm"]
+[ext_resource type="Resource" uid="uid://druc3sg2s4krw" path="res://Resources/Shelf Items/ShelfResource.tres" id="2_bwgol"]
 [ext_resource type="Script" path="res://Script/next_button.gd" id="3_60a7r"]
 [ext_resource type="Script" path="res://Script/order_rect.gd" id="4_2n1j5"]
 [ext_resource type="PackedScene" uid="uid://ckmwygrvgfwj" path="res://Scenes/UI/dialogue_manager.tscn" id="5_t5acm"]
@@ -12,6 +13,7 @@ script = ExtResource("1_hri7p")
 Customer = NodePath("Customer")
 DialogueManager = NodePath("DialogueManager")
 orderItem1 = NodePath("OrderRect/OrderItem1")
+resourceArray = ExtResource("2_bwgol")
 
 [node name="BGRect" type="ColorRect" parent="."]
 offset_right = 1152.0
@@ -30,11 +32,12 @@ offset_right = 1152.0
 offset_bottom = 648.0
 color = Color(0, 0.588235, 0, 1)
 
-[node name="DialogueManager" parent="." instance=ExtResource("5_t5acm")]
+[node name="DialogueManager" parent="." node_paths=PackedStringArray("Customer") instance=ExtResource("5_t5acm")]
 offset_left = 959.0
 offset_top = 541.0
 offset_right = 959.0
 offset_bottom = 541.0
+Customer = NodePath("../Customer")
 
 [node name="ChatBG" parent="DialogueManager/Control" index="0"]
 offset_left = -1170.0
@@ -56,11 +59,15 @@ one_shot = true
 wait_time = 3.0
 one_shot = true
 
-[node name="Customer" type="Sprite2D" parent="."]
+[node name="Customer" type="Sprite2D" parent="." node_paths=PackedStringArray("order", "dialogueManager", "shopScreen", "timeLimit")]
 position = Vector2(-200, 444)
 scale = Vector2(2, 2)
 texture = ExtResource("1_ikxkj")
 script = ExtResource("2_6vssm")
+order = NodePath("../OrderRect")
+dialogueManager = NodePath("../DialogueManager")
+shopScreen = NodePath("..")
+timeLimit = NodePath("../DialogueManager/dialogueTimer")
 
 [node name="NextButton" type="Button" parent="."]
 visible = false
@@ -81,13 +88,15 @@ offset_bottom = 1060.0
 theme_override_font_sizes/font_size = 35
 text = "Serve Order"
 
-[node name="OrderRect" type="ColorRect" parent="."]
+[node name="OrderRect" type="ColorRect" parent="." node_paths=PackedStringArray("NextButton", "ServeButton")]
 visible = false
 offset_left = 111.0
 offset_top = 388.0
 offset_right = 417.0
 offset_bottom = 863.0
 script = ExtResource("4_2n1j5")
+NextButton = NodePath("../NextButton")
+ServeButton = NodePath("../ServeButton")
 
 [node name="OrderLabel" type="Label" parent="OrderRect"]
 layout_mode = 0
