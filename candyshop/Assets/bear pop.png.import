@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3lp15qu8o7yu"
-path="res://.godot/imported/360_F_171058201_KFR9cLbr3VKoQIFtGFY7t9PvfmdXjv5t.jpg-2adbcfa0278a018a576ecc07c56a8cbc.ctex"
+uid="uid://d20vd1xcemu21"
+path="res://.godot/imported/bear pop.png-b7f4e46a49d45fcf25b421bc6c766efc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Main Menu/360_F_171058201_KFR9cLbr3VKoQIFtGFY7t9PvfmdXjv5t.jpg"
-dest_files=["res://.godot/imported/360_F_171058201_KFR9cLbr3VKoQIFtGFY7t9PvfmdXjv5t.jpg-2adbcfa0278a018a576ecc07c56a8cbc.ctex"]
+source_file="res://Assets/bear pop.png"
+dest_files=["res://.godot/imported/bear pop.png-b7f4e46a49d45fcf25b421bc6c766efc.ctex"]
 
 [params]
 

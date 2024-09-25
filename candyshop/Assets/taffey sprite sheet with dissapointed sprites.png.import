@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8wyrh71eq5w7"
-path="res://.godot/imported/pngtree-pink-flower-cute-png-image_10448174.png-0af7e85323c1e638eb44d8632b9d73c1.ctex"
+uid="uid://biqqhgudsoeba"
+path="res://.godot/imported/taffey sprite sheet with dissapointed sprites.png-cf5cd3f842d5e8055ed5caeb29fcec5c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Main Menu/pngtree-pink-flower-cute-png-image_10448174.png"
-dest_files=["res://.godot/imported/pngtree-pink-flower-cute-png-image_10448174.png-0af7e85323c1e638eb44d8632b9d73c1.ctex"]
+source_file="res://Assets/taffey sprite sheet with dissapointed sprites.png"
+dest_files=["res://.godot/imported/taffey sprite sheet with dissapointed sprites.png-cf5cd3f842d5e8055ed5caeb29fcec5c.ctex"]
 
 [params]
 
