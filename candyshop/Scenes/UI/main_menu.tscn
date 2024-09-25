@@ -1,75 +1,103 @@
-[gd_scene load_steps=2 format=3 uid="uid://cgvwnh3goli7e"]
+[gd_scene load_steps=8 format=3 uid="uid://cgvwnh3goli7e"]
 
 [ext_resource type="Script" path="res://Script/main_menu.gd" id="1_lvh0n"]
+[ext_resource type="Texture2D" uid="uid://cb1u2cd6a5f6s" path="res://Resources/Main Menu/candybgtest5.png" id="2_dompv"]
+[ext_resource type="Texture2D" uid="uid://dv6k46df7ups1" path="res://Resources/Main Menu/chocobarcondensed.png" id="3_b0ppt"]
+[ext_resource type="Texture2D" uid="uid://3lp15qu8o7yu" path="res://Resources/Main Menu/360_F_171058201_KFR9cLbr3VKoQIFtGFY7t9PvfmdXjv5t.jpg" id="3_ffglk"]
+[ext_resource type="Texture2D" uid="uid://btmc0snif4xws" path="res://Resources/Main Menu/eatenchoco1condensed.png" id="4_wbq50"]
+[ext_resource type="Texture2D" uid="uid://b13j41k5dclom" path="res://Resources/Main Menu/candycaneswirlcondensed.png" id="5_cmkxl"]
+[ext_resource type="Texture2D" uid="uid://cu4rm8wwvvk7h" path="res://Resources/Main Menu/gumdropscondensed.png" id="6_mn0k6"]
 
 [node name="Main Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -1920.0
-offset_bottom = -1080.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = -1919.0
+offset_bottom = -1079.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_lvh0n")
 
-[node name="PlayButton" type="TextureButton" parent="."]
+[node name="Bg" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1920.0
+offset_bottom = 1083.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_dompv")
+
+[node name="play bg" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 585.0
+offset_top = 303.0
+offset_right = 1090.0
+offset_bottom = 663.0
+scale = Vector2(1.43928, 1.67631)
+texture = ExtResource("3_ffglk")
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 956.0
+offset_top = 442.0
+offset_right = 996.0
+offset_bottom = 482.0
+
+[node name="PlayButton" type="TextureButton" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.184
 anchor_top = -0.249
 anchor_right = 0.499
 anchor_bottom = -0.076
-offset_left = 4.11996
-offset_top = 9.40901
-offset_right = 3.44495
-offset_bottom = 8.916
+offset_left = -309.578
+offset_top = -87.3775
+offset_right = 289.822
+offset_bottom = 50.7025
 grow_horizontal = 2
 grow_vertical = 2
+texture_normal = ExtResource("3_b0ppt")
+texture_pressed = ExtResource("4_wbq50")
+texture_hover = ExtResource("4_wbq50")
 stretch_mode = 0
 
-[node name="OptionsButton" type="TextureButton" parent="."]
+[node name="OptionsButton" type="TextureButton" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.198
 anchor_top = 0.331
 anchor_right = 0.487
 anchor_bottom = 0.454
-offset_left = -28.11
-offset_top = -296.371
-offset_right = 29.785
-offset_bottom = -206.814
+offset_left = -317.082
+offset_top = 53.6675
+offset_right = 291.358
+offset_bottom = 241.747
 grow_horizontal = 2
 grow_vertical = 2
+texture_normal = ExtResource("5_cmkxl")
 stretch_mode = 0
 
-[node name="QuitButton" type="TextureButton" parent="."]
+[node name="QuitButton" type="TextureButton" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.198
 anchor_top = 0.487
 anchor_right = 0.487
 anchor_bottom = 0.639
-offset_left = -13.11
-offset_top = -215.567
-offset_right = 23.785
-offset_bottom = -181.399
+offset_left = -302.082
+offset_top = 250.037
+offset_right = 285.358
+offset_bottom = 405.957
 grow_horizontal = 2
 grow_vertical = 2
+texture_normal = ExtResource("6_mn0k6")
 stretch_mode = 0
 
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="TextureRect2" type="TextureRect" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(48.1173, 26.843)
-expand_mode = 1
-
-[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="OptionsButton" to="." method="_on_options_button_pressed"]
-[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="Control/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Control/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="Control/QuitButton" to="." method="_on_quit_button_pressed"]
