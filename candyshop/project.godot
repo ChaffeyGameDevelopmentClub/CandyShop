@@ -11,9 +11,18 @@ config_version=5
 [application]
 
 config/name="CandyShop"
-run/main_scene="res://Scenes/pause_menu.tscn"
+run/main_scene="res://Scenes/shelf_testing.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Assets/icon.svg"
+
+[autoload]
+
+GameManager="*res://Script/GameManager.gd"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 
 [autoload]
 
@@ -27,7 +36,11 @@ window/size/viewport_height=1080
 [file_customization]
 
 folder_colors={
-"res://Scenes/": "green"
+"res://Assets/": "green",
+"res://Scenes/": "orange",
+"res://Scenes/Dialogue Machine/": "green",
+"res://Scenes/UI/": "teal",
+"res://Script/": "red"
 }
 
 [input]

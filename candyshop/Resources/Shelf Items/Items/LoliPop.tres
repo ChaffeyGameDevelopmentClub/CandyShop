@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://bqgyetp3h1rcf"]
+
+[ext_resource type="Script" path="res://Script/ShelfScripts/itemResources.gd" id="1_3br5k"]
+[ext_resource type="Texture2D" uid="uid://brwfm50gyafys" path="res://Assets/icon.svg" id="1_pfnwr"]
+
+[resource]
+script = ExtResource("1_3br5k")
+image = ExtResource("1_pfnwr")
+Name = "Loli-Pop"
+Amount = 25

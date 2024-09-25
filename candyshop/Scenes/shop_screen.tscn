@@ -1,3 +1,107 @@
-[gd_scene format=3 uid="uid://38pe832setc0"]
+[gd_scene load_steps=7 format=3 uid="uid://38pe832setc0"]
+
+[ext_resource type="Script" path="res://Script/shop_screen_script.gd" id="1_hri7p"]
+[ext_resource type="Texture2D" uid="uid://brwfm50gyafys" path="res://Assets/icon.svg" id="1_ikxkj"]
+[ext_resource type="Script" path="res://Script/shopCustomer.gd" id="2_6vssm"]
+[ext_resource type="Script" path="res://Script/next_button.gd" id="3_60a7r"]
+[ext_resource type="Script" path="res://Script/order_rect.gd" id="4_2n1j5"]
+[ext_resource type="PackedScene" uid="uid://ckmwygrvgfwj" path="res://Scenes/UI/dialogue_manager.tscn" id="5_t5acm"]
 
 [node name="ShopScreen" type="Node2D"]
+script = ExtResource("1_hri7p")
+
+[node name="BGRect" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0.588235, 0.588235, 1)
+
+[node name="CounterRect" type="ColorRect" parent="."]
+offset_top = 450.0
+offset_right = 1152.0
+offset_bottom = 550.0
+color = Color(0, 1, 0, 1)
+
+[node name="TableRect" type="ColorRect" parent="."]
+offset_top = 550.0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0.588235, 0, 1)
+
+[node name="DialogueManager" parent="." instance=ExtResource("5_t5acm")]
+offset_left = 959.0
+offset_top = 541.0
+offset_right = 959.0
+offset_bottom = 541.0
+
+[node name="ChatBG" parent="DialogueManager/Control" index="0"]
+offset_left = -1170.0
+offset_top = -547.0
+offset_right = -413.0
+offset_bottom = -295.0
+
+[node name="DialogueText" parent="DialogueManager/Control" index="1"]
+offset_left = -1139.0
+offset_top = -506.0
+offset_right = -465.0
+offset_bottom = -297.0
+
+[node name="dialogueTimer" parent="DialogueManager" index="2"]
+wait_time = 3.0
+
+[node name="dialogueStartTimer" type="Timer" parent="DialogueManager"]
+wait_time = 3.0
+one_shot = true
+
+[node name="Customer" type="Sprite2D" parent="."]
+position = Vector2(-200, 444)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ikxkj")
+script = ExtResource("2_6vssm")
+
+[node name="NextButton" type="Button" parent="."]
+visible = false
+offset_left = 1466.0
+offset_top = 932.0
+offset_right = 1885.0
+offset_bottom = 1061.0
+theme_override_font_sizes/font_size = 35
+text = "Next"
+script = ExtResource("3_60a7r")
+
+[node name="OrderRect" type="ColorRect" parent="."]
+visible = false
+offset_left = 111.0
+offset_top = 388.0
+offset_right = 417.0
+offset_bottom = 863.0
+script = ExtResource("4_2n1j5")
+
+[node name="OrderLabel" type="Label" parent="OrderRect"]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 21.0
+offset_right = 262.0
+offset_bottom = 96.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+text = "Order:"
+
+[node name="OrderItem1" type="Sprite2D" parent="OrderRect"]
+position = Vector2(151, 137)
+scale = Vector2(0.5625, 0.554688)
+texture = ExtResource("1_ikxkj")
+
+[node name="OrderItem2" type="Sprite2D" parent="OrderRect"]
+position = Vector2(151, 248)
+scale = Vector2(0.5625, 0.554688)
+texture = ExtResource("1_ikxkj")
+
+[node name="OrderItem3" type="Sprite2D" parent="OrderRect"]
+position = Vector2(150, 371)
+scale = Vector2(0.5625, 0.554688)
+texture = ExtResource("1_ikxkj")
+
+[connection signal="timeout" from="DialogueManager/dialogueStartTimer" to="DialogueManager" method="_on_dialogue_start_timer_timeout"]
+[connection signal="pressed" from="NextButton" to="NextButton" method="_on_pressed"]
+
+[editable path="DialogueManager"]

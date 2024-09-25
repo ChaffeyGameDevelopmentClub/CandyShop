@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://u444trm8jryt"]
+
+[ext_resource type="Script" path="res://Script/ShelfScripts/itemResources.gd" id="1_8xo48"]
+[ext_resource type="Texture2D" uid="uid://d20vd1xcemu21" path="res://Assets/Ingredent Assets/bear pop.png" id="1_fkxvs"]
+
+[resource]
+script = ExtResource("1_8xo48")
+image = ExtResource("1_fkxvs")
+Name = "Bear Pop"
+Amount = 0

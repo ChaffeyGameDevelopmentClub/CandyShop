@@ -1,0 +1,85 @@
+[gd_scene load_steps=6 format=3 uid="uid://cp1a0a6itp7yd"]
+
+[ext_resource type="Script" path="res://Script/ShelfScripts/ShelfOverlayContainer.gd" id="1_78kgt"]
+[ext_resource type="Script" path="res://Scenes/UI/MouseSensorPot.gd" id="1_amly7"]
+[ext_resource type="Resource" uid="uid://druc3sg2s4krw" path="res://Resources/Shelf Items/ShelfResource.tres" id="2_68g84"]
+[ext_resource type="Resource" uid="uid://dpqceg5trpq1e" path="res://Resources/Shelf Items/ShelfProdResource.tres" id="3_vkqmb"]
+[ext_resource type="Script" path="res://Scenes/UI/button.gd" id="5_avqyv"]
+
+[node name="ShelfOverlay" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -355.0
+offset_right = 516.0
+grow_vertical = 0
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 1037.0
+offset_top = -15.0
+offset_right = 1920.0
+offset_bottom = 351.0
+
+[node name="Pot" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 584.0
+offset_top = 569.0
+offset_right = 978.0
+offset_bottom = 767.0
+script = ExtResource("1_amly7")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = -80.0
+offset_right = 15.0
+offset_bottom = -80.0
+grow_vertical = 0
+scale = Vector2(1.25, 1.25)
+columns = 3
+script = ExtResource("1_78kgt")
+shelfResource = ExtResource("2_68g84")
+
+[node name="GridContainer2" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -50.0
+offset_top = -50.0
+offset_right = -50.0
+offset_bottom = -50.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(1.25, 1.25)
+columns = 5
+script = ExtResource("1_78kgt")
+shelfResource = ExtResource("3_vkqmb")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 367.0
+offset_top = 202.0
+offset_right = 530.0
+offset_bottom = 260.0
+text = "Signal"
+script = ExtResource("5_avqyv")
+
+[connection signal="mouse_entered" from="Pot" to="Pot" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Pot" to="Pot" method="_on_mouse_exited"]
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

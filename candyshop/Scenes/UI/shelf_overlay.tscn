@@ -1,0 +1,366 @@
+[gd_scene load_steps=29 format=3 uid="uid://fhbg06io7grq"]
+
+[ext_resource type="Script" path="res://Script/ShelfScripts/ShelfOverlayContainer.gd" id="1_78kgt"]
+[ext_resource type="Script" path="res://Script/ShelfScripts/MouseSensorPot.gd" id="1_amly7"]
+[ext_resource type="Texture2D" uid="uid://bdli5de6jykhm" path="res://Assets/Cooking_Screen.png" id="1_gs24o"]
+[ext_resource type="Resource" uid="uid://druc3sg2s4krw" path="res://Resources/Shelf Items/ShelfResource.tres" id="2_68g84"]
+[ext_resource type="Resource" uid="uid://dpqceg5trpq1e" path="res://Resources/Shelf Items/ShelfProdResource.tres" id="3_vkqmb"]
+[ext_resource type="Script" path="res://Script/ShelfScripts/itemResources.gd" id="4_c5av3"]
+[ext_resource type="Script" path="res://Script/ShelfScripts/ingredents_screen.gd" id="5_ko00x"]
+[ext_resource type="Script" path="res://Script/ShelfScripts/shelfResource.gd" id="5_t007n"]
+[ext_resource type="Texture2D" uid="uid://brwfm50gyafys" path="res://Assets/icon.svg" id="6_lfo4h"]
+[ext_resource type="Resource" uid="uid://u444trm8jryt" path="res://Resources/Shelf Items/Products/lvl1/BearPop.tres" id="6_qkgg3"]
+[ext_resource type="Resource" uid="uid://vwdt1wkjgmo8" path="res://Resources/Shelf Items/Products/lvl1/ChocolatePopcorn.tres" id="7_k4cvy"]
+[ext_resource type="Resource" uid="uid://1yb8wjsobrt8" path="res://Resources/Shelf Items/Products/lvl1/CholoateBears.tres" id="8_qbi71"]
+[ext_resource type="Resource" uid="uid://mjl0ujgrsg6r" path="res://Resources/Shelf Items/Products/lvl1/GummyPops.tres" id="9_5hw2k"]
+[ext_resource type="Resource" uid="uid://p81joevjt0ll" path="res://Resources/Shelf Items/Products/lvl1/GummySharks.tres" id="10_3qpc6"]
+[ext_resource type="PackedScene" uid="uid://mflkbq06ie5g" path="res://Scenes/CookingObjects/Pot Normal/pot_normal.tscn" id="10_dwvl6"]
+[ext_resource type="Resource" uid="uid://bkmtq6dw55ekf" path="res://Resources/Shelf Items/Products/lvl2/ChocolateForest.tres" id="11_53yve"]
+[ext_resource type="Script" path="res://Scenes/UI/drag_script.gd" id="11_mkv1l"]
+[ext_resource type="Resource" uid="uid://11pdtt6jfxmn" path="res://Resources/Shelf Items/Products/lvl2/GingerbreadHouse.tres" id="12_2qmnd"]
+[ext_resource type="Resource" uid="uid://cosq5ela7c8x0" path="res://Resources/Shelf Items/Products/lvl2/GummyArmy.tres" id="13_7wu38"]
+[ext_resource type="Resource" uid="uid://p7cpfwnyjuk1" path="res://Resources/Shelf Items/Products/lvl2/StrawberryFields.tres" id="14_8nls6"]
+[ext_resource type="Resource" uid="uid://bbre4yctwkaex" path="res://Resources/Shelf Items/Products/lvl3/ChocolateLatte.tres" id="15_3vsne"]
+[ext_resource type="Resource" uid="uid://cf7d2o07wwhdt" path="res://Resources/Shelf Items/Products/lvl3/GummyCandyCorn.tres" id="16_anv5l"]
+[ext_resource type="Resource" uid="uid://coy6dornwup8g" path="res://Resources/Shelf Items/Products/lvl3/SwedishFish.tres" id="17_wdbdp"]
+[ext_resource type="Resource" uid="uid://dfo4vsteftsf8" path="res://Resources/Shelf Items/Products/lvl4/CaramelApples.tres" id="18_ey277"]
+[ext_resource type="Resource" uid="uid://dgeb52ifhaayc" path="res://Resources/Shelf Items/Products/lvl4/GingerBreadMan.tres" id="19_jvo7a"]
+[ext_resource type="Resource" uid="uid://bxwv4xr4brv2l" path="res://Resources/Shelf Items/Products/lvl5/FunDip.tres" id="20_uv0q0"]
+
+[sub_resource type="Resource" id="Resource_eg1gy"]
+script = ExtResource("5_t007n")
+item_array = Array[ExtResource("4_c5av3")]([ExtResource("6_qkgg3"), ExtResource("7_k4cvy"), ExtResource("8_qbi71"), ExtResource("9_5hw2k"), ExtResource("10_3qpc6"), ExtResource("11_53yve"), ExtResource("12_2qmnd"), ExtResource("13_7wu38"), ExtResource("14_8nls6"), ExtResource("15_3vsne"), ExtResource("16_anv5l"), ExtResource("17_wdbdp"), ExtResource("18_ey277"), ExtResource("19_jvo7a"), ExtResource("20_uv0q0")])
+
+[sub_resource type="Theme" id="Theme_ssx1o"]
+default_font_size = 30
+
+[node name="ShelfOverlay" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_gs24o")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -355.0
+offset_right = 516.0
+grow_vertical = 0
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 1037.0
+offset_top = -191.0
+offset_right = 1920.0
+offset_bottom = 351.0
+
+[node name="Pot" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 592.0
+offset_top = 713.0
+offset_right = 1138.0
+offset_bottom = 1044.0
+color = Color(1, 1, 1, 0)
+script = ExtResource("1_amly7")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = -19.0
+offset_right = 15.0
+offset_bottom = -19.0
+grow_vertical = 0
+columns = 3
+script = ExtResource("1_78kgt")
+shelfResource = ExtResource("2_68g84")
+
+[node name="GridContainer2" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -16.0
+offset_top = -15.0
+offset_right = -16.0
+offset_bottom = -15.0
+grow_horizontal = 0
+grow_vertical = 0
+columns = 5
+script = ExtResource("1_78kgt")
+shelfResource = SubResource("Resource_eg1gy")
+
+[node name="Ingredents screen" type="Control" parent="." node_paths=PackedStringArray("ing1Label", "ing2Label", "ing3Label", "ing4Label")]
+anchors_preset = 0
+offset_left = 603.0
+offset_top = 322.0
+offset_right = 1170.0
+offset_bottom = 670.0
+script = ExtResource("5_ko00x")
+ing1Label = NodePath("Ing1/Ing1")
+ing2Label = NodePath("Ing2/Ing2")
+ing3Label = NodePath("Ing3/Ing3")
+ing4Label = NodePath("Ing4/Ing4")
+
+[node name="ColorRect" type="ColorRect" parent="Ingredents screen"]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 33.0
+offset_right = 507.0
+offset_bottom = 319.0
+color = Color(0, 0, 0, 1)
+
+[node name="Ing1" type="Control" parent="Ingredents screen"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Ingredents screen/Ing1"]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 49.0
+offset_right = 485.0
+offset_bottom = 105.0
+color = Color(0.2484, 0.2484, 0.2484, 1)
+
+[node name="Label1" type="RichTextLabel" parent="Ingredents screen/Ing1"]
+layout_mode = 0
+offset_left = 138.0
+offset_top = 57.0
+offset_right = 188.0
+offset_bottom = 109.0
+theme = SubResource("Theme_ssx1o")
+text = "1"
+
+[node name="Ing1" type="RichTextLabel" parent="Ingredents screen/Ing1"]
+layout_mode = 1
+offset_left = 224.0
+offset_top = 62.0
+offset_right = 428.0
+offset_bottom = 106.0
+text = "Empty"
+
+[node name="Ing2" type="Control" parent="Ingredents screen"]
+anchors_preset = 0
+offset_top = 64.0
+offset_right = 40.0
+offset_bottom = 104.0
+
+[node name="ColorRect" type="ColorRect" parent="Ingredents screen/Ing2"]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 49.0
+offset_right = 485.0
+offset_bottom = 105.0
+color = Color(0.2484, 0.2484, 0.2484, 1)
+
+[node name="Label2" type="RichTextLabel" parent="Ingredents screen/Ing2"]
+layout_mode = 0
+offset_left = 138.0
+offset_top = 57.0
+offset_right = 188.0
+offset_bottom = 109.0
+theme = SubResource("Theme_ssx1o")
+text = "2"
+
+[node name="Ing2" type="RichTextLabel" parent="Ingredents screen/Ing2"]
+layout_mode = 1
+offset_left = 224.0
+offset_top = 62.0
+offset_right = 428.0
+offset_bottom = 106.0
+text = "Empty"
+
+[node name="Ing3" type="Control" parent="Ingredents screen"]
+anchors_preset = 0
+offset_top = 127.0
+offset_right = 40.0
+offset_bottom = 167.0
+
+[node name="ColorRect" type="ColorRect" parent="Ingredents screen/Ing3"]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 49.0
+offset_right = 485.0
+offset_bottom = 105.0
+color = Color(0.2484, 0.2484, 0.2484, 1)
+
+[node name="Label3" type="RichTextLabel" parent="Ingredents screen/Ing3"]
+layout_mode = 0
+offset_left = 138.0
+offset_top = 57.0
+offset_right = 188.0
+offset_bottom = 109.0
+theme = SubResource("Theme_ssx1o")
+text = "3"
+
+[node name="Ing3" type="RichTextLabel" parent="Ingredents screen/Ing3"]
+layout_mode = 0
+offset_left = 224.0
+offset_top = 62.0
+offset_right = 428.0
+offset_bottom = 106.0
+text = "Empty"
+
+[node name="Ing4" type="Control" parent="Ingredents screen"]
+anchors_preset = 0
+offset_top = 192.0
+offset_right = 40.0
+offset_bottom = 232.0
+
+[node name="ColorRect" type="ColorRect" parent="Ingredents screen/Ing4"]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 49.0
+offset_right = 485.0
+offset_bottom = 105.0
+color = Color(0.2484, 0.2484, 0.2484, 1)
+
+[node name="Label4" type="RichTextLabel" parent="Ingredents screen/Ing4"]
+layout_mode = 0
+offset_left = 138.0
+offset_top = 57.0
+offset_right = 188.0
+offset_bottom = 109.0
+theme = SubResource("Theme_ssx1o")
+text = "4"
+
+[node name="Ing4" type="RichTextLabel" parent="Ingredents screen/Ing4"]
+layout_mode = 0
+offset_left = 224.0
+offset_top = 62.0
+offset_right = 428.0
+offset_bottom = 106.0
+text = "Empty"
+
+[node name="Clear" type="Button" parent="Ingredents screen"]
+layout_mode = 0
+offset_left = 203.0
+offset_top = 329.0
+offset_right = 355.0
+offset_bottom = 361.0
+text = "Clear"
+
+[node name="Cook" type="Button" parent="Ingredents screen"]
+layout_mode = 0
+offset_left = 221.0
+offset_top = 365.0
+offset_right = 335.0
+offset_bottom = 398.0
+text = "Cook"
+
+[node name="Pots" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Left Pots" type="Control" parent="Pots"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Pot_Normal" parent="Pots/Left Pots" instance=ExtResource("10_dwvl6")]
+offset_left = 161.0
+offset_top = 322.0
+offset_right = 161.0
+offset_bottom = 322.0
+scale = Vector2(0.739777, 0.553983)
+plantType = "Candy Corn"
+
+[node name="Pot_Normal2" parent="Pots/Left Pots" instance=ExtResource("10_dwvl6")]
+offset_left = 322.0
+offset_top = 324.0
+offset_right = 322.0
+offset_bottom = 324.0
+scale = Vector2(0.739777, 0.553983)
+plantType = "Cholate"
+
+[node name="Pot_Normal3" parent="Pots/Left Pots" instance=ExtResource("10_dwvl6")]
+offset_left = 500.0
+offset_top = 326.0
+offset_right = 500.0
+offset_bottom = 326.0
+scale = Vector2(0.739777, 0.553983)
+plantType = "Gummy Bears"
+
+[node name="Right Pots" type="Control" parent="Pots"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Pot_Normal" parent="Pots/Right Pots" instance=ExtResource("10_dwvl6")]
+offset_left = 1411.0
+offset_top = 324.0
+offset_right = 1411.0
+offset_bottom = 324.0
+scale = Vector2(0.739777, 0.553983)
+plantType = "Gummy Worms"
+
+[node name="Pot_Normal2" parent="Pots/Right Pots" instance=ExtResource("10_dwvl6")]
+offset_left = 1587.0
+offset_top = 331.0
+offset_right = 1587.0
+offset_bottom = 331.0
+scale = Vector2(0.739777, 0.553983)
+plantType = "Licorice"
+
+[node name="Pot_Normal3" parent="Pots/Right Pots" instance=ExtResource("10_dwvl6")]
+offset_left = 1778.0
+offset_top = 327.0
+offset_right = 1778.0
+offset_bottom = 327.0
+scale = Vector2(0.739777, 0.553983)
+plantType = "Loli-Pop"
+growColor = Color(0.143082, 0.783175, 0.39463, 1)
+
+[node name="DragScript" type="Control" parent="." node_paths=PackedStringArray("node", "textureRect")]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("11_mkv1l")
+node = NodePath("Control")
+textureRect = NodePath("Control/TextureRect")
+array1 = ExtResource("2_68g84")
+array2 = ExtResource("3_vkqmb")
+
+[node name="Control" type="Control" parent="DragScript"]
+anchors_preset = 0
+scale = Vector2(0.7, 0.7)
+
+[node name="TextureRect" type="TextureRect" parent="DragScript/Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.0
+offset_top = -28.0
+offset_right = 66.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("6_lfo4h")
+expand_mode = 1
+
+[connection signal="mouse_entered" from="Pot" to="Pot" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Pot" to="Pot" method="_on_mouse_exited"]
+[connection signal="pressed" from="Ingredents screen/Clear" to="Ingredents screen" method="_on_button_pressed"]
+[connection signal="pressed" from="Ingredents screen/Cook" to="Ingredents screen" method="_on_cook_pressed"]

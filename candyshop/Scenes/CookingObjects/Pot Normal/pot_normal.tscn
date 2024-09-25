@@ -1,0 +1,75 @@
+[gd_scene load_steps=3 format=3 uid="uid://mflkbq06ie5g"]
+
+[ext_resource type="Script" path="res://Scenes/CookingObjects/Pot Normal/pot_normal.gd" id="1_176sy"]
+[ext_resource type="Texture2D" uid="uid://brwfm50gyafys" path="res://Assets/icon.svg" id="2_jpjcl"]
+
+[node name="Pot_Normal" type="Control" node_paths=PackedStringArray("pot", "sprout", "plant", "growingTimer", "rottingTimer", "GrotProgress")]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 737.0
+offset_top = 347.0
+offset_right = 737.0
+offset_bottom = 347.0
+script = ExtResource("1_176sy")
+pot = NodePath("pot")
+sprout = NodePath("Sporut")
+plant = NodePath("Plant")
+growingTimer = NodePath("Growing Timer")
+rottingTimer = NodePath("Rotting Timer")
+sproutTexture = ExtResource("2_jpjcl")
+plantTexture = ExtResource("2_jpjcl")
+GrotProgress = NodePath("Grot Progress")
+growColor = Color(0.143635, 0.788046, 0.397102, 1)
+rotColor = Color(0.714657, 0.173585, 0.00119181, 1)
+clickedColor = Color(0.941708, 0.578565, 0.595345, 1)
+
+[node name="pot" type="Sprite2D" parent="."]
+position = Vector2(1, 1)
+texture = ExtResource("2_jpjcl")
+
+[node name="Sporut" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, -130)
+texture = ExtResource("2_jpjcl")
+
+[node name="Plant" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, -130)
+rotation = 3.18348
+texture = ExtResource("2_jpjcl")
+
+[node name="Growing Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="Rotting Timer" type="Timer" parent="."]
+wait_time = 8.0
+one_shot = true
+
+[node name="CollectButton" type="TextureButton" parent="."]
+layout_mode = 1
+offset_left = -88.0
+offset_top = -179.0
+offset_right = 525.0
+offset_bottom = 166.0
+scale = Vector2(0.308214, 0.79763)
+
+[node name="Grot Progress" type="ProgressBar" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -65.0
+offset_top = 67.5
+offset_right = 65.0
+offset_bottom = 108.5
+grow_horizontal = 2
+grow_vertical = 2
+show_percentage = false
+
+[connection signal="timeout" from="Growing Timer" to="." method="_on_growing_timer_timeout"]
+[connection signal="timeout" from="Rotting Timer" to="." method="_on_rotting_timer_timeout"]
+[connection signal="button_down" from="CollectButton" to="." method="_on_collect_button_button_down"]
+[connection signal="button_up" from="CollectButton" to="." method="_on_collect_button_button_up"]
