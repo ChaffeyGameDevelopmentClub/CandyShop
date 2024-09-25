@@ -1,5 +1,4 @@
 extends Control
-@onready var testfunc = $"res://Script/testing.gd"
 @export var ing1Label : RichTextLabel
 @export var ing2Label : RichTextLabel
 @export var ing3Label : RichTextLabel
@@ -15,9 +14,7 @@ var ingNum = 1
 func _ready() -> void:
 	GameManager.connect('addItem',changeText)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+
 
 func changeText(nameText):
 	print('Ing Num:' + str(ingNum))
