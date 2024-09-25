@@ -19,7 +19,7 @@ func _ready():
 	for i in resourceArray.item_array.size():
 		items1.append(resourceArray.item_array[i].Name)
 	print(items1)
-
+	print(resourceArray.item_array[0].Amount)
 func _makeOrder():
 	itemOrdered = items1[rng.randf_range(0,4)]
 	print("ordered: " + itemOrdered)
