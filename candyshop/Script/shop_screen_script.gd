@@ -1,18 +1,27 @@
 extends Node2D
 var itemOrdered
 var rng = RandomNumberGenerator.new()
-var items1 = ["Chocolate Popcorn", "Chocolate Bears", "Bear Pop", "Gummy-Pops", "Gummy Sharks", "Chocolate Forest", "Gingerbread House", "Gummy Army", "Strawberry Fields", "Chocolate Latte", "Gummy Candy Corn", "Swedish Fish", "Caramel Apples", "Ginger Bread Man", "last"]
+#var items1 = ["Chocolate Popcorn", "Chocolate Bears", "Bear Pop", "Gummy-Pops", "Gummy Sharks", "Chocolate Forest", "Gingerbread House", "Gummy Army", "Strawberry Fields", "Chocolate Latte", "Gummy Candy Corn", "Swedish Fish", "Caramel Apples", "Ginger Bread Man", "last"]
 var items2 = []
+
 @export var Customer : Sprite2D
 @export var DialogueManager : Control
 @export var orderItem1 : Sprite2D
 @export var timeLimit : Timer
+
+@export var resourceArray : ShelfResource
+var items1 = []
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
-
+	print("hello")
+	GameManager.connect('sendOut',sendTo)
+	for i in resourceArray.item_array.size():
+		items1.append(resourceArray.item_array[i].Name)
+	print(items1)
+	print(resourceArray.item_array[0].Amount)
 func _makeOrder():
-	itemOrdered = items1[rng.randf_range(0,14)]
+	itemOrdered = items1[rng.randf_range(0,4)]
 	print("ordered: " + itemOrdered)
 	setItem1()
 	
@@ -22,7 +31,7 @@ func _process(delta):
 
 
 func _on_serve_button_pressed():
-	items2.append(itemOrdered)
+	#items2.append(itemOrdered)
 	timeLimit.stop()
 	if items2.has(itemOrdered):
 		print("Order Complete")
@@ -56,3 +65,7 @@ func setItem1():
 	else:
 		orderItem1.set_texture(preload("res://Assets/icon.svg"))
 	orderItem1.scale = Vector2(100, 100) / orderItem1.texture.get_size()
+
+func sendTo(nameOf):
+	print("sendto: " + nameOf)
+	items2.append(nameOf)

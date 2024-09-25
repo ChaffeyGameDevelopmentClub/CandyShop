@@ -48,13 +48,14 @@ func _on_button_up() -> void:
 	GameManager.checkIfHeld(held)
 	#print(name + ' Up')
 	#print(isHover)
-	if amount == 0:
-		pass
-	elif isHover and !full:
+	
+	if isHover and !full:
 		#adds item to pot
 		GameManager.sendName(name)
 	elif  isHoverOut:
 		GameManager.sendName2(name)
+	elif amount == 0:
+		pass
 	else:
 		amount += 1
 	itemAmount.text = '[center]' + str(amount) + '[/center]'
