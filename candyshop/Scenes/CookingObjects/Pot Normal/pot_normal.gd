@@ -1,5 +1,5 @@
 extends Control
-
+@export var plantType : String
 @export var pot: Sprite2D
 @export var sprout: Sprite2D
 @export var plant: Sprite2D
@@ -14,18 +14,21 @@ var rotting = false
 var collected = false
 
 
+
 func collecting():
 	if (collected == true): # if the varible for when it's clicked is true then do ...
-			Chocolate += 1
+			addToStorage(plantType)
 			print("collected")
 			print(Chocolate)
+			growingTimer.wait_time = randi_range(4,8)
 
 func addToStorage(nameOf):
 	GameManager.send_Amount(nameOf)
 
 func resetTimer():
 	rottingTimer.stop()
-	rottingTimer.wait_time = 5 #set this to what is on rotting timer node
+	rottingTimer.wait_time = 8 #set this to what is on rotting timer node
+	
 	# *resets the timer when it's collected
 
 func switchSprite():

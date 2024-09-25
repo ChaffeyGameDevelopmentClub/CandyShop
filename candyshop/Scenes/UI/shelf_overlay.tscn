@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://fhbg06io7grq"]
+[gd_scene load_steps=28 format=3 uid="uid://fhbg06io7grq"]
 
 [ext_resource type="Script" path="res://Script/ShelfScripts/ShelfOverlayContainer.gd" id="1_78kgt"]
 [ext_resource type="Script" path="res://Script/ShelfScripts/MouseSensorPot.gd" id="1_amly7"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://Script/ShelfScripts/shelfResource.gd" id="5_t007n"]
 [ext_resource type="Texture2D" uid="uid://brwfm50gyafys" path="res://Assets/icon.svg" id="6_lfo4h"]
 [ext_resource type="Texture2D" uid="uid://ix50l6q8vmw7" path="res://Assets/Gummy bear army.png" id="7_lvns0"]
+[ext_resource type="PackedScene" uid="uid://mflkbq06ie5g" path="res://Scenes/CookingObjects/Pot Normal/pot_normal.tscn" id="10_dwvl6"]
 
 [sub_resource type="Resource" id="Resource_jhmpc"]
 script = ExtResource("4_c5av3")
@@ -336,6 +337,69 @@ offset_top = 365.0
 offset_right = 335.0
 offset_bottom = 398.0
 text = "Cook"
+
+[node name="Pots" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Left Pots" type="Control" parent="Pots"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Pot_Normal" parent="Pots/Left Pots" instance=ExtResource("10_dwvl6")]
+offset_left = 152.0
+offset_top = 324.0
+offset_right = 152.0
+offset_bottom = 324.0
+scale = Vector2(0.739777, 0.553983)
+plantType = "Candy Corn"
+
+[node name="Pot_Normal2" parent="Pots/Left Pots" instance=ExtResource("10_dwvl6")]
+offset_left = 322.0
+offset_top = 324.0
+offset_right = 322.0
+offset_bottom = 324.0
+scale = Vector2(0.739777, 0.553983)
+plantType = "Cholate"
+
+[node name="Pot_Normal3" parent="Pots/Left Pots" instance=ExtResource("10_dwvl6")]
+offset_left = 500.0
+offset_top = 326.0
+offset_right = 500.0
+offset_bottom = 326.0
+scale = Vector2(0.739777, 0.553983)
+plantType = "Gummy Bears"
+
+[node name="Right Pots" type="Control" parent="Pots"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Pot_Normal" parent="Pots/Right Pots" instance=ExtResource("10_dwvl6")]
+offset_left = 1411.0
+offset_top = 324.0
+offset_right = 1411.0
+offset_bottom = 324.0
+scale = Vector2(0.739777, 0.553983)
+plantType = "Gummy Worms"
+
+[node name="Pot_Normal2" parent="Pots/Right Pots" instance=ExtResource("10_dwvl6")]
+offset_left = 1587.0
+offset_top = 331.0
+offset_right = 1587.0
+offset_bottom = 331.0
+scale = Vector2(0.739777, 0.553983)
+plantType = "Licorice"
+
+[node name="Pot_Normal3" parent="Pots/Right Pots" instance=ExtResource("10_dwvl6")]
+offset_left = 1778.0
+offset_top = 327.0
+offset_right = 1778.0
+offset_bottom = 327.0
+scale = Vector2(0.739777, 0.553983)
+plantType = "Loli-Pop"
 
 [connection signal="mouse_entered" from="Pot" to="Pot" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Pot" to="Pot" method="_on_mouse_exited"]
