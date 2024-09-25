@@ -4,7 +4,8 @@
 
 [node name="Shoptest" type="Node2D"]
 
-[node name="ShopScreen" parent="." instance=ExtResource("1_fjuih")]
+[node name="ShopScreen" parent="." node_paths=PackedStringArray("timeLimit") instance=ExtResource("1_fjuih")]
+timeLimit = NodePath("TimeLimitTimer")
 metadata/_edit_group_ = true
 
 [node name="Customer" parent="ShopScreen" index="4" node_paths=PackedStringArray("order", "dialogueManager", "shopScreen", "timeLimit")]

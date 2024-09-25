@@ -6,6 +6,7 @@ var items2 = []
 @export var Customer : Sprite2D
 @export var DialogueManager : Control
 @export var orderItem1 : Sprite2D
+@export var timeLimit : Timer
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
@@ -22,6 +23,7 @@ func _process(delta):
 
 func _on_serve_button_pressed():
 	items2.append(itemOrdered)
+	timeLimit.stop()
 	if items2.has(itemOrdered):
 		print("Order Complete")
 		Customer.completeOrder()
