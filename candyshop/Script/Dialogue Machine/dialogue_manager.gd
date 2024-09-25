@@ -43,6 +43,9 @@ func playText():
 func completeOrder():
 	textLabel.text = "yummers"
 
+func failedOrder():
+	textLabel.text = "you failed me"
+
 func _on_dialogue_timer_timeout() -> void:
 	print('timeout')
 	playText()

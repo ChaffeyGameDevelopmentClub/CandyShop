@@ -1,16 +1,18 @@
 extends Sprite2D
 var customerMovementState
-var order
-var dialogueManager
-var shopScreen
+@export var order : ColorRect
+@export var dialogueManager : Control
+@export var shopScreen : Node2D
 var ordersCompleted : int
+var totalOrders : int
+var ordersFailed : int
+@export var timeLimit : Timer
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	ordersCompleted = 0
+	ordersFailed = 0
+	totalOrders = 0
 	customerMovementState = 1
-	order = get_tree().current_scene.get_node("ShopScreen").get_node("OrderRect")
-	dialogueManager = get_tree().current_scene.get_node("ShopScreen").get_node("DialogueManager")
-	shopScreen = get_tree().current_scene.get_node("ShopScreen")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -29,10 +31,18 @@ func _process(delta):
 	
 func dialogueEnd():
 	order._summonOrder()
+	timeLimit.start()
 func completeOrder():
 	customerMovementState = 2
 	order._hideOrder()
 	ordersCompleted+=1
+	totalOrders+=1
+	print("customers: " + str(ordersCompleted))
+func failedOrder():
+	customerMovementState = 2
+	order._hideOrder()
+	ordersFailed+=1
+	totalOrders+=1
 	print("customers: " + str(ordersCompleted))
 func newCustomer():
 	set_texture(preload("res://Assets/icon.svg"))

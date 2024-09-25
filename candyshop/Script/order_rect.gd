@@ -1,5 +1,6 @@
 extends ColorRect
-
+@export var NextButton : Button
+@export var ServeButton : Button
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -11,10 +12,10 @@ func _process(delta):
 	pass
 func _summonOrder():
 	visible = true
-	get_tree().current_scene.get_node("ShopScreen").get_node("NextButton").visible = true
-	get_tree().current_scene.get_node("ShopScreen").get_node("ServeButton").visible = true
+	NextButton.visible = true
+	ServeButton.visible = true
 
 func _hideOrder():
 	visible = false
-	get_tree().current_scene.get_node("ShopScreen").get_node("NextButton").visible = false
-	get_tree().current_scene.get_node("ShopScreen").get_node("ServeButton").visible = false
+	NextButton.visible = false
+	ServeButton.visible = false
