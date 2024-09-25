@@ -5,6 +5,6 @@
 
 [resource]
 script = ExtResource("1_e83fy")
-img = ExtResource("1_ekepf")
+image = ExtResource("1_ekepf")
 Name = "Fun Dip"
 Amount = 0
