@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://brbj33630tq80"]
 
 [ext_resource type="Script" path="res://Script/ShelfScripts/itemResources.gd" id="1_dbqbe"]
-[ext_resource type="Texture2D" uid="uid://brwfm50gyafys" path="res://Assets/icon.svg" id="1_qihfn"]
+[ext_resource type="Texture2D" uid="uid://b38h2p5qdgf45" path="res://Assets/Ingredent Assets/chocolatebar.png" id="1_rrrxo"]
 
 [resource]
 script = ExtResource("1_dbqbe")
-image = ExtResource("1_qihfn")
+image = ExtResource("1_rrrxo")
 Name = "Cholate"
 Amount = 25

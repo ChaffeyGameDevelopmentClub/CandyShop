@@ -1,8 +1,8 @@
 extends Control
 @export var plantType : String
-@export var pot: Sprite2D
-@export var sprout: Sprite2D
-@export var plant: Sprite2D
+@export var pot: TextureRect
+@export var sprout: TextureRect
+@export var plant: TextureRect
 @export var growingTimer: Timer
 @export var rottingTimer: Timer
 @export var sproutTexture : Texture
