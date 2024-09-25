@@ -23,16 +23,18 @@ func initAmount(tempAmount):
 	
 func initImg(Img):
 	#Img
-	#print(Img)
-	#Img = texturerect.texture
+	print(Img)
+	texturerect.texture = Img
 	pass
 	
 
 
 func _on_button_down() -> void:
 	held = true
+	GameManager.checkIfHeld(held)
 	#print(name + ' Down')
 	GameManager.checkHeldItem(name)
+	print('held ' + name)
 	if amount == 0:
 		pass
 	else:
@@ -42,6 +44,7 @@ func _on_button_down() -> void:
 
 func _on_button_up() -> void:
 	held = false
+	GameManager.checkIfHeld(held)
 	#print(name + ' Up')
 	#print(isHover)
 	if amount == 0:

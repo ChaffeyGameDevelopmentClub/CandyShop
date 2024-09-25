@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ix50l6q8vmw7"
-path="res://.godot/imported/Gummy bear army.png-f0957435807bef30eca638bb99d16339.ctex"
+uid="uid://cx0nl0k5skfeu"
+path="res://.godot/imported/candy corn.png-ecb5640311aec8dd3d5197323c68408e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Gummy bear army.png"
-dest_files=["res://.godot/imported/Gummy bear army.png-f0957435807bef30eca638bb99d16339.ctex"]
+source_file="res://Assets/Ingredent Assets/candy corn.png"
+dest_files=["res://.godot/imported/candy corn.png-ecb5640311aec8dd3d5197323c68408e.ctex"]
 
 [params]
 

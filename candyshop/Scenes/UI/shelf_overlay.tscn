@@ -1,14 +1,15 @@
-[gd_scene load_steps=29 format=3 uid="uid://fhbg06io7grq"]
+[gd_scene load_steps=30 format=3 uid="uid://fhbg06io7grq"]
 
 [ext_resource type="Script" path="res://Script/ShelfScripts/ShelfOverlayContainer.gd" id="1_78kgt"]
 [ext_resource type="Script" path="res://Script/ShelfScripts/MouseSensorPot.gd" id="1_amly7"]
 [ext_resource type="Texture2D" uid="uid://bdli5de6jykhm" path="res://Assets/Cooking_Screen.png" id="1_gs24o"]
 [ext_resource type="Resource" uid="uid://druc3sg2s4krw" path="res://Resources/Shelf Items/ShelfResource.tres" id="2_68g84"]
+[ext_resource type="Resource" uid="uid://dpqceg5trpq1e" path="res://Resources/Shelf Items/ShelfProdResource.tres" id="3_vkqmb"]
 [ext_resource type="Script" path="res://Script/ShelfScripts/itemResources.gd" id="4_c5av3"]
 [ext_resource type="Script" path="res://Script/ShelfScripts/ingredents_screen.gd" id="5_ko00x"]
 [ext_resource type="Script" path="res://Script/ShelfScripts/shelfResource.gd" id="5_t007n"]
 [ext_resource type="Texture2D" uid="uid://brwfm50gyafys" path="res://Assets/icon.svg" id="6_lfo4h"]
-[ext_resource type="Texture2D" uid="uid://ix50l6q8vmw7" path="res://Assets/Gummy bear army.png" id="7_lvns0"]
+[ext_resource type="Texture2D" uid="uid://ix50l6q8vmw7" path="res://Assets/Ingredent Assets/Gummy bear army.png" id="7_lvns0"]
 [ext_resource type="PackedScene" uid="uid://mflkbq06ie5g" path="res://Scenes/CookingObjects/Pot Normal/pot_normal.tscn" id="10_dwvl6"]
 [ext_resource type="Script" path="res://Scenes/UI/drag_script.gd" id="11_mkv1l"]
 
@@ -409,12 +410,15 @@ offset_bottom = 40.0
 script = ExtResource("11_mkv1l")
 node = NodePath("Control")
 textureRect = NodePath("Control/TextureRect")
+array1 = ExtResource("2_68g84")
+array2 = ExtResource("3_vkqmb")
 
 [node name="Control" type="Control" parent="DragScript"]
 anchors_preset = 0
 scale = Vector2(0.5, 0.5)
 
 [node name="TextureRect" type="TextureRect" parent="DragScript/Control"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -429,6 +433,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 texture = ExtResource("6_lfo4h")
+expand_mode = 1
 
 [connection signal="mouse_entered" from="Pot" to="Pot" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Pot" to="Pot" method="_on_mouse_exited"]

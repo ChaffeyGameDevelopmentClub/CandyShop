@@ -9,6 +9,7 @@ signal addItem
 signal pot_full
 signal sendAmount
 signal heldItem
+signal held
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -44,3 +45,5 @@ func send_Amount(nameAmount):
 	emit_signal('sendAmount', nameAmount)
 func checkHeldItem(nameOf):
 	emit_signal('heldItem',nameOf)
+func checkIfHeld(isHeld):
+	emit_signal('held',isHeld)

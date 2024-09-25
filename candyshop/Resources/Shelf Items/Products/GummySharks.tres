@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://p81joevjt0ll"]
 
 [ext_resource type="Script" path="res://Script/ShelfScripts/itemResources.gd" id="1_2ecuu"]
-[ext_resource type="Texture2D" uid="uid://brwfm50gyafys" path="res://Assets/icon.svg" id="1_8ffs3"]
+[ext_resource type="Texture2D" uid="uid://b6ig0t6rjuevb" path="res://Assets/Ingredent Assets/gummy sharks.png" id="1_nru5x"]
 
 [resource]
 script = ExtResource("1_2ecuu")
-img = ExtResource("1_8ffs3")
+img = ExtResource("1_nru5x")
 Name = "Gummy Sharks"
 Amount = 0

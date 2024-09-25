@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d20vd1xcemu21"
-path="res://.godot/imported/bear pop.png-b7f4e46a49d45fcf25b421bc6c766efc.ctex"
+uid="uid://kayexab56t0b"
+path="res://.godot/imported/chocolate bears.png-4f6e37ccd1eda20d3aadc743465aa23b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/bear pop.png"
-dest_files=["res://.godot/imported/bear pop.png-b7f4e46a49d45fcf25b421bc6c766efc.ctex"]
+source_file="res://Assets/Ingredent Assets/chocolate bears.png"
+dest_files=["res://.godot/imported/chocolate bears.png-4f6e37ccd1eda20d3aadc743465aa23b.ctex"]
 
 [params]
 
