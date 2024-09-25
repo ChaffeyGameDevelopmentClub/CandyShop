@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://drjb4cjgwisy1"]
+
+[ext_resource type="PackedScene" uid="uid://38pe832setc0" path="res://Scenes/shop_screen.tscn" id="1_fjuih"]
+
+[node name="Shoptest" type="Node2D"]
+
+[node name="ShopScreen" parent="." instance=ExtResource("1_fjuih")]
+metadata/_edit_group_ = true
+
+[editable path="ShopScreen"]
+[editable path="ShopScreen/DialogueManager"]

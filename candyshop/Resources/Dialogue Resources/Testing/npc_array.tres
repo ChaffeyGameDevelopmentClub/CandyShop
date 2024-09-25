@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="DialogueArray" load_steps=4 format=3 uid="uid://uwapsfnoi586"]
+[gd_resource type="Resource" script_class="DialogueArray" load_steps=5 format=3 uid="uid://uwapsfnoi586"]
 
 [ext_resource type="Script" path="res://Script/Dialogue Machine/DialogueResource.gd" id="1_mify6"]
 [ext_resource type="Resource" uid="uid://c5h1h424u0vdd" path="res://Resources/Dialogue Resources/Testing/Npc1.tres" id="2_h65ce"]
 [ext_resource type="Script" path="res://Script/Dialogue Machine/DialogueArrayResource.gd" id="2_nygpj"]
+[ext_resource type="Resource" uid="uid://dwn0vd6syh7ot" path="res://Resources/Dialogue Resources/Testing/Npc2.tres" id="3_0l2o3"]
 
 [resource]
 script = ExtResource("2_nygpj")
-npc_array = Array[ExtResource("1_mify6")]([ExtResource("2_h65ce")])
+npc_array = Array[ExtResource("1_mify6")]([ExtResource("2_h65ce"), ExtResource("3_0l2o3")])

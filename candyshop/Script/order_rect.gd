@@ -11,10 +11,10 @@ func _process(delta):
 	pass
 func _summonOrder():
 	visible = true
-	get_tree().current_scene.get_node("NextButton").visible = true
-	get_tree().current_scene.get_node("ServeButton").visible = true
+	get_tree().current_scene.get_node("ShopScreen").get_node("NextButton").visible = true
+	get_tree().current_scene.get_node("ShopScreen").get_node("ServeButton").visible = true
 
 func _hideOrder():
 	visible = false
-	get_tree().current_scene.get_node("NextButton").visible = false
-	get_tree().current_scene.get_node("ServeButton").visible = false
+	get_tree().current_scene.get_node("ShopScreen").get_node("NextButton").visible = false
+	get_tree().current_scene.get_node("ShopScreen").get_node("ServeButton").visible = false

@@ -7,8 +7,8 @@ var Customer
 var DialogueManager
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Customer = get_tree().current_scene.get_node("Customer")
-	DialogueManager = get_tree().current_scene.get_node("DialogueManager")
+	Customer = get_tree().current_scene.get_node("ShopScreen").get_node("Customer")
+	DialogueManager = get_tree().current_scene.get_node("ShopScreen").get_node("DialogueManager")
 
 func _makeOrder():
 	itemOrdered = items1[rng.randf_range(0,14)]
