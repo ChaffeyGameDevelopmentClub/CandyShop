@@ -16,7 +16,7 @@ var npc
 func orderStart():
 	print('orderStart')
 	#how many npcs we have in Dialogue Array
-	npc = randi_range(0,0)
+	npc = randi_range(0,1)
 	print(npc)
 	var name = dialogueArray.npc_array[npc].Name
 	var arrayamount = dialogueArray.npc_array[npc].text.size()
@@ -35,9 +35,16 @@ func playText():
 		timer.start()
 		print
 		i += 1
-	if arrayamount-1 < i:
-		get_tree().current_scene.get_node("Customer").dialogueEnd()
+	elif arrayamount-1 < i:
+		get_tree().current_scene.get_node("ShopScreen").get_node("Customer").dialogueEnd()
+		print(str(i) + " arrayamount")
+		i = 0
 
+func completeOrder():
+	textLabel.text = "yummers"
+
+func failedOrder():
+	textLabel.text = "you failed me"
 
 func _on_dialogue_timer_timeout() -> void:
 	print('timeout')

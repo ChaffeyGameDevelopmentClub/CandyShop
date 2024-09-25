@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3 uid="uid://dwn0vd6syh7ot"]
+
+[ext_resource type="Script" path="res://Script/Dialogue Machine/DialogueResource.gd" id="1_exffl"]
+
+[resource]
+script = ExtResource("1_exffl")
+Name = "Test Dialogue"
+text = Array[String](["You there give me food", "Give me a Bear Pop", "I have hunger"])
