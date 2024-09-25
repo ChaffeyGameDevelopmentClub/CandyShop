@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="CandyShop"
-run/main_scene="res://Scenes/shelf_testing.tscn"
+run/main_scene="res://Scenes/UI/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://Assets/icon.svg"
 

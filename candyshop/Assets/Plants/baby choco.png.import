@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4ndsxrbir51v"
-path="res://.godot/imported/baby candy corn plant.png-1ecfe5aa970a4fa224e5fd7b9461a745.ctex"
+uid="uid://dqk6wmxkk7e5k"
+path="res://.godot/imported/baby choco.png-dca123b8ff5e4870b119be6270c49e20.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/baby candy corn plant.png"
-dest_files=["res://.godot/imported/baby candy corn plant.png-1ecfe5aa970a4fa224e5fd7b9461a745.ctex"]
+source_file="res://Assets/Plants/baby choco.png"
+dest_files=["res://.godot/imported/baby choco.png-dca123b8ff5e4870b119be6270c49e20.ctex"]
 
 [params]
 

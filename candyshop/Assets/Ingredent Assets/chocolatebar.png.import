@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dp4ldytmachcj"
-path="res://.godot/imported/adult candy corn plant.png-6f5625f2419f8fe7016964721a34acc7.ctex"
+uid="uid://b38h2p5qdgf45"
+path="res://.godot/imported/chocolatebar.png-3c265e2f6710d35545a078a94278daeb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/adult candy corn plant.png"
-dest_files=["res://.godot/imported/adult candy corn plant.png-6f5625f2419f8fe7016964721a34acc7.ctex"]
+source_file="res://Assets/Ingredent Assets/chocolatebar.png"
+dest_files=["res://.godot/imported/chocolatebar.png-3c265e2f6710d35545a078a94278daeb.ctex"]
 
 [params]
 

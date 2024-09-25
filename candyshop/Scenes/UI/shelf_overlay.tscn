@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://fhbg06io7grq"]
+[gd_scene load_steps=41 format=3 uid="uid://fhbg06io7grq"]
 
 [ext_resource type="Script" path="res://Script/ShelfScripts/ShelfOverlayContainer.gd" id="1_78kgt"]
 [ext_resource type="Script" path="res://Script/ShelfScripts/MouseSensorPot.gd" id="1_amly7"]
@@ -26,6 +26,18 @@
 [ext_resource type="Resource" uid="uid://dfo4vsteftsf8" path="res://Resources/Shelf Items/Products/lvl4/CaramelApples.tres" id="18_ey277"]
 [ext_resource type="Resource" uid="uid://dgeb52ifhaayc" path="res://Resources/Shelf Items/Products/lvl4/GingerBreadMan.tres" id="19_jvo7a"]
 [ext_resource type="Resource" uid="uid://bxwv4xr4brv2l" path="res://Resources/Shelf Items/Products/lvl5/FunDip.tres" id="20_uv0q0"]
+[ext_resource type="Texture2D" uid="uid://4ndsxrbir51v" path="res://Assets/Plants/baby candy corn plant.png" id="24_22xv8"]
+[ext_resource type="Texture2D" uid="uid://dp4ldytmachcj" path="res://Assets/Plants/adult candy corn plant.png" id="25_snus7"]
+[ext_resource type="Texture2D" uid="uid://dqk6wmxkk7e5k" path="res://Assets/Plants/baby choco.png" id="26_q2mls"]
+[ext_resource type="Texture2D" uid="uid://ddahjxpivga5a" path="res://Assets/Plants/adult choco.png" id="27_rp5t1"]
+[ext_resource type="Texture2D" uid="uid://btfpsqi5dk4ws" path="res://Assets/Plants/baby gummy bear plant.png" id="28_nxxrr"]
+[ext_resource type="Texture2D" uid="uid://bhihv5eqyucnx" path="res://Assets/Plants/adult gummy bear plant.png" id="29_pf0au"]
+[ext_resource type="Texture2D" uid="uid://dgbsryjrt83mk" path="res://Assets/Plants/baby gummy worm plant.png" id="30_pw7ix"]
+[ext_resource type="Texture2D" uid="uid://tks1dvldalea" path="res://Assets/Plants/adult gummy worm plant.png" id="31_15p72"]
+[ext_resource type="Texture2D" uid="uid://cc2176h2ome1s" path="res://Assets/Plants/baby licorice plant.png" id="32_fqhlk"]
+[ext_resource type="Texture2D" uid="uid://decn3so7nwwbo" path="res://Assets/Plants/adult licorice plant.png" id="33_t8ilc"]
+[ext_resource type="Texture2D" uid="uid://ctrxihn1g6f2j" path="res://Assets/Plants/baby lollipop plant.png" id="34_jmb3q"]
+[ext_resource type="Texture2D" uid="uid://dsfr4680iricc" path="res://Assets/Plants/adult lollipop plant.png" id="35_q7hcm"]
 
 [sub_resource type="Resource" id="Resource_eg1gy"]
 script = ExtResource("5_t007n")
@@ -75,6 +87,7 @@ color = Color(1, 1, 1, 0)
 script = ExtResource("1_amly7")
 
 [node name="GridContainer" type="GridContainer" parent="."]
+top_level = true
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -89,6 +102,7 @@ script = ExtResource("1_78kgt")
 shelfResource = ExtResource("2_68g84")
 
 [node name="GridContainer2" type="GridContainer" parent="."]
+top_level = true
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -271,61 +285,73 @@ offset_bottom = 40.0
 
 [node name="Left Pots" type="Control" parent="Pots"]
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 63.0
+offset_top = 44.0
+offset_right = 103.0
+offset_bottom = 84.0
+scale = Vector2(0.8, 0.8)
 
 [node name="Pot_Normal" parent="Pots/Left Pots" instance=ExtResource("10_dwvl6")]
 offset_left = 161.0
 offset_top = 322.0
 offset_right = 161.0
 offset_bottom = 322.0
-scale = Vector2(0.739777, 0.553983)
 plantType = "Candy Corn"
+sproutTexture = ExtResource("24_22xv8")
+plantTexture = ExtResource("25_snus7")
 
 [node name="Pot_Normal2" parent="Pots/Left Pots" instance=ExtResource("10_dwvl6")]
 offset_left = 322.0
 offset_top = 324.0
 offset_right = 322.0
 offset_bottom = 324.0
-scale = Vector2(0.739777, 0.553983)
 plantType = "Cholate"
+sproutTexture = ExtResource("26_q2mls")
+plantTexture = ExtResource("27_rp5t1")
 
 [node name="Pot_Normal3" parent="Pots/Left Pots" instance=ExtResource("10_dwvl6")]
 offset_left = 500.0
 offset_top = 326.0
 offset_right = 500.0
 offset_bottom = 326.0
-scale = Vector2(0.739777, 0.553983)
 plantType = "Gummy Bears"
+sproutTexture = ExtResource("28_nxxrr")
+plantTexture = ExtResource("29_pf0au")
 
 [node name="Right Pots" type="Control" parent="Pots"]
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 311.0
+offset_top = 51.0
+offset_right = 351.0
+offset_bottom = 91.0
+scale = Vector2(0.8, 0.8)
 
 [node name="Pot_Normal" parent="Pots/Right Pots" instance=ExtResource("10_dwvl6")]
 offset_left = 1411.0
 offset_top = 324.0
 offset_right = 1411.0
 offset_bottom = 324.0
-scale = Vector2(0.739777, 0.553983)
 plantType = "Gummy Worms"
+sproutTexture = ExtResource("30_pw7ix")
+plantTexture = ExtResource("31_15p72")
 
 [node name="Pot_Normal2" parent="Pots/Right Pots" instance=ExtResource("10_dwvl6")]
 offset_left = 1587.0
 offset_top = 331.0
 offset_right = 1587.0
 offset_bottom = 331.0
-scale = Vector2(0.739777, 0.553983)
 plantType = "Licorice"
+sproutTexture = ExtResource("32_fqhlk")
+plantTexture = ExtResource("33_t8ilc")
 
 [node name="Pot_Normal3" parent="Pots/Right Pots" instance=ExtResource("10_dwvl6")]
 offset_left = 1778.0
 offset_top = 327.0
 offset_right = 1778.0
 offset_bottom = 327.0
-scale = Vector2(0.739777, 0.553983)
 plantType = "Loli-Pop"
+sproutTexture = ExtResource("34_jmb3q")
+plantTexture = ExtResource("35_q7hcm")
 growColor = Color(0.143082, 0.783175, 0.39463, 1)
 
 [node name="DragScript" type="Control" parent="." node_paths=PackedStringArray("node", "textureRect")]
