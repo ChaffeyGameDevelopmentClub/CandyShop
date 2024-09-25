@@ -9,87 +9,27 @@
 [ext_resource type="Script" path="res://Script/ShelfScripts/ingredents_screen.gd" id="5_ko00x"]
 [ext_resource type="Script" path="res://Script/ShelfScripts/shelfResource.gd" id="5_t007n"]
 [ext_resource type="Texture2D" uid="uid://brwfm50gyafys" path="res://Assets/icon.svg" id="6_lfo4h"]
+[ext_resource type="Resource" uid="uid://u444trm8jryt" path="res://Resources/Shelf Items/Products/lvl1/BearPop.tres" id="6_qkgg3"]
+[ext_resource type="Resource" uid="uid://vwdt1wkjgmo8" path="res://Resources/Shelf Items/Products/lvl1/ChocolatePopcorn.tres" id="7_k4cvy"]
+[ext_resource type="Resource" uid="uid://1yb8wjsobrt8" path="res://Resources/Shelf Items/Products/lvl1/CholoateBears.tres" id="8_qbi71"]
+[ext_resource type="Resource" uid="uid://mjl0ujgrsg6r" path="res://Resources/Shelf Items/Products/lvl1/GummyPops.tres" id="9_5hw2k"]
+[ext_resource type="Resource" uid="uid://p81joevjt0ll" path="res://Resources/Shelf Items/Products/lvl1/GummySharks.tres" id="10_3qpc6"]
 [ext_resource type="PackedScene" uid="uid://mflkbq06ie5g" path="res://Scenes/CookingObjects/Pot Normal/pot_normal.tscn" id="10_dwvl6"]
+[ext_resource type="Resource" uid="uid://bkmtq6dw55ekf" path="res://Resources/Shelf Items/Products/lvl2/ChocolateForest.tres" id="11_53yve"]
 [ext_resource type="Script" path="res://Scenes/UI/drag_script.gd" id="11_mkv1l"]
-
-[sub_resource type="Resource" id="Resource_jhmpc"]
-script = ExtResource("4_c5av3")
-Name = "Chocolate Bears"
-Amount = 0
-
-[sub_resource type="Resource" id="Resource_1xadm"]
-script = ExtResource("4_c5av3")
-Name = "Bear Pop"
-Amount = 0
-
-[sub_resource type="Resource" id="Resource_hulo0"]
-script = ExtResource("4_c5av3")
-Name = "Chcolate Popcorn"
-Amount = 0
-
-[sub_resource type="Resource" id="Resource_l0v42"]
-script = ExtResource("4_c5av3")
-Name = "Gummy-Pops"
-Amount = 0
-
-[sub_resource type="Resource" id="Resource_qpysa"]
-script = ExtResource("4_c5av3")
-Name = "Gummy Sharks"
-Amount = 0
-
-[sub_resource type="Resource" id="Resource_ecx1x"]
-script = ExtResource("4_c5av3")
-Name = "Chocolate Forest"
-Amount = 0
-
-[sub_resource type="Resource" id="Resource_guqbt"]
-script = ExtResource("4_c5av3")
-Name = "Gingerbread House"
-Amount = 0
-
-[sub_resource type="Resource" id="Resource_4qyis"]
-script = ExtResource("4_c5av3")
-Name = "Gummy Army"
-Amount = 0
-
-[sub_resource type="Resource" id="Resource_1ghy1"]
-script = ExtResource("4_c5av3")
-Name = "Strawberry Fields"
-Amount = 0
-
-[sub_resource type="Resource" id="Resource_ocdvx"]
-script = ExtResource("4_c5av3")
-Name = "Chocolate Latte"
-Amount = 0
-
-[sub_resource type="Resource" id="Resource_eosbt"]
-script = ExtResource("4_c5av3")
-Name = "Gummy Candy Corn"
-Amount = 0
-
-[sub_resource type="Resource" id="Resource_3yspv"]
-script = ExtResource("4_c5av3")
-Name = "Swedish Fish"
-Amount = 0
-
-[sub_resource type="Resource" id="Resource_gwfbs"]
-script = ExtResource("4_c5av3")
-Name = "Caramel Apples"
-Amount = 0
-
-[sub_resource type="Resource" id="Resource_7o8ka"]
-script = ExtResource("4_c5av3")
-Name = "Ginger Bread Man"
-Amount = 0
-
-[sub_resource type="Resource" id="Resource_gq08j"]
-script = ExtResource("4_c5av3")
-Name = "Fun Dip"
-Amount = 0
+[ext_resource type="Resource" uid="uid://11pdtt6jfxmn" path="res://Resources/Shelf Items/Products/lvl2/GingerbreadHouse.tres" id="12_2qmnd"]
+[ext_resource type="Resource" uid="uid://cosq5ela7c8x0" path="res://Resources/Shelf Items/Products/lvl2/GummyArmy.tres" id="13_7wu38"]
+[ext_resource type="Resource" uid="uid://p7cpfwnyjuk1" path="res://Resources/Shelf Items/Products/lvl2/StrawberryFields.tres" id="14_8nls6"]
+[ext_resource type="Resource" uid="uid://bbre4yctwkaex" path="res://Resources/Shelf Items/Products/lvl3/ChocolateLatte.tres" id="15_3vsne"]
+[ext_resource type="Resource" uid="uid://cf7d2o07wwhdt" path="res://Resources/Shelf Items/Products/lvl3/GummyCandyCorn.tres" id="16_anv5l"]
+[ext_resource type="Resource" uid="uid://coy6dornwup8g" path="res://Resources/Shelf Items/Products/lvl3/SwedishFish.tres" id="17_wdbdp"]
+[ext_resource type="Resource" uid="uid://dfo4vsteftsf8" path="res://Resources/Shelf Items/Products/lvl4/CaramelApples.tres" id="18_ey277"]
+[ext_resource type="Resource" uid="uid://dgeb52ifhaayc" path="res://Resources/Shelf Items/Products/lvl4/GingerBreadMan.tres" id="19_jvo7a"]
+[ext_resource type="Resource" uid="uid://bxwv4xr4brv2l" path="res://Resources/Shelf Items/Products/lvl5/FunDip.tres" id="20_uv0q0"]
 
 [sub_resource type="Resource" id="Resource_eg1gy"]
 script = ExtResource("5_t007n")
-item_array = Array[ExtResource("4_c5av3")]([SubResource("Resource_jhmpc"), SubResource("Resource_1xadm"), SubResource("Resource_hulo0"), SubResource("Resource_l0v42"), SubResource("Resource_qpysa"), SubResource("Resource_ecx1x"), SubResource("Resource_guqbt"), SubResource("Resource_4qyis"), SubResource("Resource_1ghy1"), SubResource("Resource_ocdvx"), SubResource("Resource_eosbt"), SubResource("Resource_3yspv"), SubResource("Resource_gwfbs"), SubResource("Resource_7o8ka"), SubResource("Resource_gq08j")])
+item_array = Array[ExtResource("4_c5av3")]([ExtResource("6_qkgg3"), ExtResource("7_k4cvy"), ExtResource("8_qbi71"), ExtResource("9_5hw2k"), ExtResource("10_3qpc6"), ExtResource("11_53yve"), ExtResource("12_2qmnd"), ExtResource("13_7wu38"), ExtResource("14_8nls6"), ExtResource("15_3vsne"), ExtResource("16_anv5l"), ExtResource("17_wdbdp"), ExtResource("18_ey277"), ExtResource("19_jvo7a"), ExtResource("20_uv0q0")])
 
 [sub_resource type="Theme" id="Theme_ssx1o"]
 default_font_size = 30

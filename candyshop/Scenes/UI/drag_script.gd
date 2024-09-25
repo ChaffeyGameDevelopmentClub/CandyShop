@@ -33,10 +33,10 @@ func checkArrays(name):
 	for i in size:
 		if array1.item_array[i].Name == name:
 			print("checked: " + name)
-			return array1.item_array[i].img
+			return array1.item_array[i].image
 	var size2 = array2.item_array.size()
 	for i in size2:
 		if array2.item_array[i].Name == name:
 			print("checked: " + name)
-			return array2.item_array[i].img
+			return array2.item_array[i].image
 	
