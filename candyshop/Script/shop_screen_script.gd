@@ -14,15 +14,15 @@ var items1 = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print("hello")
+	#print("hello")
 	GameManager.connect('sendOut',sendTo)
 	for i in resourceArray.item_array.size():
 		items1.append(resourceArray.item_array[i].Name)
-	print(items1)
-	print(resourceArray.item_array[0].Amount)
+	#print(items1)
+	#print(resourceArray.item_array[0].Amount)
 func _makeOrder():
 	itemOrdered = items1[rng.randf_range(0,4)]
-	print("ordered: " + itemOrdered)
+	#print("ordered: " + itemOrdered)
 	setItem1()
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -34,17 +34,17 @@ func _on_serve_button_pressed():
 	#items2.append(itemOrdered)
 	timeLimit.stop()
 	if items2.has(itemOrdered):
-		print("Order Complete")
+		#print("Order Complete")
 		Customer.completeOrder()
 		DialogueManager.completeOrder()
 	else:
-		print("Order Failed")
+		#print("Order Failed")
 		Customer.failedOrder()
 		DialogueManager.failedOrder()
 
 
 func _on_time_limit_timer_timeout():
-	print("Order Failed")
+	#print("Order Failed")
 	Customer.failedOrder()
 	DialogueManager.failedOrder()
 
@@ -67,5 +67,5 @@ func setItem1():
 	orderItem1.scale = Vector2(100, 100) / orderItem1.texture.get_size()
 
 func sendTo(nameOf):
-	print("sendto: " + nameOf)
+	#print("sendto: " + nameOf)
 	items2.append(nameOf)

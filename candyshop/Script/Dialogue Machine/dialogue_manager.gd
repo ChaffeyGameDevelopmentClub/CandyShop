@@ -14,30 +14,30 @@ func _process(delta: float) -> void:
 
 var npc
 func orderStart():
-	print('orderStart')
+	#print('orderStart')
 	#how many npcs we have in Dialogue Array
 	npc = randi_range(0,1)
-	print(npc)
+	#print(npc)
 	var name = dialogueArray.npc_array[npc].Name
 	var arrayamount = dialogueArray.npc_array[npc].text.size()
 	playText()
 	
 var i = 0
 func playText():
-	print('playText')
+	#print('playText')
 	var arrayamount = dialogueArray.npc_array[npc].text.size()
 	var text
 	
-	print(i)
+	#print(i)
 	if arrayamount > i:
 		text = dialogueArray.npc_array[npc].text[i]
 		textLabel.text = text
 		timer.start()
-		print
+		#print
 		i += 1
 	elif arrayamount-1 < i:
 		Customer.dialogueEnd()
-		print(str(i) + " arrayamount")
+		#print(str(i) + " arrayamount")
 		i = 0
 
 func completeOrder():
@@ -47,7 +47,7 @@ func failedOrder():
 	textLabel.text = "you failed me"
 
 func _on_dialogue_timer_timeout() -> void:
-	print('timeout')
+	#print('timeout')
 	playText()
 
 

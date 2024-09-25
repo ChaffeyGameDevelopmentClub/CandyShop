@@ -37,14 +37,14 @@ func completeOrder():
 	order._hideOrder()
 	ordersCompleted+=1
 	totalOrders+=1
-	print("customers: " + str(ordersCompleted))
+	#print("customers: " + str(ordersCompleted))
 func failedOrder():
 	customerMovementState = 2
 	order._hideOrder()
 	ordersFailed+=1
 	totalOrders+=1
-	print("customers: " + str(ordersCompleted))
+	#print("customers: " + str(ordersCompleted))
 func newCustomer():
 	set_texture(preload("res://Assets/icon.svg"))
 	customerMovementState = 1
-	print("yummers")
+	#print("yummers")

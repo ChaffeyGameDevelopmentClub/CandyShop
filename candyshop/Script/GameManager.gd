@@ -17,7 +17,7 @@ signal sendOut
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	self.process_mode = Node.PROCESS_MODE_ALWAYS
-	print(process_mode)
+	#print(process_mode)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -30,7 +30,7 @@ func _input(event):
 		toggle_pause()
 		
 func toggle_pause():
-	print('paused')
+	#print('paused')
 	get_tree().paused = !get_tree().paused
 	
 

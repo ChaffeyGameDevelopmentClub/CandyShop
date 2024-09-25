@@ -21,10 +21,10 @@ func _process(delta):
 	camera.position = camera.position.lerp(target_position, 0.1)
 	if (sell+miss == customers):
 		if (sell >= 3):
-			print("won")
+			#print("won")
 			get_tree().change_scene_to_file("res://Scenes/DaySystem/Levels/level_1.tscn")
 		elif (sell<3):
-			print("lost")
+			#print("lost")
 			get_tree().change_scene_to_file("res://Scenes/UI/main_menu.tscn")
 
 
@@ -32,7 +32,7 @@ func _process(delta):
 
 func _on_sell_button_down() -> void:
 	sell += 1
-	print(customers)
+	#print(customers)
 	
 
 
