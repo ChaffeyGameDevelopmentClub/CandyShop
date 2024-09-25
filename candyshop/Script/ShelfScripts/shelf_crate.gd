@@ -7,6 +7,7 @@ var amount
 var held : bool
 var isHover : bool
 var full : bool
+var isHoverOut : bool
 
 func initName(tempname):
 	#Name
@@ -23,7 +24,7 @@ func initAmount(tempAmount):
 	
 func initImg(Img):
 	#Img
-	print(name)
+	#print(name)
 	texturerect.texture = Img
 	pass
 	
@@ -52,6 +53,8 @@ func _on_button_up() -> void:
 	elif isHover and !full:
 		#adds item to pot
 		GameManager.sendName(name)
+	elif  isHoverOut:
+		GameManager.sendName2(name)
 	else:
 		amount += 1
 	itemAmount.text = '[center]' + str(amount) + '[/center]'
@@ -61,6 +64,7 @@ func _ready() -> void:
 	GameManager.connect('checkHover', check_Hover)
 	GameManager.connect("pot_full", check_full)
 	GameManager.connect("sendAmount", addTo)
+	GameManager.connect('isHover_Out', check_HoverOut)
 	
 func check_Hover(hover):
 	if hover == true:
@@ -70,6 +74,13 @@ func check_Hover(hover):
 		isHover = false
 		#print(isHover)
 
+func check_HoverOut(hover):
+	if hover == true:
+		isHoverOut = true
+		#print(isHover)
+	if hover == false:
+		isHoverOut = false
+
 func check_full():
 	full = true
 	
@@ -78,5 +89,5 @@ func addTo(nameOf):
 	#print(name)
 	if nameOf == name:
 		amount += 1
-		print(amount)
+		#print(amount)
 	itemAmount.text = '[center]' + str(amount) + '[/center]'

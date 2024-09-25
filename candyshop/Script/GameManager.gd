@@ -3,6 +3,7 @@ extends Node
 var index = 1
 var amount
 var hover
+var hoverOut
 signal update_amount
 signal checkHover
 signal addItem
@@ -10,6 +11,8 @@ signal pot_full
 signal sendAmount
 signal heldItem
 signal held
+signal isHover_Out
+signal sendOut
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -32,12 +35,21 @@ func mouseEnterPot():
 func mouseExitPot():
 	hover = false
 	check_Hover()
+func mouseEnterOut():
+	hoverOut = true
+	check_HoverOut(hoverOut)
+func mouseExitOut():
+	hoverOut = false
+	check_HoverOut(hoverOut)
+
 
 func check_Hover():
 	emit_signal('checkHover',hover)
 	
 func sendName(nametxt):
 	emit_signal('addItem',nametxt)
+func sendName2(nametxt):
+	emit_signal('sendOut',nametxt)
 func potFull():
 	print('full')
 	emit_signal('pot_full')
@@ -48,3 +60,5 @@ func checkHeldItem(nameOf):
 	emit_signal('heldItem',nameOf)
 func checkIfHeld(isHeld):
 	emit_signal('held',isHeld)
+func check_HoverOut(hover):
+	emit_signal('isHover_Out',hover)
