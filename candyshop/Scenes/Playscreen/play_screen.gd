@@ -25,6 +25,7 @@ func _process(delta):
 			get_tree().change_scene_to_file("res://Scenes/DaySystem/Levels/level_1.tscn")
 		elif (sell<3):
 			print("lost")
+			get_tree().change_scene_to_file("res://Scenes/UI/main_menu.tscn")
 
 
 
