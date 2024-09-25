@@ -68,28 +68,28 @@ func _makeOrder():
 		print("ordered: " + itemOrdered)
 		setItem1()
 	elif have2 != need2:
-		itemOrdered = items1[rng.randf_range(5,8)]
+		itemOrdered = items1[randi_range(5,8)]
 		have2 +=1
 		sellAmount = 15
 		orders += 1
 		print("ordered: " + itemOrdered)
 		setItem1()
 	elif have3 != need3:
-		itemOrdered = items1[rng.randf_range(9,11)]
+		itemOrdered = items1[randi_range(9,11)]
 		have3 +=1
 		sellAmount = 20
 		orders += 1
 		print("ordered: " + itemOrdered)
 		setItem1()
 	elif have4 != need4:
-		itemOrdered = items1[rng.randf_range(12,13)]
+		itemOrdered = items1[randi_range(12,13)]
 		have4 +=1
 		sellAmount = 25
 		orders += 1
 		print("ordered: " + itemOrdered)
 		setItem1()
 	elif have5 != need5:
-		itemOrdered = items1[rng.randf_range(14,14)]
+		itemOrdered = items1[randi_range(14,14)]
 		have5 +=1
 		sellAmount = 1000
 		orders += 1
@@ -112,7 +112,7 @@ func _on_serve_button_pressed():
 		print("Order Complete")
 		money += sellAmount
 		print(money)
-		dayCounter.text = "day: " + str(day) + "money: " + str(money)
+		dayCounter.text = "day: " + str(day) + "money: " + str(money) + " money needed:" + str(moneyNeed)
 		Customer.completeOrder()
 		DialogueManager.completeOrder()
 	else:
