@@ -22,6 +22,7 @@ func _ready():
 func _process(delta):
 	if(position.x<1500 and customerMovementState == 1):
 		position += Vector2(10, 0)
+		print_debug("moving right")
 	if(position.x>1499 and customerMovementState == 1):
 		customerMovementState = 0
 		itemName = shopScreen.makeOrder()
@@ -33,7 +34,7 @@ func _process(delta):
 		position -= Vector2(10, 0)
 	if(position.x<-199 and customerMovementState == 2):
 		customerMovementState = 0
-		newCustomer()
+		dialogueManager.orderStart()
 	
 func dialogueEnd():
 	order._summonOrder()

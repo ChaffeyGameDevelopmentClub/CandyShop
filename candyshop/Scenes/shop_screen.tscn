@@ -33,6 +33,9 @@ Customer = NodePath("../Customer")
 wait_time = 3.0
 one_shot = true
 
+[node name="WalkonTimer" type="Timer" parent="DialogueManager"]
+wait_time = 2.0
+
 [node name="Customer" type="Sprite2D" parent="." node_paths=PackedStringArray("order", "dialogueManager", "shopScreen", "timeLimit")]
 position = Vector2(-200, 444)
 scale = Vector2(2, 2)
