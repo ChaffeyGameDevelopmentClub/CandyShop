@@ -21,7 +21,7 @@ var npcName
 func orderStart():
 	#print('orderStart')
 	#how many npcs we have in Dialogue Array
-	npc = randi_range(0,7)
+	npc = randi_range(1,8)
 	
 	var name = dialogueArray.npc_array[npc].Name
 	var arrayamount = dialogueArray.npc_array[npc].text.size()
