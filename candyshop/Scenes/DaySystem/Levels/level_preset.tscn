@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnshq5nx73viv"]
+
+[ext_resource type="Script" path="res://Scenes/DaySystem/Levels/level_preset.gd" id="1_2kuvo"]
+
+[node name="Level Preset" type="Node2D" node_paths=PackedStringArray("camera")]
+script = ExtResource("1_2kuvo")
+camera = NodePath("Camera")
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2(-961, 541)
+metadata/_edit_group_ = true
+
+[node name="To Back" type="Button" parent="."]
+offset_left = -232.0
+offset_top = 627.0
+offset_right = 2.0
+offset_bottom = 704.0
+text = "To back"
+metadata/_edit_use_anchors_ = true
+metadata/_edit_group_ = true
+
+[node name="To Front" type="Button" parent="."]
+offset_left = 3.0
+offset_top = 627.0
+offset_right = 266.0
+offset_bottom = 710.0
+text = "To fornt
+"
+metadata/_edit_group_ = true
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="To Back" to="." method="_on_to_back_pressed"]
+[connection signal="pressed" from="To Front" to="." method="_on_to_front_pressed"]

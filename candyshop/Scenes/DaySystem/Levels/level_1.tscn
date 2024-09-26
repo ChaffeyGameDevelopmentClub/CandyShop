@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cjvdeqdmogw76"]
-
-[ext_resource type="PackedScene" uid="uid://dw8j6pg76fxjd" path="res://Scenes/Playscreen/play_screen.tscn" id="1_68jgn"]
-
-[node name="Level1" type="Node2D"]
-
-[node name="PlayScreen" parent="." instance=ExtResource("1_68jgn")]
-customers = 7
