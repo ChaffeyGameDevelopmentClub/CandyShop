@@ -1,18 +1,18 @@
 [gd_scene load_steps=12 format=3 uid="uid://6hfkwlnv0xj4"]
 
 [ext_resource type="Script" path="res://Script/Cook Book/cook_book.gd" id="1_1cmo6"]
+[ext_resource type="Resource" uid="uid://0lmgcrare03" path="res://Resources/CookBook/Book.tres" id="2_ajcfa"]
 [ext_resource type="Texture2D" uid="uid://bhmslgr73hvid" path="res://Assets/CookBook/book.png" id="2_phbx6"]
 [ext_resource type="Texture2D" uid="uid://d3wl2hngcqck0" path="res://Assets/CookBook/right.png" id="3_oq8v6"]
 [ext_resource type="Texture2D" uid="uid://c8bp2qox4wal2" path="res://Assets/CookBook/rightHover.png" id="4_463b0"]
 [ext_resource type="Texture2D" uid="uid://bubsnenc2ef3q" path="res://Assets/CookBook/left.png" id="5_deh6o"]
 [ext_resource type="Texture2D" uid="uid://bpag6tuins7wv" path="res://Assets/CookBook/leftHover.png" id="6_pyguf"]
-[ext_resource type="Texture2D" uid="uid://d20vd1xcemu21" path="res://Assets/Product Assets/bear pop.png" id="7_w42er"]
 [ext_resource type="Theme" uid="uid://bwifx5peyypoc" path="res://Resources/CookBook/TextSize.tres" id="8_82e1b"]
 [ext_resource type="Texture2D" uid="uid://dg3o5m5lux8a2" path="res://Assets/Product Assets/popcorn.png" id="9_tdq1m"]
 [ext_resource type="Texture2D" uid="uid://kayexab56t0b" path="res://Assets/Product Assets/chocolate bears.png" id="10_sjsna"]
 [ext_resource type="Texture2D" uid="uid://b2lvycpvte427" path="res://Assets/Product Assets/gummy worm pops.png" id="11_m5k67"]
 
-[node name="CookBook" type="Control"]
+[node name="CookBook" type="Control" node_paths=PackedStringArray("icon1", "text1")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -20,6 +20,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1cmo6")
+pages = ExtResource("2_ajcfa")
+icon1 = NodePath("Control/1/Icon1")
+text1 = NodePath("Control/1/Text1")
 
 [node name="Book" type="Control" parent="."]
 anchors_preset = 0
@@ -95,7 +98,6 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(6.27473, 5.72727)
-texture = ExtResource("7_w42er")
 expand_mode = 1
 
 [node name="Text1" type="RichTextLabel" parent="Control/1"]
@@ -183,3 +185,6 @@ offset_bottom = 248.0
 theme = ExtResource("8_82e1b")
 text = "Gummy-Pops=
 Gummy worms+Loli-pop"
+
+[connection signal="pressed" from="Book/Buttons/Next Page" to="." method="_on_next_page_pressed"]
+[connection signal="pressed" from="Book/Buttons/Prev Pahe" to="." method="_on_prev_pahe_pressed"]

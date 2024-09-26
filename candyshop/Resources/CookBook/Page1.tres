@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CookBookPage" load_steps=3 format=3 uid="uid://biom7v0j6r2a1"]
+
+[ext_resource type="Texture2D" uid="uid://d20vd1xcemu21" path="res://Assets/Product Assets/bear pop.png" id="1_hyw1v"]
+[ext_resource type="Script" path="res://Script/Cook Book/Page.gd" id="1_q2riu"]
+
+[resource]
+script = ExtResource("1_q2riu")
+icon1 = ExtResource("1_hyw1v")
+text1 = "Bear Pop=Gummy Bear+LoliPop"
+text2 = ""
+text3 = ""
+text4 = ""
