@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://fhbg06io7grq"]
+[gd_scene load_steps=44 format=3 uid="uid://fhbg06io7grq"]
 
 [ext_resource type="Script" path="res://Script/ShelfScripts/ShelfOverlayContainer.gd" id="1_78kgt"]
 [ext_resource type="Script" path="res://Script/ShelfScripts/MouseSensorPot.gd" id="1_amly7"]
@@ -40,6 +40,7 @@
 [ext_resource type="Texture2D" uid="uid://dsfr4680iricc" path="res://Assets/Plants/adult lollipop plant.png" id="35_q7hcm"]
 [ext_resource type="Script" path="res://Scenes/Playscreen/control.gd" id="39_csd04"]
 [ext_resource type="PackedScene" uid="uid://6hfkwlnv0xj4" path="res://Scenes/CookBook/cook_book.tscn" id="40_8ijrn"]
+[ext_resource type="Texture2D" uid="uid://ood0okfuqlj5" path="res://Assets/grabby hand.png" id="40_ntwqc"]
 
 [sub_resource type="Resource" id="Resource_eg1gy"]
 script = ExtResource("5_t007n")
@@ -439,6 +440,16 @@ script = ExtResource("39_csd04")
 layout_mode = 0
 offset_right = 156.0
 offset_bottom = 138.0
+color = Color(1, 1, 1, 0)
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 185.0
+offset_top = -25.0
+offset_right = 2185.0
+offset_bottom = 1975.0
+scale = Vector2(-0.1, 0.1)
+texture = ExtResource("40_ntwqc")
 
 [node name="CookBook" parent="." instance=ExtResource("40_8ijrn")]
 z_index = 4

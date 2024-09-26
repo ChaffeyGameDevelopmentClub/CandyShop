@@ -18,7 +18,7 @@
 [ext_resource type="Resource" uid="uid://brxnakeio2y0c" path="res://Resources/Dialogue Resources/Npc1/npc14.tres" id="15_rguuv"]
 [ext_resource type="Resource" uid="uid://b7j2hxj3rd7f3" path="res://Resources/Dialogue Resources/Npc1/npc15.tres" id="16_oqm5u"]
 [ext_resource type="Resource" uid="uid://cuvk62wg6m2ey" path="res://Resources/Dialogue Resources/Npc1/npc16.tres" id="17_fn2po"]
-[ext_resource type="Resource" path="res://Resources/Dialogue Resources/Npc1/npcEgg.tres" id="18_roy4l"]
+[ext_resource type="Resource" uid="uid://dq01j4nclnkid" path="res://Resources/Dialogue Resources/Npc1/npcEgg.tres" id="18_roy4l"]
 
 [resource]
 script = ExtResource("2_nygpj")
