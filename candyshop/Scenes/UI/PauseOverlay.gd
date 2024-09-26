@@ -5,6 +5,7 @@ extends Control
 @export var options: Control
 @export var panelcontainer: PanelContainer
 
+
 func _ready() -> void:
 	pls.visible = false
 	options.visible = false
@@ -16,7 +17,10 @@ func _settings():
 	options.visible = true
 	#pls.visible = false
 	
-
+func _backSetting():
+	panelcontainer.visible = true
+	options.visible = false
+	
 
 func resume():
 	get_tree().paused = false
@@ -49,8 +53,10 @@ func _process(delta):
 
 
 func _on_quit_pressed() -> void:
-	pass # Replace with function body.
+	resume()
+	get_tree().change_scene_to_file("res://Scenes/UI/main_menu.tscn")
 
 
 func _on_settings_pressed() -> void:
 	_settings()
+	

@@ -37,8 +37,9 @@ metadata/_edit_group_ = true
 pls = NodePath("..")
 options = NodePath("Options Menu")
 
-[node name="Options Menu" parent="Camera/pls/PauseOverlay" instance=ExtResource("2_wmsu2")]
+[node name="Options Menu" parent="Camera/pls/PauseOverlay" node_paths=PackedStringArray("pause") instance=ExtResource("2_wmsu2")]
 layout_mode = 1
+pause = NodePath("..")
 
 [connection signal="pressed" from="To Back" to="." method="_on_to_back_pressed"]
 [connection signal="pressed" from="To Front" to="." method="_on_to_front_pressed"]

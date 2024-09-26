@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://38pe832setc0" path="res://Scenes/shop_screen.tscn" id="1_k3rxu"]
 [ext_resource type="PackedScene" uid="uid://fhbg06io7grq" path="res://Scenes/UI/shelf_overlay.tscn" id="2_pfqum"]
-[ext_resource type="PackedScene" path="res://Scenes/DaySystem/Levels/level_preset.tscn" id="3_d3r52"]
+[ext_resource type="PackedScene" uid="uid://dnshq5nx73viv" path="res://Scenes/DaySystem/Levels/level_preset.tscn" id="3_d3r52"]
 
 [node name="lv 5" type="Node2D"]
 
