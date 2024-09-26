@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=3 format=3 uid="uid://ciyi0fkj5kof3"]
+
+[ext_resource type="Texture2D" uid="uid://ymtno7bb1gf6" path="res://Assets/Sam the Player.jpg" id="1_f71po"]
+[ext_resource type="Script" path="res://Script/Dialogue Machine/DialogueResource.gd" id="1_y8o7l"]
+
+[resource]
+script = ExtResource("1_y8o7l")
+Name = "Sam The Player"
+text = Array[String]([""])
+image = ExtResource("1_f71po")
