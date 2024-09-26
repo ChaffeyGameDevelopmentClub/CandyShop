@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=3 format=3 uid="uid://q775ibvgsrfi"]
+
+[ext_resource type="Texture2D" uid="uid://xcnt7x5kb5ev" path="res://Resources/Dialogue Resources/Npc1/Peter Griffin.png" id="1_omiir"]
+[ext_resource type="Script" path="res://Script/Dialogue Machine/DialogueResource.gd" id="2_fblwu"]
+
+[resource]
+script = ExtResource("2_fblwu")
+Name = "Peter Griffin"
+text = Array[String](["It's me, Peter Griffin from the hit show Family Guy", "Did you know that adding me to any situation automatically counts as comedy?", "Boy this is worse than the time I ordered a "])
+image = ExtResource("1_omiir")
