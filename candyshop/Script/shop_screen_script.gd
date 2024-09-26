@@ -53,17 +53,17 @@ func _on_time_limit_timer_timeout():
 func setItem1():
 	orderItem1.visible = true
 	if(itemOrdered == "Bear Pop"):
-		orderItem1.set_texture(preload("res://Assets/Ingredent Assets/bear pop.png"))
+		orderItem1.set_texture(resourceArray.item_array[1].image)
 	elif(itemOrdered == "Candy Corn"):
-		orderItem1.set_texture(preload("res://Assets/Ingredent Assets/candy corn.png"))
+		orderItem1.set_texture(resourceArray.item_array[1].image)
 	elif(itemOrdered == "Chocolate Bears"):
-		orderItem1.set_texture(preload("res://Assets/Ingredent Assets/chocolate bears.png"))
+		orderItem1.set_texture(resourceArray.item_array[0].image)
 	elif(itemOrdered == "Gummy Bear Army"):
-		orderItem1.set_texture(preload("res://Assets/Ingredent Assets/Gummy bear army.png"))
+		orderItem1.set_texture(resourceArray.item_array[7].image)
 	elif(itemOrdered == "Gummy Sharks"):
-		orderItem1.set_texture(preload("res://Assets/Ingredent Assets/gummy sharks.png"))
+		orderItem1.set_texture(resourceArray.item_array[4].image)
 	elif(itemOrdered == "Gummy Worm Pops"):
-		orderItem1.set_texture(preload("res://Assets/Ingredent Assets/gummy worm pops.png"))
+		orderItem1.set_texture(resourceArray.item_array[3].image)
 	else:
 		orderItem1.set_texture(preload("res://Assets/icon.svg"))
 	orderItem1.scale = Vector2(100, 100) / orderItem1.texture.get_size()

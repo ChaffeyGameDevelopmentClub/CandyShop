@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2ycbmdy35qxc"
-path="res://.godot/imported/GingerBreadHouse.png-bad5582d22a01a02766fd0ac35595b9a.ctex"
+uid="uid://l3rwkmj5k8lj"
+path="res://.godot/imported/chocolate forest.png-601991fc25d31e8e03e6b9ff541d9341.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/GingerBreadHouse.png"
-dest_files=["res://.godot/imported/GingerBreadHouse.png-bad5582d22a01a02766fd0ac35595b9a.ctex"]
+source_file="res://Assets/Product Assets/chocolate forest.png"
+dest_files=["res://.godot/imported/chocolate forest.png-601991fc25d31e8e03e6b9ff541d9341.ctex"]
 
 [params]
 
