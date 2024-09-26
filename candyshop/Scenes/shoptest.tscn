@@ -4,21 +4,10 @@
 
 [node name="Shoptest" type="Node2D"]
 
-[node name="ShopScreen" parent="." node_paths=PackedStringArray("timeLimit") instance=ExtResource("1_fjuih")]
-timeLimit = NodePath("TimeLimitTimer")
+[node name="ShopScreen" parent="." instance=ExtResource("1_fjuih")]
 metadata/_edit_group_ = true
 
-[node name="Customer" parent="ShopScreen" index="4" node_paths=PackedStringArray("order", "dialogueManager", "shopScreen", "timeLimit")]
-order = NodePath("../OrderRect")
-dialogueManager = NodePath("../DialogueManager")
-shopScreen = NodePath("..")
-timeLimit = NodePath("../TimeLimitTimer")
-
-[node name="OrderRect" parent="ShopScreen" index="7" node_paths=PackedStringArray("NextButton", "ServeButton")]
-NextButton = NodePath("../NextButton")
-ServeButton = NodePath("../ServeButton")
-
-[node name="TimeLimitTimer" type="Timer" parent="ShopScreen"]
+[node name="TimeLimitTimer2" type="Timer" parent="ShopScreen"]
 wait_time = 1000.0
 one_shot = true
 
