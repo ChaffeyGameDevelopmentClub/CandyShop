@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DialogueResource" load_steps=3 format=3 uid="uid://b3fmu3rg8p68n"]
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=3 format=3 uid="uid://djg3ekyag00v2"]
 
 [ext_resource type="Texture2D" uid="uid://1p2w33ny005w" path="res://Assets/ScaryBenny.jpg" id="1_rxgex"]
 [ext_resource type="Script" path="res://Script/Dialogue Machine/DialogueResource.gd" id="2_e8okb"]
