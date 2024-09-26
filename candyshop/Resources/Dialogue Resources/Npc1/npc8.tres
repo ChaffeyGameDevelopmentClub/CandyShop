@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=3 format=3 uid="uid://bgfk2ek7a5hs7"]
+
+[ext_resource type="Texture2D" uid="uid://cpbjr4f2um1kk" path="res://Assets/dio.png" id="1_oh7gg"]
+[ext_resource type="Script" path="res://Script/Dialogue Machine/DialogueResource.gd" id="2_qql0a"]
+
+[resource]
+script = ExtResource("2_qql0a")
+Name = "Dio"
+text = Array[String](["Your first customer wasn't Jo Jo.", "It was me Dio!", "Give me a "])
+image = ExtResource("1_oh7gg")

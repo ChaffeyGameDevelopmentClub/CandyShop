@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://bx6u827jnwi8u"]
 
 [ext_resource type="Script" path="res://Script/ShelfScripts/itemResources.gd" id="1_0us4k"]
-[ext_resource type="Texture2D" uid="uid://brwfm50gyafys" path="res://Assets/icon.svg" id="1_kt3uu"]
+[ext_resource type="Texture2D" uid="uid://n1shww47ggnn" path="res://Assets/Ingredent Assets/worms2.png" id="1_1pfhq"]
 
 [resource]
 script = ExtResource("1_0us4k")
-image = ExtResource("1_kt3uu")
+image = ExtResource("1_1pfhq")
 Name = "Gummy Worms"
-Amount = 25
+Amount = 10

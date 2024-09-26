@@ -1,24 +1,62 @@
 extends Sprite2D
 var customerMovementState
-var order
-var dialogueManager
-var shopScreen
+@export var order : TextureRect
+@export var dialogueManager : Control
+@export var shopScreen : Node2D
+var ordersCompleted : int
+var totalOrders : int
+var ordersFailed : int
+@export var timeLimit : Timer
+var itemName
+var custImg
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	ordersCompleted = 0
+	ordersFailed = 0
+	totalOrders = 0
 	customerMovementState = 1
-	order = get_tree().current_scene.get_node("OrderRect")
-	dialogueManager = get_tree().current_scene.get_node("DialogueManager")
-	shopScreen = get_tree().current_scene#.get_node("ShopScreen")
+	newCustomer()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if(position.x<1500 and customerMovementState == 1):
 		position += Vector2(10, 0)
+		#print_debug("moving right")
 	if(position.x>1499 and customerMovementState == 1):
-		customerMovementState = 2
-		shopScreen._makeOrder()
+		customerMovementState = 0
+		itemName = shopScreen.makeOrder()
+		dialogueManager.sendToDialogue(itemName)
+		#print_debug("Send to dialogue")
+		#dialogueManager.orderStart()
+		#print_debug("order start")
+	if(position.x>-200 and customerMovementState == 2):
+		position -= Vector2(10, 0)
+	if(position.x<-199 and customerMovementState == 2):
+		customerMovementState = 0
 		dialogueManager.orderStart()
+		customerMovementState = 1
 	
 func dialogueEnd():
 	order._summonOrder()
+	timeLimit.start()
+func completeOrder():
+	customerMovementState = 2
+	order._hideOrder()
+	ordersCompleted+=1
+	totalOrders+=1
+	#print("customers: " + str(ordersCompleted))
+func failedOrder():
+	customerMovementState = 2
+	order._hideOrder()
+	ordersFailed+=1
+	totalOrders+=1
+	#print("customers: " + str(ordersCompleted))
+func newCustomer():
+	#set_texture(custImg)
+	print_debug('newCustomer')
+	dialogueManager.orderStart()
+	customerMovementState = 1
+	#print("yummers")
+func sendImage(textureName):
+	custImg = textureName

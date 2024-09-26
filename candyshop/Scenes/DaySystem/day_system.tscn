@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cserprcw12vq2"]
+
+[ext_resource type="Script" path="res://Scenes/DaySystem/day_system.gd" id="1_0v0mq"]
+
+[node name="DaySystem" type="Node2D"]
+script = ExtResource("1_0v0mq")

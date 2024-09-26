@@ -7,4 +7,4 @@
 script = ExtResource("1_448d5")
 image = ExtResource("1_8coxo")
 Name = "Candy Corn"
-Amount = 25
+Amount = 10

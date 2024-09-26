@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://drjb4cjgwisy1"]
+
+[ext_resource type="PackedScene" uid="uid://38pe832setc0" path="res://Scenes/shop_screen.tscn" id="1_fjuih"]
+
+[node name="Shoptest" type="Node2D"]
+
+[node name="ShopScreen" parent="." node_paths=PackedStringArray("timeLimit") instance=ExtResource("1_fjuih")]
+timeLimit = NodePath("TimeLimitTimer")
+metadata/_edit_group_ = true
+
+[node name="Customer" parent="ShopScreen" index="4" node_paths=PackedStringArray("order", "dialogueManager", "shopScreen", "timeLimit")]
+order = NodePath("../OrderRect")
+dialogueManager = NodePath("../DialogueManager")
+shopScreen = NodePath("..")
+timeLimit = NodePath("../TimeLimitTimer")
+
+[node name="OrderRect" parent="ShopScreen" index="7" node_paths=PackedStringArray("NextButton", "ServeButton")]
+NextButton = NodePath("../NextButton")
+ServeButton = NodePath("../ServeButton")
+
+[node name="TimeLimitTimer" type="Timer" parent="ShopScreen"]
+wait_time = 1000.0
+one_shot = true
+
+[connection signal="timeout" from="ShopScreen/TimeLimitTimer" to="ShopScreen" method="_on_time_limit_timer_timeout"]
+
+[editable path="ShopScreen"]
+[editable path="ShopScreen/DialogueManager"]

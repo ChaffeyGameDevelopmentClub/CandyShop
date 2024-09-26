@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://1yb8wjsobrt8"]
 
-[ext_resource type="Texture2D" uid="uid://kayexab56t0b" path="res://Assets/Ingredent Assets/chocolate bears.png" id="1_8d2t4"]
 [ext_resource type="Script" path="res://Script/ShelfScripts/itemResources.gd" id="1_366d0"]
+[ext_resource type="Texture2D" uid="uid://kayexab56t0b" path="res://Assets/Product Assets/chocolate bears.png" id="1_r0jmq"]
 
 [resource]
 script = ExtResource("1_366d0")
-image = ExtResource("1_8d2t4")
+image = ExtResource("1_r0jmq")
 Name = "Chocolate Bears"
 Amount = 0

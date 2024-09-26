@@ -17,7 +17,7 @@ func _ready() -> void:
 
 
 func changeText(nameText):
-	print('Ing Num:' + str(ingNum))
+	#print('Ing Num:' + str(ingNum))
 	if ingNum == 1:
 		ing1Label.text = nameText
 		spot1 = nameText
@@ -58,7 +58,7 @@ func combine():
 	#spot3
 	#spot4
 	var ingredents = [spot1,spot2,spot3,spot4]
-	print(ingredents)
+	#print(ingredents)
 	
 	#Chcolate Popcorn
 	if ingredents.has('Candy Corn') and ingredents.has('Cholate'):
@@ -122,5 +122,5 @@ func combine():
 	#lvl5
 	#Fun Dip
 	if ingredents.has('Ginger Bread Man') and ingredents.has('Caramel Apples') and ingredents.has('Gummy Army') and ingredents.has('Gummy Sharks'):
-		addToStorage('Ginger Bread Man')
+		addToStorage('Fun Dip')
 		clearpot()

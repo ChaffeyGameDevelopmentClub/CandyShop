@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://bqgyetp3h1rcf"]
 
 [ext_resource type="Script" path="res://Script/ShelfScripts/itemResources.gd" id="1_3br5k"]
-[ext_resource type="Texture2D" uid="uid://brwfm50gyafys" path="res://Assets/icon.svg" id="1_pfnwr"]
+[ext_resource type="Texture2D" uid="uid://dw304gk7rayx4" path="res://Assets/Ingredent Assets/lollipop.png" id="1_268v3"]
 
 [resource]
 script = ExtResource("1_3br5k")
-image = ExtResource("1_pfnwr")
+image = ExtResource("1_268v3")
 Name = "Loli-Pop"
-Amount = 25
+Amount = 10

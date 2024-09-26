@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://dgeb52ifhaayc"]
 
-[ext_resource type="Texture2D" uid="uid://brwfm50gyafys" path="res://Assets/icon.svg" id="1_iluah"]
+[ext_resource type="Texture2D" uid="uid://dniun4me2eg35" path="res://Assets/Product Assets/gingerbread.png" id="1_87r1t"]
 [ext_resource type="Script" path="res://Script/ShelfScripts/itemResources.gd" id="1_vmsrn"]
 
 [resource]
 script = ExtResource("1_vmsrn")
-image = ExtResource("1_iluah")
+image = ExtResource("1_87r1t")
 Name = "Ginger Bread Man"
 Amount = 0

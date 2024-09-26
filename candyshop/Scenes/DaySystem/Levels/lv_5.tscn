@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dejhmkvnhvk7s"]
+
+[ext_resource type="PackedScene" uid="uid://38pe832setc0" path="res://Scenes/shop_screen.tscn" id="1_k3rxu"]
+[ext_resource type="PackedScene" uid="uid://fhbg06io7grq" path="res://Scenes/UI/shelf_overlay.tscn" id="2_pfqum"]
+[ext_resource type="PackedScene" uid="uid://dnshq5nx73viv" path="res://Scenes/DaySystem/Levels/level_preset.tscn" id="3_d3r52"]
+
+[node name="lv 5" type="Node2D"]
+
+[node name="ShopScreen" parent="." instance=ExtResource("1_k3rxu")]
+day = "5"
+NextLevel = &"res://Scenes/DaySystem/Levels/win.tscn"
+moneyNeed = 1000
+need5 = 1
+totalOrders = 1
+
+[node name="ShelfOverlay" parent="." instance=ExtResource("2_pfqum")]
+
+[node name="Level Preset" parent="." instance=ExtResource("3_d3r52")]

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CookBookPage" load_steps=6 format=3 uid="uid://c8iqxfmci1xv6"]
+
+[ext_resource type="Texture2D" uid="uid://b6ig0t6rjuevb" path="res://Assets/Product Assets/gummy sharks.png" id="1_226gn"]
+[ext_resource type="Script" path="res://Script/Cook Book/Page.gd" id="1_ixi8j"]
+[ext_resource type="Texture2D" uid="uid://l3rwkmj5k8lj" path="res://Assets/Product Assets/chocolate forest.png" id="2_vd18s"]
+[ext_resource type="Texture2D" uid="uid://b2ycbmdy35qxc" path="res://Assets/Product Assets/GingerBreadHouse.png" id="3_60dua"]
+[ext_resource type="Texture2D" uid="uid://ix50l6q8vmw7" path="res://Assets/Product Assets/Gummy bear army.png" id="4_0b5xt"]
+
+[resource]
+script = ExtResource("1_ixi8j")
+icon1 = ExtResource("1_226gn")
+text1 = "Gummy Sharks=Gummy Bears + Gummy Worms"
+icon2 = ExtResource("2_vd18s")
+text2 = "Chocolate Forest=Chocolate Popcorn + Licorice + Lollipop"
+icon3 = ExtResource("3_60dua")
+text3 = "Gingerbread House=Candy Corn + Gummy-Pops + Chocolate"
+icon4 = ExtResource("4_0b5xt")
+text4 = "Gummy Army=Gummy Bears + Gummy Worms + Lollipop "
