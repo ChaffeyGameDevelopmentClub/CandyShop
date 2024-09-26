@@ -2,11 +2,21 @@ extends Control
 
 @export var pls: CanvasLayer
 @export var anime: AnimationPlayer
+@export var options: Control
+@export var panelcontainer: PanelContainer
 
 func _ready() -> void:
 	pls.visible = false
+	options.visible = false
 	anime.play("RESET")
 	pass
+
+func _settings():
+	panelcontainer.visible = false
+	options.visible = true
+	#pls.visible = false
+	
+
 
 func resume():
 	get_tree().paused = false
@@ -40,3 +50,7 @@ func _process(delta):
 
 func _on_quit_pressed() -> void:
 	pass # Replace with function body.
+
+
+func _on_settings_pressed() -> void:
+	_settings()

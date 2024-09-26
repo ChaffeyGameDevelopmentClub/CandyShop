@@ -3,7 +3,6 @@ extends Node2D
 @export var camera: Camera2D  
 
 
-
 var target_position: Vector2
 
 func _ready():

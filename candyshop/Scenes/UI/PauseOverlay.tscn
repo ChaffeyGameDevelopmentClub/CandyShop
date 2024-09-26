@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c6s3clh2rvb8m"]
+[gd_scene load_steps=7 format=3 uid="uid://dpebh0sy1vypb"]
 
 [ext_resource type="Script" path="res://Scenes/UI/PauseOverlay.gd" id="1_hh7qp"]
 [ext_resource type="Shader" path="res://Scenes/UI/PauseOverlay.gdshader" id="2_kfgvd"]
@@ -68,7 +68,7 @@ _data = {
 "RESET": SubResource("Animation_u4qih")
 }
 
-[node name="PauseOverlay" type="Control" node_paths=PackedStringArray("anime")]
+[node name="PauseOverlay" type="Control" node_paths=PackedStringArray("anime", "panelcontainer")]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 15
@@ -78,6 +78,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_hh7qp")
 anime = NodePath("AnimationPlayer")
+panelcontainer = NodePath("PanelContainer")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_eabaq")
@@ -94,8 +95,12 @@ offset_right = 1434.0
 offset_bottom = 839.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
-visible = false
 layout_mode = 2
+
+[node name="settings" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "Settings"
 
 [node name="resume" type="Button" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
@@ -112,5 +117,6 @@ libraries = {
 "": SubResource("AnimationLibrary_tp4by")
 }
 
+[connection signal="pressed" from="PanelContainer/VBoxContainer/settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]

@@ -16,6 +16,7 @@
 texture = ExtResource("3_xxmdf")
 
 [node name="Options Menu" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -62,6 +63,7 @@ scale = Vector2(2.94915, 2.0125)
 texture = ExtResource("3_namnu")
 
 [node name="musicslider" type="HSlider" parent="AudioOptions/Control/music"]
+process_mode = 3
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.311
@@ -100,6 +102,7 @@ scale = Vector2(2.94915, 2.0125)
 texture = ExtResource("3_namnu")
 
 [node name="overallslider" type="HSlider" parent="AudioOptions/Control/overall"]
+process_mode = 3
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.311
@@ -138,6 +141,7 @@ scale = Vector2(2.94915, 2.0125)
 texture = ExtResource("3_namnu")
 
 [node name="sfxslider" type="HSlider" parent="AudioOptions/Control/sfx"]
+process_mode = 3
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.311
@@ -158,6 +162,7 @@ scale = Vector2(2.86328, 2.47115)
 texture = ExtResource("7_2b5pc")
 
 [node name="TextureButton" type="TextureButton" parent="."]
+process_mode = 3
 layout_mode = 0
 offset_left = 630.0
 offset_top = 958.0
