@@ -67,7 +67,7 @@ func sendToDialogue(itemName1):
 	itemName = itemName1
 
 func completeOrder():
-	textLabel.text = "yummers"
+	textLabel.text = '[center]' + "yummers" + '[/center]'
 
 func failedOrder():
 	textLabel.text = "you failed me"

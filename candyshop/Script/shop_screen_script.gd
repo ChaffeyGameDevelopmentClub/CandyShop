@@ -24,7 +24,7 @@ func makeOrder():
 	itemOrdered = items1[rng.randf_range(0,4)]
 	#print("ordered: " + itemOrdered)
 	setItem1()
-	print_debug(itemOrdered)
+	#print_debug(itemOrdered)
 	return itemOrdered
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
