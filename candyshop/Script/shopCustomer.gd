@@ -7,6 +7,7 @@ var ordersCompleted : int
 var totalOrders : int
 var ordersFailed : int
 @export var timeLimit : Timer
+var itemName
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	ordersCompleted = 0
@@ -21,8 +22,11 @@ func _process(delta):
 		position += Vector2(10, 0)
 	if(position.x>1499 and customerMovementState == 1):
 		customerMovementState = 0
-		shopScreen._makeOrder()
+		itemName = shopScreen.makeOrder()
+		dialogueManager.sendToDialogue(itemName)
+		#print_debug("Send to dialogue")
 		dialogueManager.orderStart()
+		#print_debug("order start")
 	if(position.x>-200 and customerMovementState == 2):
 		position -= Vector2(10, 0)
 	if(position.x<-199 and customerMovementState == 2):
@@ -45,6 +49,7 @@ func failedOrder():
 	totalOrders+=1
 	#print("customers: " + str(ordersCompleted))
 func newCustomer():
+	
 	set_texture(preload("res://Assets/icon.svg"))
 	customerMovementState = 1
 	#print("yummers")

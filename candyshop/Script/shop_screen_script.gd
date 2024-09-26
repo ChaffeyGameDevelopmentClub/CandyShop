@@ -20,10 +20,12 @@ func _ready():
 		items1.append(resourceArray.item_array[i].Name)
 	#print(items1)
 	#print(resourceArray.item_array[0].Amount)
-func _makeOrder():
+func makeOrder():
 	itemOrdered = items1[rng.randf_range(0,4)]
 	#print("ordered: " + itemOrdered)
 	setItem1()
+	print_debug(itemOrdered)
+	return itemOrdered
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
