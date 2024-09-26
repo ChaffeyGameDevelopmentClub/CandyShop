@@ -436,12 +436,6 @@ offset_right = 143.0
 offset_bottom = 561.0
 script = ExtResource("39_csd04")
 
-[node name="ColorRect" type="ColorRect" parent="Control"]
-layout_mode = 0
-offset_right = 156.0
-offset_bottom = 138.0
-color = Color(1, 1, 1, 0)
-
 [node name="TextureRect" type="TextureRect" parent="Control"]
 layout_mode = 0
 offset_left = 185.0
@@ -449,7 +443,14 @@ offset_top = -25.0
 offset_right = 2185.0
 offset_bottom = 1975.0
 scale = Vector2(-0.1, 0.1)
+mouse_filter = 2
 texture = ExtResource("40_ntwqc")
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_right = 156.0
+offset_bottom = 138.0
+color = Color(1, 1, 1, 0)
 
 [node name="CookBook" parent="." instance=ExtResource("40_8ijrn")]
 z_index = 4

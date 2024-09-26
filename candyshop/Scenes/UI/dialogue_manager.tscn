@@ -61,8 +61,7 @@ offset_right = 705.0
 offset_bottom = 283.0
 theme = SubResource("Theme_u02hj")
 bbcode_enabled = true
-text = "[center]Hello I want a nice shake!
-please make it now!
+text = "[center]
 [/center]"
 
 [node name="NameText" type="RichTextLabel" parent="Control"]
@@ -70,7 +69,6 @@ layout_mode = 0
 offset_right = 234.0
 offset_bottom = 77.0
 theme = SubResource("Theme_3ilyw")
-text = "Name"
 
 [node name="dialogueTimer" type="Timer" parent="."]
 wait_time = 3.0
