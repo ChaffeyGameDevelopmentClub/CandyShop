@@ -34,6 +34,8 @@ func _process(delta):
 		position -= Vector2(10, 0)
 	if(position.x<-199 and customerMovementState == 2):
 		customerMovementState = 0
+		if texture == preload("res://Assets/kenny.png"):
+			$CustomerSound.play()
 		dialogueManager.orderStart()
 		customerMovementState = 1
 	
