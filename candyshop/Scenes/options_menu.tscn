@@ -1,31 +1,185 @@
-[gd_scene load_steps=2 format=3 uid="uid://cuh2picld1kjm"]
+[gd_scene load_steps=12 format=3 uid="uid://cuh2picld1kjm"]
 
 [ext_resource type="Script" path="res://Scenes/options_menu.gd" id="1_cdxxy"]
+[ext_resource type="Texture2D" uid="uid://darc6424mlf0x" path="res://Assets/Main Menu/BG.png" id="2_hgx7w"]
+[ext_resource type="Script" path="res://Scenes/audio_options.gd" id="2_q5bqc"]
+[ext_resource type="Texture2D" uid="uid://e6bw5jyy3yfi" path="res://Assets/Main Menu/lightscrollbg.png" id="3_namnu"]
+[ext_resource type="Texture2D" uid="uid://drq6vt8r2857v" path="res://Assets/Main Menu/darkbgscroll.png" id="3_xxmdf"]
+[ext_resource type="Texture2D" uid="uid://cr33show1brye" path="res://Assets/Main Menu/musiclogo.png" id="5_2obco"]
+[ext_resource type="Texture2D" uid="uid://cplmie6gu23nc" path="res://Assets/Main Menu/candypinks.png" id="5_wh5en"]
+[ext_resource type="Texture2D" uid="uid://dwvgto7d7h42l" path="res://Assets/Main Menu/overalllogo.png" id="6_4ocrr"]
+[ext_resource type="Texture2D" uid="uid://dwmqqcjqp57dq" path="res://Assets/Main Menu/sfxlogo.png" id="7_2b5pc"]
+[ext_resource type="Texture2D" uid="uid://5rbsvgo0cavv" path="res://Assets/Main Menu/volume.png" id="9_wa4vq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7jm2r"]
+texture = ExtResource("3_xxmdf")
 
 [node name="Options Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_cdxxy")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(937, 590)
+scale = Vector2(1.14271, 1.14074)
+texture = ExtResource("2_hgx7w")
+
+[node name="AudioOptions" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_q5bqc")
+
+[node name="Control" type="Control" parent="AudioOptions"]
+anchors_preset = 0
+offset_left = 30.0
+offset_top = 196.0
+offset_right = 70.0
+offset_bottom = 236.0
+
+[node name="music" type="Control" parent="AudioOptions/Control"]
+anchors_preset = 0
+offset_left = 128.0
+offset_top = 312.0
+offset_right = 168.0
+offset_bottom = 352.0
+
+[node name="Darkbgscroll" type="Sprite2D" parent="AudioOptions/Control/music"]
+position = Vector2(805, 123)
+scale = Vector2(2.54426, 1.9)
+texture = ExtResource("3_xxmdf")
+
+[node name="Lightscrollbg" type="Sprite2D" parent="AudioOptions/Control/music"]
+position = Vector2(960, 123)
+scale = Vector2(2.94915, 2.0125)
+texture = ExtResource("3_namnu")
+
+[node name="musicslider" type="HSlider" parent="AudioOptions/Control/music"]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = -1
+anchor_right = 0.311
+anchor_bottom = 0.015
+offset_left = 388.0
+offset_top = 81.0
+offset_right = 1512.56
+offset_bottom = 163.4
+theme_override_icons/grabber = ExtResource("5_wh5en")
+theme_override_icons/grabber_highlight = ExtResource("5_wh5en")
+theme_override_icons/grabber_disabled = ExtResource("5_wh5en")
+theme_override_styles/slider = SubResource("StyleBoxTexture_7jm2r")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
-layout_mode = 2
+[node name="Musiclogo" type="Sprite2D" parent="AudioOptions/Control/music"]
+position = Vector2(231, 124)
+scale = Vector2(2.30702, 2.03)
+texture = ExtResource("5_2obco")
 
-[node name="Volume" type="HSlider" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
+[node name="overall" type="Control" parent="AudioOptions/Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 129.0
+offset_top = 107.0
+offset_right = 169.0
+offset_bottom = 147.0
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Volume"]
+[node name="Darkbgscroll" type="Sprite2D" parent="AudioOptions/Control/overall"]
+position = Vector2(805, 123)
+scale = Vector2(2.54426, 1.9)
+texture = ExtResource("3_xxmdf")
+
+[node name="Lightscrollbg" type="Sprite2D" parent="AudioOptions/Control/overall"]
+position = Vector2(960, 123)
+scale = Vector2(2.94915, 2.0125)
+texture = ExtResource("3_namnu")
+
+[node name="overallslider" type="HSlider" parent="AudioOptions/Control/overall"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.311
+anchor_bottom = 0.015
+offset_left = 388.0
+offset_top = 81.0
+offset_right = 1508.56
+offset_bottom = 163.4
+theme_override_icons/grabber = ExtResource("5_wh5en")
+theme_override_icons/grabber_highlight = ExtResource("5_wh5en")
+theme_override_icons/grabber_disabled = ExtResource("5_wh5en")
+theme_override_styles/slider = SubResource("StyleBoxTexture_7jm2r")
+
+[node name="Overalllogo" type="Sprite2D" parent="AudioOptions/Control/overall"]
+position = Vector2(217, 125)
+scale = Vector2(1.8356, 1.78977)
+texture = ExtResource("6_4ocrr")
+
+[node name="sfx" type="Control" parent="AudioOptions/Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 129.0
+offset_top = 518.0
+offset_right = 169.0
+offset_bottom = 558.0
+
+[node name="Darkbgscroll" type="Sprite2D" parent="AudioOptions/Control/sfx"]
+position = Vector2(805, 123)
+scale = Vector2(2.54426, 1.9)
+texture = ExtResource("3_xxmdf")
+
+[node name="Lightscrollbg" type="Sprite2D" parent="AudioOptions/Control/sfx"]
+position = Vector2(960, 123)
+scale = Vector2(2.94915, 2.0125)
+texture = ExtResource("3_namnu")
+
+[node name="sfxslider" type="HSlider" parent="AudioOptions/Control/sfx"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.311
+anchor_bottom = 0.015
+offset_left = 388.0
+offset_top = 81.0
+offset_right = 1510.56
+offset_bottom = 163.4
+theme_override_icons/grabber = ExtResource("5_wh5en")
+theme_override_icons/grabber_highlight = ExtResource("5_wh5en")
+theme_override_icons/grabber_disabled = ExtResource("5_wh5en")
+theme_override_styles/slider = SubResource("StyleBoxTexture_7jm2r")
+
+[node name="Sfxlogo" type="Sprite2D" parent="AudioOptions/Control/sfx"]
+position = Vector2(230, 126)
+scale = Vector2(2.86328, 2.47115)
+texture = ExtResource("7_2b5pc")
+
+[node name="TextureButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_right = 1907.0
-offset_bottom = 15.0
+offset_left = 630.0
+offset_top = 958.0
+offset_right = 1240.0
+offset_bottom = 1038.0
+rotation = 0.00571733
+texture_normal = ExtResource("3_xxmdf")
+
+[node name="Control2" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 74.0
+offset_top = 51.0
+offset_right = 114.0
+offset_bottom = 91.0
+
+[node name="Darkbgscroll2" type="Sprite2D" parent="Control2"]
+position = Vector2(894, 133)
+scale = Vector2(1.37213, 1.57187)
+texture = ExtResource("3_xxmdf")
+
+[node name="Volume" type="Sprite2D" parent="Control2"]
+position = Vector2(905, 133)
+scale = Vector2(3.35169, 3.75)
+texture = ExtResource("9_wa4vq")
+
+[connection signal="mouse_exited" from="AudioOptions/Control/music/musicslider" to="." method="_on_musicslider_mouse_exited"]
+[connection signal="mouse_exited" from="AudioOptions/Control/overall/overallslider" to="." method="_on_overallslider_mouse_exited"]
+[connection signal="mouse_exited" from="AudioOptions/Control/sfx/sfxslider" to="." method="_on_sfxslider_mouse_exited"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
