@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5n6pyce2q8o6"]
+
+[ext_resource type="PackedScene" uid="uid://dc4qd116vb2mi" path="res://Scenes/pause_menu.tscn" id="1_bqota"]
+[ext_resource type="Script" path="res://Scenes/control.gd" id="2_duwic"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1708.0
+offset_bottom = 968.0
+color = Color(0.473976, 0.473976, 0.473976, 1)
+
+[node name="Pause Menu" parent="." instance=ExtResource("1_bqota")]
+layout_mode = 1
+offset_left = -106.0
+offset_top = -56.0
+offset_right = -2026.0
+offset_bottom = -1136.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 730.0
+offset_top = 770.0
+offset_right = 875.0
+offset_bottom = 801.0
+text = "klasdjfklsdjf;k Yes"
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 299.0
+offset_top = 590.0
+offset_right = 322.0
+offset_bottom = 606.0
+scale = Vector2(3.37081, 3.371)
+script = ExtResource("2_duwic")
+color1 = Color(0, 0.360784, 0, 1)
+color2 = Color(0, 0, 0.87451, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Timer" type="Timer" parent="Control"]
+autostart = true
+
+[connection signal="pressed" from="Button" to="Pause Menu" method="_on_button_pressed"]
+[connection signal="timeout" from="Control/Timer" to="Control" method="_on_timer_timeout"]

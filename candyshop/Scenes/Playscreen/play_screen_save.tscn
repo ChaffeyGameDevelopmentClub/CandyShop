@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://cu5qg7xrh2pdg"]
 
 [ext_resource type="Script" path="res://Scenes/Playscreen/play_screen.gd" id="1_nn7nq"]
-[ext_resource type="Texture2D" uid="uid://bdli5de6jykhm" path="res://Assets/Cooking_Screen.png" id="2_onh7e"]
-[ext_resource type="Texture2D" uid="uid://cih1jdby83aeo" path="res://Assets/candshopFRONT.png" id="3_a6uub"]
+[ext_resource type="Texture2D" uid="uid://bdli5de6jykhm" path="res://Assets/extra/Cooking_Screen.png" id="2_onh7e"]
+[ext_resource type="Texture2D" uid="uid://cih1jdby83aeo" path="res://Assets/extra/candshopFRONT.png" id="3_a6uub"]
 [ext_resource type="PackedScene" uid="uid://fhbg06io7grq" path="res://Scenes/UI/shelf_overlay.tscn" id="4_ffrxe"]
 [ext_resource type="Script" path="res://Scenes/Playscreen/control.gd" id="5_2q2ow"]
 

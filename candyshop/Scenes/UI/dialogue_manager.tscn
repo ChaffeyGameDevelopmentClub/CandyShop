@@ -1,14 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://ckmwygrvgfwj"]
+[gd_scene load_steps=7 format=3 uid="uid://ckmwygrvgfwj"]
 
 [ext_resource type="Script" path="res://Script/Dialogue Machine/dialogue_manager.gd" id="1_2icc2"]
-[ext_resource type="Texture2D" uid="uid://cih1jdby83aeo" path="res://Assets/candshopFRONT.png" id="1_12vlv"]
-[ext_resource type="Texture2D" uid="uid://g574hnxfs5yy" path="res://Assets/chat test.png" id="2_ct2mw"]
+[ext_resource type="Texture2D" uid="uid://cih1jdby83aeo" path="res://Assets/extra/candshopFRONT.png" id="1_12vlv"]
+[ext_resource type="Texture2D" uid="uid://g574hnxfs5yy" path="res://Assets/extra/chat test.png" id="2_ct2mw"]
 [ext_resource type="Resource" uid="uid://uwapsfnoi586" path="res://Resources/Dialogue Resources/Testing/npc_array.tres" id="2_xej0s"]
 
 [sub_resource type="Theme" id="Theme_u02hj"]
 default_font_size = 40
 
-[node name="DialogueManager" type="Control" node_paths=PackedStringArray("textLabel", "timer")]
+[sub_resource type="Theme" id="Theme_3ilyw"]
+default_font_size = 30
+
+[node name="DialogueManager" type="Control" node_paths=PackedStringArray("textLabel", "timer", "nameText")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -19,8 +22,10 @@ script = ExtResource("1_2icc2")
 dialogueArray = ExtResource("2_xej0s")
 textLabel = NodePath("Control/DialogueText")
 timer = NodePath("dialogueTimer")
+nameText = NodePath("Control/NameText")
 
 [node name="Del Later" type="TextureRect" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -31,10 +36,10 @@ texture = ExtResource("1_12vlv")
 
 [node name="Control" type="Control" parent="."]
 anchors_preset = 0
-offset_left = 817.0
-offset_top = 48.0
-offset_right = 857.0
-offset_bottom = 88.0
+offset_left = 819.0
+offset_top = 65.0
+offset_right = 859.0
+offset_bottom = 105.0
 
 [node name="ChatBG" type="TextureRect" parent="Control"]
 layout_mode = 1
@@ -47,9 +52,9 @@ expand_mode = 1
 [node name="DialogueText" type="RichTextLabel" parent="Control"]
 layout_mode = 0
 offset_left = 31.0
-offset_top = 41.0
+offset_top = 74.0
 offset_right = 705.0
-offset_bottom = 250.0
+offset_bottom = 283.0
 theme = SubResource("Theme_u02hj")
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
@@ -57,6 +62,15 @@ text = "[center]Hello I want a nice shake!
 please make it now!
 [/center]"
 
+[node name="NameText" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+offset_right = 234.0
+offset_bottom = 77.0
+theme = SubResource("Theme_3ilyw")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Name"
+
 [node name="dialogueTimer" type="Timer" parent="."]
+wait_time = 3.0
 
 [connection signal="timeout" from="dialogueTimer" to="." method="_on_dialogue_timer_timeout"]

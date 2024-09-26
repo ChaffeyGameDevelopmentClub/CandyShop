@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://bxwv4xr4brv2l"]
 
 [ext_resource type="Script" path="res://Script/ShelfScripts/itemResources.gd" id="1_e83fy"]
-[ext_resource type="Texture2D" uid="uid://brwfm50gyafys" path="res://Assets/icon.svg" id="1_ekepf"]
+[ext_resource type="Texture2D" uid="uid://fkowj34fnw8l" path="res://Assets/Product Assets/fun dip.png" id="1_q0koi"]
 
 [resource]
 script = ExtResource("1_e83fy")
-image = ExtResource("1_ekepf")
+image = ExtResource("1_q0koi")
 Name = "Fun Dip"
 Amount = 0

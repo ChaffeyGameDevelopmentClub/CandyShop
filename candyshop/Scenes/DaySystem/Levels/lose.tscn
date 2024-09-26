@@ -1,3 +1,16 @@
 [gd_scene format=3 uid="uid://pom5xjqdx5c6"]
 
 [node name="lose" type="Node2D"]
+position = Vector2(46, 50)
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_right = 1154.0
+offset_bottom = 456.0
+text = "lost"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 356.0
+offset_top = 36.0
+offset_right = 692.0
+offset_bottom = 300.0
+text = "to main"

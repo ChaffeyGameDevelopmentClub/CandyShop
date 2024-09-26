@@ -1,11 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://dw8j6pg76fxjd"]
+[gd_scene load_steps=7 format=3 uid="uid://dw8j6pg76fxjd"]
 
 [ext_resource type="Script" path="res://Scenes/Playscreen/play_screen.gd" id="1_shwib"]
-[ext_resource type="Texture2D" uid="uid://bdli5de6jykhm" path="res://Assets/Cooking_Screen.png" id="2_m25bt"]
-[ext_resource type="Texture2D" uid="uid://cih1jdby83aeo" path="res://Assets/candshopFRONT.png" id="3_i640e"]
+[ext_resource type="Texture2D" uid="uid://bdli5de6jykhm" path="res://Assets/extra/Cooking_Screen.png" id="2_m25bt"]
+[ext_resource type="Texture2D" uid="uid://cih1jdby83aeo" path="res://Assets/extra/candshopFRONT.png" id="3_i640e"]
 [ext_resource type="PackedScene" uid="uid://fhbg06io7grq" path="res://Scenes/UI/shelf_overlay.tscn" id="4_5qjal"]
 [ext_resource type="PackedScene" uid="uid://38pe832setc0" path="res://Scenes/shop_screen.tscn" id="4_6pvsj"]
-[ext_resource type="Resource" uid="uid://dpqceg5trpq1e" path="res://Resources/Shelf Items/ShelfProdResource.tres" id="5_cogks"]
 [ext_resource type="Script" path="res://Scenes/Playscreen/control.gd" id="5_ips3f"]
 
 [node name="PlayScreen" type="Node2D" node_paths=PackedStringArray("camera")]
@@ -19,28 +18,17 @@ position = Vector2(1920, 7)
 texture = ExtResource("2_m25bt")
 
 [node name="CandshopFront" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(1, 7)
 texture = ExtResource("3_i640e")
 
-[node name="ShopScreen" parent="." node_paths=PackedStringArray("timeLimit") instance=ExtResource("4_6pvsj")]
+[node name="ShopScreen" parent="." instance=ExtResource("4_6pvsj")]
 position = Vector2(-957.485, -535)
-timeLimit = NodePath("TimeLimitTimer")
-resourceArray = ExtResource("5_cogks")
+moneyNeed = 20
+need1 = 2
+totalOrders = 2
 
-[node name="DialogueManager" parent="ShopScreen" index="3" node_paths=PackedStringArray("Customer")]
-Customer = NodePath("../Customer")
-
-[node name="Customer" parent="ShopScreen" index="4" node_paths=PackedStringArray("order", "dialogueManager", "shopScreen", "timeLimit")]
-order = NodePath("../OrderRect")
-dialogueManager = NodePath("../DialogueManager")
-shopScreen = NodePath("..")
-timeLimit = NodePath("../TimeLimitTimer")
-
-[node name="OrderRect" parent="ShopScreen" index="7" node_paths=PackedStringArray("NextButton", "ServeButton")]
-NextButton = NodePath("../NextButton")
-ServeButton = NodePath("../ServeButton")
-
-[node name="TimeLimitTimer" type="Timer" parent="ShopScreen"]
+[node name="TimeLimitTimer2" type="Timer" parent="ShopScreen"]
 wait_time = 60.0
 one_shot = true
 
@@ -53,14 +41,14 @@ offset_top = -538.0
 offset_right = 962.0
 offset_bottom = -538.0
 
-[node name="Control" type="Control" parent="ShelfOverlay"]
+[node name="Control2" type="Control" parent="ShelfOverlay"]
 anchors_preset = 0
 offset_top = 420.0
 offset_right = 143.0
 offset_bottom = 561.0
 script = ExtResource("5_ips3f")
 
-[node name="ColorRect" type="ColorRect" parent="ShelfOverlay/Control"]
+[node name="ColorRect" type="ColorRect" parent="ShelfOverlay/Control2"]
 layout_mode = 0
 offset_right = 156.0
 offset_bottom = 138.0
@@ -71,6 +59,7 @@ offset_top = 53.0
 offset_right = 959.0
 offset_bottom = 130.0
 text = "To back"
+metadata/_edit_use_anchors_ = true
 
 [node name="To Front" type="Button" parent="."]
 offset_left = 960.0
@@ -79,13 +68,16 @@ offset_right = 1223.0
 offset_bottom = 136.0
 text = "To fornt
 "
+metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="."]
+visible = false
 offset_right = 8.0
 offset_bottom = 8.0
+metadata/_edit_use_anchors_ = true
 
-[connection signal="mouse_entered" from="ShelfOverlay/Control/ColorRect" to="ShelfOverlay/Control" method="_on_color_rect_mouse_entered"]
-[connection signal="mouse_exited" from="ShelfOverlay/Control/ColorRect" to="ShelfOverlay/Control" method="_on_color_rect_mouse_exited"]
+[connection signal="mouse_entered" from="ShelfOverlay/Control2/ColorRect" to="ShelfOverlay/Control2" method="_on_color_rect_mouse_entered"]
+[connection signal="mouse_exited" from="ShelfOverlay/Control2/ColorRect" to="ShelfOverlay/Control2" method="_on_color_rect_mouse_exited"]
 [connection signal="pressed" from="To Back" to="." method="back_pressed"]
 [connection signal="pressed" from="To Front" to="." method="front_pressed"]
 

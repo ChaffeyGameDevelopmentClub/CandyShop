@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://cf7d2o07wwhdt"]
 
-[ext_resource type="Texture2D" uid="uid://brwfm50gyafys" path="res://Assets/icon.svg" id="1_ig6do"]
 [ext_resource type="Script" path="res://Script/ShelfScripts/itemResources.gd" id="1_m31tg"]
+[ext_resource type="Texture2D" uid="uid://dmav8jcspuevs" path="res://Assets/Product Assets/gummycandycorn.png" id="1_wuwic"]
 
 [resource]
 script = ExtResource("1_m31tg")
-image = ExtResource("1_ig6do")
+image = ExtResource("1_wuwic")
 Name = "Gummy Candy Corn"
 Amount = 0
