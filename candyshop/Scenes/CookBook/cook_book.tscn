@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://6hfkwlnv0xj4"]
+[gd_scene load_steps=2 format=3 uid="uid://6hfkwlnv0xj4"]
+
+[ext_resource type="Script" path="res://Script/Cook Book/cook_book.gd" id="1_1cmo6"]
 
 [node name="CookBook" type="Control"]
 layout_mode = 3
@@ -7,3 +9,19 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_1cmo6")
+
+[node name="CookBook" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Next Page" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Prev Pahe" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

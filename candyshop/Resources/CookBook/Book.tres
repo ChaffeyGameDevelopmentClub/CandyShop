@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="CookBookArray" load_steps=2 format=3 uid="uid://0lmgcrare03"]
+
+[ext_resource type="Script" path="res://Script/Cook Book/CookBookArray.gd" id="1_2p8dk"]
+
+[resource]
+script = ExtResource("1_2p8dk")
+page_array = Array[Texture]([null])
