@@ -1,62 +1,68 @@
-[gd_scene load_steps=7 format=3 uid="uid://38pe832setc0"]
+[gd_scene load_steps=13 format=3 uid="uid://38pe832setc0"]
 
 [ext_resource type="Script" path="res://Script/shop_screen_script.gd" id="1_hri7p"]
 [ext_resource type="Texture2D" uid="uid://brwfm50gyafys" path="res://Assets/icon.svg" id="1_ikxkj"]
 [ext_resource type="Script" path="res://Script/shopCustomer.gd" id="2_6vssm"]
+[ext_resource type="Resource" uid="uid://dpqceg5trpq1e" path="res://Resources/Shelf Items/ShelfProdResource.tres" id="2_sgpd6"]
+[ext_resource type="Texture2D" uid="uid://dog6qb2fn1lx" path="res://Assets/StoreBackFIXED.png" id="3_3b6r8"]
 [ext_resource type="Script" path="res://Script/next_button.gd" id="3_60a7r"]
+[ext_resource type="Texture2D" uid="uid://bogdehl73nnh3" path="res://Assets/storefront.png" id="3_vb1a6"]
 [ext_resource type="Script" path="res://Script/order_rect.gd" id="4_2n1j5"]
 [ext_resource type="PackedScene" uid="uid://ckmwygrvgfwj" path="res://Scenes/UI/dialogue_manager.tscn" id="5_t5acm"]
+[ext_resource type="AudioStream" uid="uid://c631ta8d1u40k" path="res://Assets/kenny dead.mp3" id="8_h4ihn"]
+[ext_resource type="Theme" uid="uid://bwifx5peyypoc" path="res://Resources/CookBook/TextSize.tres" id="9_1list"]
+[ext_resource type="Texture2D" uid="uid://cbydsx0st8ixa" path="res://Assets/CookBook/OrderMenu.png" id="10_m034b"]
 
-[node name="ShopScreen" type="Node2D"]
+[node name="ShopScreen" type="Node2D" node_paths=PackedStringArray("dayCounter", "Customer", "DialogueManager", "orderItem1", "timeLimit")]
+position = Vector2(-1920, -2)
 script = ExtResource("1_hri7p")
+dayCounter = NodePath("Label")
+Customer = NodePath("Customer")
+DialogueManager = NodePath("DialogueManager")
+orderItem1 = NodePath("OrderRect/OrderItem1")
+timeLimit = NodePath("TimeLimitTimer")
+resourceArray = ExtResource("2_sgpd6")
 
-[node name="BGRect" type="ColorRect" parent="."]
-offset_right = 1152.0
-offset_bottom = 648.0
-color = Color(0, 0.588235, 0.588235, 1)
+[node name="Bg" type="TextureRect" parent="."]
+z_index = -1
+offset_left = -1.0
+offset_right = 1919.0
+offset_bottom = 1080.0
+texture = ExtResource("3_3b6r8")
 
-[node name="CounterRect" type="ColorRect" parent="."]
-offset_top = 450.0
-offset_right = 1152.0
-offset_bottom = 550.0
-color = Color(0, 1, 0, 1)
+[node name="Counter" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("3_vb1a6")
 
-[node name="TableRect" type="ColorRect" parent="."]
-offset_top = 550.0
-offset_right = 1152.0
-offset_bottom = 648.0
-color = Color(0, 0.588235, 0, 1)
-
-[node name="DialogueManager" parent="." instance=ExtResource("5_t5acm")]
-offset_left = 959.0
-offset_top = 541.0
-offset_right = 959.0
-offset_bottom = 541.0
-
-[node name="ChatBG" parent="DialogueManager/Control" index="0"]
-offset_left = -1170.0
-offset_top = -547.0
-offset_right = -413.0
-offset_bottom = -295.0
-
-[node name="DialogueText" parent="DialogueManager/Control" index="1"]
-offset_left = -1139.0
-offset_top = -506.0
-offset_right = -465.0
-offset_bottom = -297.0
-
-[node name="dialogueTimer" parent="DialogueManager" index="2"]
-wait_time = 3.0
+[node name="DialogueManager" parent="." node_paths=PackedStringArray("Customer", "walkOnTimer") instance=ExtResource("5_t5acm")]
+offset_left = -127.0
+offset_top = 2.0
+offset_right = -127.0
+offset_bottom = 2.0
+Customer = NodePath("../Customer")
+walkOnTimer = NodePath("WalkonTimer")
 
 [node name="dialogueStartTimer" type="Timer" parent="DialogueManager"]
 wait_time = 3.0
 one_shot = true
 
-[node name="Customer" type="Sprite2D" parent="."]
-position = Vector2(-200, 444)
-scale = Vector2(2, 2)
+[node name="WalkonTimer" type="Timer" parent="DialogueManager"]
+one_shot = true
+
+[node name="Customer" type="Sprite2D" parent="." node_paths=PackedStringArray("order", "dialogueManager", "shopScreen", "timeLimit")]
+z_index = -1
+position = Vector2(-200, 532)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("1_ikxkj")
 script = ExtResource("2_6vssm")
+order = NodePath("../OrderRect")
+dialogueManager = NodePath("../DialogueManager")
+shopScreen = NodePath("..")
+timeLimit = NodePath("../TimeLimitTimer")
+
+[node name="CustomerSound" type="AudioStreamPlayer2D" parent="Customer"]
+stream = ExtResource("8_h4ihn")
 
 [node name="NextButton" type="Button" parent="."]
 visible = false
@@ -68,40 +74,70 @@ theme_override_font_sizes/font_size = 35
 text = "Next"
 script = ExtResource("3_60a7r")
 
-[node name="OrderRect" type="ColorRect" parent="."]
+[node name="ServeButton" type="Button" parent="."]
 visible = false
+offset_left = 1005.0
+offset_top = 931.0
+offset_right = 1424.0
+offset_bottom = 1060.0
+theme_override_font_sizes/font_size = 35
+text = "Serve Order"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 42.0
+offset_top = 889.0
+offset_right = 177.0
+offset_bottom = 944.0
+scale = Vector2(1.40129, 1.76579)
+theme = ExtResource("9_1list")
+text = "BENNY"
+
+[node name="OrderRect" type="TextureRect" parent="." node_paths=PackedStringArray("NextButton", "ServeButton")]
+visible = false
+texture_filter = 1
 offset_left = 111.0
 offset_top = 388.0
 offset_right = 417.0
 offset_bottom = 863.0
+texture = ExtResource("10_m034b")
 script = ExtResource("4_2n1j5")
+NextButton = NodePath("../NextButton")
+ServeButton = NodePath("../ServeButton")
 
 [node name="OrderLabel" type="Label" parent="OrderRect"]
+visible = false
 layout_mode = 0
 offset_left = 52.0
-offset_top = 21.0
+offset_top = 42.0
 offset_right = 262.0
-offset_bottom = 96.0
+offset_bottom = 125.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 60
 text = "Order:"
 
 [node name="OrderItem1" type="Sprite2D" parent="OrderRect"]
-position = Vector2(151, 137)
+visible = false
+position = Vector2(151, 150)
 scale = Vector2(0.5625, 0.554688)
 texture = ExtResource("1_ikxkj")
 
 [node name="OrderItem2" type="Sprite2D" parent="OrderRect"]
+visible = false
 position = Vector2(151, 248)
 scale = Vector2(0.5625, 0.554688)
 texture = ExtResource("1_ikxkj")
 
 [node name="OrderItem3" type="Sprite2D" parent="OrderRect"]
+visible = false
 position = Vector2(150, 371)
 scale = Vector2(0.5625, 0.554688)
 texture = ExtResource("1_ikxkj")
 
-[connection signal="timeout" from="DialogueManager/dialogueStartTimer" to="DialogueManager" method="_on_dialogue_start_timer_timeout"]
-[connection signal="pressed" from="NextButton" to="NextButton" method="_on_pressed"]
+[node name="TimeLimitTimer" type="Timer" parent="."]
+wait_time = 60.0
+one_shot = true
 
-[editable path="DialogueManager"]
+[connection signal="timeout" from="DialogueManager/dialogueStartTimer" to="DialogueManager" method="_on_dialogue_start_timer_timeout"]
+[connection signal="timeout" from="DialogueManager/WalkonTimer" to="DialogueManager" method="_on_walkon_timer_timeout"]
+[connection signal="pressed" from="NextButton" to="NextButton" method="_on_pressed"]
+[connection signal="pressed" from="ServeButton" to="." method="_on_serve_button_pressed"]

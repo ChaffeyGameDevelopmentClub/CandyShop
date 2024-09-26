@@ -1,8 +1,8 @@
 extends Control
 @export var plantType : String
-@export var pot: Sprite2D
-@export var sprout: Sprite2D
-@export var plant: Sprite2D
+@export var pot: TextureRect
+@export var sprout: TextureRect
+@export var plant: TextureRect
 @export var growingTimer: Timer
 @export var rottingTimer: Timer
 @export var sproutTexture : Texture
@@ -73,7 +73,7 @@ func _on_growing_timer_timeout():
 func _process(delta: float) -> void:
 	if grotSwitch: 
 		GrotProgress.value += (100/growingTimer.wait_time) * delta
-		print(growingTimer.wait_time)
+		#print(growingTimer.wait_time)
 		
 	elif not grotSwitch:
 		GrotProgress.value -= (100/rottingTimer.wait_time) * delta
