@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("1_e8553")
 Name = "Sylveon"
-text = Array[String]([])
+text = Array[String](["sylveon.wav", "(give food pls)"])
 image = ExtResource("1_w08ug")

@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("2_e8okb")
 Name = "Scary Benny"
-text = Array[String]([])
+text = Array[String](["You can run.", "But You can't hide.", "But you can always bribe me with "])
 image = ExtResource("1_rxgex")
