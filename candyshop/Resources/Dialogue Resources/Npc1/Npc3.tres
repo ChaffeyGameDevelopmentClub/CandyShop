@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3 uid="uid://d0macnnb2t38p"]
+
+[ext_resource type="Script" path="res://Script/Dialogue Machine/DialogueResource.gd" id="1_1u755"]
+
+[resource]
+script = ExtResource("1_1u755")
+Name = "One Pop Man"
+text = Array[String](["Do you have my mothers cooking?", "No? Oh well.", "Give me a "])
