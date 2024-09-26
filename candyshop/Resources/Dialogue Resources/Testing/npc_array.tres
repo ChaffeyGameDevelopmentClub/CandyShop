@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DialogueArray" load_steps=11 format=3 uid="uid://uwapsfnoi586"]
+[gd_resource type="Resource" script_class="DialogueArray" load_steps=12 format=3 uid="uid://uwapsfnoi586"]
 
 [ext_resource type="Script" path="res://Script/Dialogue Machine/DialogueResource.gd" id="1_mify6"]
 [ext_resource type="Script" path="res://Script/Dialogue Machine/DialogueArrayResource.gd" id="2_nygpj"]
@@ -10,7 +10,8 @@
 [ext_resource type="Resource" uid="uid://bbmbyny1mqgoi" path="res://Resources/Dialogue Resources/Npc1/npc6.tres" id="7_auiv6"]
 [ext_resource type="Resource" uid="uid://1u5lifkbyxsd" path="res://Resources/Dialogue Resources/Npc1/npc7.tres" id="8_qcb8n"]
 [ext_resource type="Resource" uid="uid://bgfk2ek7a5hs7" path="res://Resources/Dialogue Resources/Npc1/npc8.tres" id="9_neouv"]
+[ext_resource type="Resource" uid="uid://d250op5sipyn2" path="res://Resources/Dialogue Resources/Npc1/npc9.tres" id="10_qla2l"]
 
 [resource]
 script = ExtResource("2_nygpj")
-npc_array = Array[ExtResource("1_mify6")]([ExtResource("2_probk"), ExtResource("3_h5oyl"), ExtResource("4_pc07s"), ExtResource("5_1hxy4"), ExtResource("6_0feu8"), ExtResource("7_auiv6"), ExtResource("8_qcb8n"), ExtResource("9_neouv")])
+npc_array = Array[ExtResource("1_mify6")]([ExtResource("2_probk"), ExtResource("3_h5oyl"), ExtResource("4_pc07s"), ExtResource("5_1hxy4"), ExtResource("6_0feu8"), ExtResource("7_auiv6"), ExtResource("8_qcb8n"), ExtResource("9_neouv"), ExtResource("10_qla2l")])
