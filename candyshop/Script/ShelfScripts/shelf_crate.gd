@@ -1,4 +1,5 @@
 extends TextureButton
+@export var buttonsound: AudioStreamPlayer
 @export var itemName : RichTextLabel
 @export var texturerect : TextureRect
 @export var itemAmount : RichTextLabel
@@ -51,6 +52,7 @@ func _on_button_up() -> void:
 	
 	if isHover and !full:
 		#adds item to pot
+		buttonsound.play()
 		GameManager.sendName(name)
 	elif  isHoverOut:
 		GameManager.sendName2(name)

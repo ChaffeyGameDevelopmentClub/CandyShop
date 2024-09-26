@@ -1,5 +1,6 @@
 extends Node2D
 
+@export var buttonsound: AudioStreamPlayer
 @export var customers:int
 @export var camera: Camera2D  
 var target_position: Vector2
@@ -12,9 +13,11 @@ func _ready():
 	target_position = camera.position  
 
 func front_pressed():
+	buttonsound.play()
 	target_position.x -= 1922 
 
 func back_pressed():
+	buttonsound.play()
 	target_position.x += 1922  
 
 func _process(delta):
