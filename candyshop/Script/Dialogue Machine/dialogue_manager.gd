@@ -21,7 +21,7 @@ var npcName
 func orderStart():
 	#print('orderStart')
 	#how many npcs we have in Dialogue Array
-	npc = randi_range(0,14)
+	npc = randi_range(15,15)
 	#kenny only mode
 	#npc = 8
 	var name = dialogueArray.npc_array[npc].Name
