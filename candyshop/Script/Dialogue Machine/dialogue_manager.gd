@@ -29,6 +29,7 @@ func orderStart():
 	playText()
 	print_debug(npcName)
 	nameText.text = npcName
+	Customer.texture = dialogueArray.npc_array[npc].image
 	#print_debug("orderStart Done")
 	return npcName
 	

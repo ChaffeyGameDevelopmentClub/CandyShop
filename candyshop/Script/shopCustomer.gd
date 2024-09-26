@@ -8,12 +8,14 @@ var totalOrders : int
 var ordersFailed : int
 @export var timeLimit : Timer
 var itemName
+var custImg
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	ordersCompleted = 0
 	ordersFailed = 0
 	totalOrders = 0
 	customerMovementState = 1
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -49,7 +51,8 @@ func failedOrder():
 	totalOrders+=1
 	#print("customers: " + str(ordersCompleted))
 func newCustomer():
-	
-	set_texture(preload("res://Assets/icon.svg"))
+	set_texture(custImg)
 	customerMovementState = 1
 	#print("yummers")
+func sendImage(textureName):
+	custImg = textureName

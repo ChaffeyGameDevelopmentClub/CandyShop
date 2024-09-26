@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3 uid="uid://d0macnnb2t38p"]
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=3 format=3 uid="uid://d0macnnb2t38p"]
 
 [ext_resource type="Script" path="res://Script/Dialogue Machine/DialogueResource.gd" id="1_1u755"]
+[ext_resource type="Texture2D" uid="uid://beufbf28dm3ct" path="res://Assets/npc's/star popinumLarge.png" id="1_xxqkc"]
 
 [resource]
 script = ExtResource("1_1u755")
 Name = "Star Popinum"
 text = Array[String](["Do you have my mothers cooking ora?", "No? Oh well ora.", "Give me a "])
+image = ExtResource("1_xxqkc")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cih1jdby83aeo"
-path="res://.godot/imported/candshopFRONT.png-ee3ee3852cb164544f5177995f474d08.ctex"
+uid="uid://cktcmrp8uavic"
+path="res://.godot/imported/npc candygirl sprite sheet fixed.png-3266aeef9429998927cc393072ff0e55.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/candshopFRONT.png"
-dest_files=["res://.godot/imported/candshopFRONT.png-ee3ee3852cb164544f5177995f474d08.ctex"]
+source_file="res://Assets/extra/npc candygirl sprite sheet fixed.png"
+dest_files=["res://.godot/imported/npc candygirl sprite sheet fixed.png-3266aeef9429998927cc393072ff0e55.ctex"]
 
 [params]
 

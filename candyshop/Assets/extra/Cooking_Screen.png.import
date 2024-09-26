@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dy7q6ieb5ow8k"
-path="res://.godot/imported/you won screen.png-e30d917850ebdf4389586096c1027a4c.ctex"
+uid="uid://bdli5de6jykhm"
+path="res://.godot/imported/Cooking_Screen.png-0058ed086f48949fa1aac147e4faa371.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/you won screen.png"
-dest_files=["res://.godot/imported/you won screen.png-e30d917850ebdf4389586096c1027a4c.ctex"]
+source_file="res://Assets/extra/Cooking_Screen.png"
+dest_files=["res://.godot/imported/Cooking_Screen.png-0058ed086f48949fa1aac147e4faa371.ctex"]
 
 [params]
 

@@ -7,7 +7,7 @@
 [ext_resource type="Script" path="res://Script/next_button.gd" id="3_60a7r"]
 [ext_resource type="Script" path="res://Script/order_rect.gd" id="4_2n1j5"]
 [ext_resource type="PackedScene" uid="uid://ckmwygrvgfwj" path="res://Scenes/UI/dialogue_manager.tscn" id="5_t5acm"]
-[ext_resource type="Texture2D" uid="uid://cih1jdby83aeo" path="res://Assets/candshopFRONT.png" id="8_t346y"]
+[ext_resource type="Texture2D" uid="uid://cih1jdby83aeo" path="res://Assets/extra/candshopFRONT.png" id="8_t346y"]
 
 [node name="ShopScreen" type="Node2D" node_paths=PackedStringArray("Customer", "DialogueManager", "orderItem1", "timeLimit")]
 script = ExtResource("1_hri7p")

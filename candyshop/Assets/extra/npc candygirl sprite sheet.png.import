@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://biqqhgudsoeba"
-path="res://.godot/imported/taffey sprite sheet with dissapointed sprites.png-cf5cd3f842d5e8055ed5caeb29fcec5c.ctex"
+uid="uid://h667xnxtncae"
+path="res://.godot/imported/npc candygirl sprite sheet.png-514beb9752c85c296383aaa379dc49b6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/taffey sprite sheet with dissapointed sprites.png"
-dest_files=["res://.godot/imported/taffey sprite sheet with dissapointed sprites.png-cf5cd3f842d5e8055ed5caeb29fcec5c.ctex"]
+source_file="res://Assets/extra/npc candygirl sprite sheet.png"
+dest_files=["res://.godot/imported/npc candygirl sprite sheet.png-514beb9752c85c296383aaa379dc49b6.ctex"]
 
 [params]
 

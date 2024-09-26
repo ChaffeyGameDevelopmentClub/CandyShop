@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Script/ShelfScripts/ShelfOverlayContainer.gd" id="1_78kgt"]
 [ext_resource type="Script" path="res://Script/ShelfScripts/MouseSensorPot.gd" id="1_amly7"]
-[ext_resource type="Texture2D" uid="uid://bdli5de6jykhm" path="res://Assets/Cooking_Screen.png" id="1_gs24o"]
+[ext_resource type="Texture2D" uid="uid://bdli5de6jykhm" path="res://Assets/extra/Cooking_Screen.png" id="1_gs24o"]
 [ext_resource type="Resource" uid="uid://druc3sg2s4krw" path="res://Resources/Shelf Items/ShelfResource.tres" id="2_68g84"]
 [ext_resource type="Resource" uid="uid://dpqceg5trpq1e" path="res://Resources/Shelf Items/ShelfProdResource.tres" id="3_vkqmb"]
 [ext_resource type="Script" path="res://Script/ShelfScripts/itemResources.gd" id="4_c5av3"]

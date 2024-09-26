@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cktcmrp8uavic"
-path="res://.godot/imported/npc candygirl sprite sheet fixed.png-896adf520bae3dc8b4aeea7ef5517358.ctex"
+uid="uid://beufbf28dm3ct"
+path="res://.godot/imported/star popinumLarge.png-284c600437f38d11c7928f3a3e3893ea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/npc candygirl sprite sheet fixed.png"
-dest_files=["res://.godot/imported/npc candygirl sprite sheet fixed.png-896adf520bae3dc8b4aeea7ef5517358.ctex"]
+source_file="res://Assets/npc's/star popinumLarge.png"
+dest_files=["res://.godot/imported/star popinumLarge.png-284c600437f38d11c7928f3a3e3893ea.ctex"]
 
 [params]
 

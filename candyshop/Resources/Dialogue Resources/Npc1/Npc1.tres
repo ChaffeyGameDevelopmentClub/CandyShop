@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3 uid="uid://c5h1h424u0vdd"]
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=3 format=3 uid="uid://c5h1h424u0vdd"]
 
+[ext_resource type="Texture2D" uid="uid://brwfm50gyafys" path="res://Assets/icon.svg" id="1_e7ibv"]
 [ext_resource type="Script" path="res://Script/Dialogue Machine/DialogueResource.gd" id="1_qthqc"]
 
 [resource]
 script = ExtResource("1_qthqc")
 Name = "Taffy"
 text = Array[String](["Hello I want ur stuff!", "Im hungry!", "I want a "])
+image = ExtResource("1_e7ibv")

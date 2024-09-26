@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://g574hnxfs5yy"
-path="res://.godot/imported/chat test.png-8dc6000256813d728ade98dfdc8fc2b6.ctex"
+uid="uid://dy7q6ieb5ow8k"
+path="res://.godot/imported/you won screen.png-c564ecae82471771b57cf2504117cc0d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/chat test.png"
-dest_files=["res://.godot/imported/chat test.png-8dc6000256813d728ade98dfdc8fc2b6.ctex"]
+source_file="res://Assets/extra/you won screen.png"
+dest_files=["res://.godot/imported/you won screen.png-c564ecae82471771b57cf2504117cc0d.ctex"]
 
 [params]
 

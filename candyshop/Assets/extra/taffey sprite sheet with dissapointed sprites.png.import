@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdli5de6jykhm"
-path="res://.godot/imported/Cooking_Screen.png-f4a02be29fb47cfd5fa43b1a7732780d.ctex"
+uid="uid://biqqhgudsoeba"
+path="res://.godot/imported/taffey sprite sheet with dissapointed sprites.png-b0f17d9428f47c05f856b7f9b1c3148e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cooking_Screen.png"
-dest_files=["res://.godot/imported/Cooking_Screen.png-f4a02be29fb47cfd5fa43b1a7732780d.ctex"]
+source_file="res://Assets/extra/taffey sprite sheet with dissapointed sprites.png"
+dest_files=["res://.godot/imported/taffey sprite sheet with dissapointed sprites.png-b0f17d9428f47c05f856b7f9b1c3148e.ctex"]
 
 [params]
 
