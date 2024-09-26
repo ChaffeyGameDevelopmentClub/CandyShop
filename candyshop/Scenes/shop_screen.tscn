@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://brwfm50gyafys" path="res://Assets/icon.svg" id="1_ikxkj"]
 [ext_resource type="Script" path="res://Script/shopCustomer.gd" id="2_6vssm"]
 [ext_resource type="Resource" uid="uid://dpqceg5trpq1e" path="res://Resources/Shelf Items/ShelfProdResource.tres" id="2_sgpd6"]
+[ext_resource type="Texture2D" uid="uid://dog6qb2fn1lx" path="res://Assets/StoreBackFIXED.png" id="3_3b6r8"]
 [ext_resource type="Script" path="res://Script/next_button.gd" id="3_60a7r"]
-[ext_resource type="Texture2D" uid="uid://bv5km4u30afpy" path="res://Assets/StoreBack.png" id="3_o7v7x"]
 [ext_resource type="Texture2D" uid="uid://bogdehl73nnh3" path="res://Assets/storefront.png" id="3_vb1a6"]
 [ext_resource type="Script" path="res://Script/order_rect.gd" id="4_2n1j5"]
 [ext_resource type="PackedScene" uid="uid://ckmwygrvgfwj" path="res://Scenes/UI/dialogue_manager.tscn" id="5_t5acm"]
@@ -27,7 +27,7 @@ z_index = -1
 offset_left = -1.0
 offset_right = 1919.0
 offset_bottom = 1080.0
-texture = ExtResource("3_o7v7x")
+texture = ExtResource("3_3b6r8")
 
 [node name="Counter" type="TextureRect" parent="."]
 offset_right = 1920.0
@@ -35,9 +35,9 @@ offset_bottom = 1080.0
 texture = ExtResource("3_vb1a6")
 
 [node name="DialogueManager" parent="." node_paths=PackedStringArray("Customer", "walkOnTimer") instance=ExtResource("5_t5acm")]
-offset_left = 2.0
+offset_left = -127.0
 offset_top = 2.0
-offset_right = 2.0
+offset_right = -127.0
 offset_bottom = 2.0
 Customer = NodePath("../Customer")
 walkOnTimer = NodePath("WalkonTimer")
@@ -51,7 +51,7 @@ one_shot = true
 
 [node name="Customer" type="Sprite2D" parent="." node_paths=PackedStringArray("order", "dialogueManager", "shopScreen", "timeLimit")]
 z_index = -1
-position = Vector2(-200, 580)
+position = Vector2(-200, 532)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("1_ikxkj")
 script = ExtResource("2_6vssm")
