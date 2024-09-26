@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cxvj320dpk2jy"]
+[gd_scene load_steps=5 format=3 uid="uid://cxvj320dpk2jy"]
 
 [ext_resource type="PackedScene" uid="uid://38pe832setc0" path="res://Scenes/shop_screen.tscn" id="1_slbyr"]
 [ext_resource type="PackedScene" uid="uid://fhbg06io7grq" path="res://Scenes/UI/shelf_overlay.tscn" id="2_tocms"]
 [ext_resource type="PackedScene" uid="uid://dnshq5nx73viv" path="res://Scenes/DaySystem/Levels/level_preset.tscn" id="3_gnleb"]
+[ext_resource type="PackedScene" uid="uid://bs68jwtchi3dq" path="res://Scenes/pause_menu.tscn" id="4_auaut"]
 
 [node name="lv1" type="Node2D"]
 
@@ -16,3 +17,5 @@ totalOrders = 8
 [node name="ShelfOverlay" parent="." instance=ExtResource("2_tocms")]
 
 [node name="Level Preset" parent="." instance=ExtResource("3_gnleb")]
+
+[node name="Pause Menu" parent="." instance=ExtResource("4_auaut")]
