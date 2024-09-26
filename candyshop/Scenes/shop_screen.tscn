@@ -38,8 +38,8 @@ one_shot = true
 one_shot = true
 
 [node name="Customer" type="Sprite2D" parent="." node_paths=PackedStringArray("order", "dialogueManager", "shopScreen", "timeLimit")]
-position = Vector2(-200, 444)
-scale = Vector2(2, 2)
+position = Vector2(-200, 580)
+scale = Vector2(2.5, 2.5)
 texture = ExtResource("1_ikxkj")
 script = ExtResource("2_6vssm")
 order = NodePath("../OrderRect")

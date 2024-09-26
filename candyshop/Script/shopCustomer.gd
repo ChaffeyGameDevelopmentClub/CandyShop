@@ -28,7 +28,7 @@ func _process(delta):
 		itemName = shopScreen.makeOrder()
 		dialogueManager.sendToDialogue(itemName)
 		#print_debug("Send to dialogue")
-		dialogueManager.orderStart()
+		#dialogueManager.orderStart()
 		#print_debug("order start")
 	if(position.x>-200 and customerMovementState == 2):
 		position -= Vector2(10, 0)
@@ -55,6 +55,7 @@ func failedOrder():
 func newCustomer():
 	#set_texture(custImg)
 	print_debug('newCustomer')
+	dialogueManager.orderStart()
 	customerMovementState = 1
 	#print("yummers")
 func sendImage(textureName):
