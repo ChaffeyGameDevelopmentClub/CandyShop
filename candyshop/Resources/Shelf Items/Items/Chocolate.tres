@@ -7,4 +7,4 @@
 script = ExtResource("1_dbqbe")
 image = ExtResource("1_rrrxo")
 Name = "Cholate"
-Amount = 0
+Amount = 10

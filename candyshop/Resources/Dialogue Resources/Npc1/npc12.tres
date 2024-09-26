@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=3 format=3 uid="uid://b3fmu3rg8p68n"]
+
+[ext_resource type="Texture2D" uid="uid://1p2w33ny005w" path="res://Assets/ScaryBenny.jpg" id="1_rxgex"]
+[ext_resource type="Script" path="res://Script/Dialogue Machine/DialogueResource.gd" id="2_e8okb"]
+
+[resource]
+script = ExtResource("2_e8okb")
+Name = "Scary Benny"
+text = Array[String](["You can run.", "But You can't hide.", "But you can always bribe me with "])
+image = ExtResource("1_rxgex")

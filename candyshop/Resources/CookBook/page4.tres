@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CookBookPage" load_steps=6 format=3 uid="uid://dg4jrad0px26o"]
+
+[ext_resource type="Script" path="res://Script/Cook Book/Page.gd" id="1_gv8mn"]
+[ext_resource type="Texture2D" uid="uid://dyfkf0dlbdnaw" path="res://Assets/Product Assets/caramelapple.png" id="1_wimu7"]
+[ext_resource type="Texture2D" uid="uid://dniun4me2eg35" path="res://Assets/Product Assets/gingerbread.png" id="2_awfy5"]
+[ext_resource type="Texture2D" uid="uid://fkowj34fnw8l" path="res://Assets/Product Assets/fun dip.png" id="3_aak44"]
+[ext_resource type="Texture2D" uid="uid://brwfm50gyafys" path="res://Assets/icon.svg" id="4_tgmy4"]
+
+[resource]
+script = ExtResource("1_gv8mn")
+icon1 = ExtResource("1_wimu7")
+text1 = "Caramel Apples=Chocolate Forest + Gummy Bears + Swedish Fish + Candy Corn"
+icon2 = ExtResource("2_awfy5")
+text2 = "GingerBread Man=Gummy-Pops + Gummy Bears + Licorice + Gummy Candy Corn"
+icon3 = ExtResource("3_aak44")
+text3 = "Fun Dip=GingerBread Man + Caramel Apples + Gummy Army + Gummy Sharks"
+icon4 = ExtResource("4_tgmy4")
+text4 = "EVIL GODOT MUHEHEHE"

@@ -1,6 +1,6 @@
 extends Sprite2D
 var customerMovementState
-@export var order : ColorRect
+@export var order : TextureRect
 @export var dialogueManager : Control
 @export var shopScreen : Node2D
 var ordersCompleted : int

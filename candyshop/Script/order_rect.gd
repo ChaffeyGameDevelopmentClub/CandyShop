@@ -1,4 +1,4 @@
-extends ColorRect
+extends TextureRect
 @export var NextButton : Button
 @export var ServeButton : Button
 

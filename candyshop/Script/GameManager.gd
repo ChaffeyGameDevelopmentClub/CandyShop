@@ -24,19 +24,6 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	pass
 
-func _input(event):
-	if event.is_action_pressed("esc"):
-		#$ColorRect.show()
-		toggle_pause()
-		
-func toggle_pause():
-	#print('paused')
-	get_tree().paused = !get_tree().paused
-	
-
-
-
-
 
 #shelf Func
 func updateAmount():

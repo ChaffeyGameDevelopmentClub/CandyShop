@@ -54,27 +54,28 @@ func endDay():
 func _ready():
 	#print("hello")
 	GameManager.connect('sendOut',sendTo)
+	dayCounter.text = "day: " + str(day) + " money: " + str(money) + " money needed:" + str(moneyNeed)
 	for i in resourceArray.item_array.size():
 		items1.append(resourceArray.item_array[i].Name)
 	#print(items1)
 	#print(resourceArray.item_array[0].Amount)
-func makeOrder():
-	itemOrdered = items1[rng.randf_range(0,4)]
+#unc makeOrder():
+	#itemOrdered = items1[rng.randf_range(0,4)]
 	#print("ordered: " + itemOrdered)
-	setItem1()
+	#setItem1()
 	#print_debug(itemOrdered)
-	return itemOrdered
+	#return itemOrdered
 	
-	print("hello")
-	dayCounter.text = "day: " + str(day) + " money: " + str(money) + " money needed:" + str(moneyNeed)
-	GameManager.connect('sendOut',sendTo)
-	for i in resourceArray.item_array.size():
-		items1.append(resourceArray.item_array[i].Name)
-	print(items1)
-	print(resourceArray.item_array[0].Amount)
-func _makeOrder():
+	#print("hello")
+	
+	#GameManager.connect('sendOut',sendTo)
+	#for i in resourceArray.item_array.size():
+	#	items1.append(resourceArray.item_array[i].Name)
+	#print(items1)
+	#print(resourceArray.item_array[0].Amount)
+func makeOrder():
 	if have1 != need1:
-		itemOrdered = items1[rng.randf_range(0,4)]
+		itemOrdered = items1[randi_range(0,4)]
 		have1 +=1
 		sellAmount = 10
 		orders += 1
@@ -110,9 +111,11 @@ func _makeOrder():
 		setItem1()
 	elif orders == totalOrders:
 		endDay()
-	else:
-		
+	else:	
 		print("oof")
+		
+	return itemOrdered
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
@@ -122,9 +125,11 @@ func _on_serve_button_pressed():
 	#items2.append(itemOrdered)
 	timeLimit.stop()
 	if items2.has(itemOrdered):
-		print("Order Complete")
+		print_debug("Order Complete")
+		print_debug(sellAmount)
 		money += sellAmount
-		print(money)
+		print_debug(money)
+		
 		dayCounter.text = "day: " + str(day) + "money: " + str(money) + " money needed:" + str(moneyNeed)
 		Customer.completeOrder()
 		DialogueManager.completeOrder()
@@ -142,22 +147,10 @@ func _on_time_limit_timer_timeout():
 func setItem1():
 	orderItem1.visible = true
 	
+	for i in resourceArray.item_array.size():
+		if itemOrdered == resourceArray.item_array[i].Name:
+			orderItem1.set_texture(resourceArray.item_array[i].image)
 	
-	
-	if(itemOrdered == "Bear Pop"):
-		orderItem1.set_texture(resourceArray.item_array[1].image)
-	elif(itemOrdered == "Candy Corn"):
-		orderItem1.set_texture(resourceArray.item_array[1].image)
-	elif(itemOrdered == "Chocolate Bears"):
-		orderItem1.set_texture(resourceArray.item_array[0].image)
-	elif(itemOrdered == "Gummy Bear Army"):
-		orderItem1.set_texture(resourceArray.item_array[7].image)
-	elif(itemOrdered == "Gummy Sharks"):
-		orderItem1.set_texture(resourceArray.item_array[4].image)
-	elif(itemOrdered == "Gummy Worm Pops"):
-		orderItem1.set_texture(resourceArray.item_array[3].image)
-	else:
-		orderItem1.set_texture(preload("res://Assets/icon.svg"))
 	orderItem1.scale = Vector2(100, 100) / orderItem1.texture.get_size()
 
 func sendTo(nameOf):
