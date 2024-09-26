@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kayexab56t0b"
-path="res://.godot/imported/chocolate bears.png-4f6e37ccd1eda20d3aadc743465aa23b.ctex"
+uid="uid://bdq5e12iab8l3"
+path="res://.godot/imported/gummy worm plant 1.png-e01e6da959adf17dee04aecce835c22d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Ingredent Assets/chocolate bears.png"
-dest_files=["res://.godot/imported/chocolate bears.png-4f6e37ccd1eda20d3aadc743465aa23b.ctex"]
+source_file="res://Assets/Plants/gummy worm plant 1.png"
+dest_files=["res://.godot/imported/gummy worm plant 1.png-e01e6da959adf17dee04aecce835c22d.ctex"]
 
 [params]
 

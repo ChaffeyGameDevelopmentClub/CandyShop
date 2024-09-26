@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxth656yiuy84"
-path="res://.godot/imported/peek.png-7404560521375af688c617d7eaabba57.ctex"
+uid="uid://wrkhnvudgjgc"
+path="res://.godot/imported/gummysharks.png-44611932012f96675623d12ef8030a24.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/peek.png"
-dest_files=["res://.godot/imported/peek.png-7404560521375af688c617d7eaabba57.ctex"]
+source_file="res://Assets/Product Assets/gummysharks.png"
+dest_files=["res://.godot/imported/gummysharks.png-44611932012f96675623d12ef8030a24.ctex"]
 
 [params]
 

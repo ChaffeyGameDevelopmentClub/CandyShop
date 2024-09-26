@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdq5e12iab8l3"
-path="res://.godot/imported/gummy worm plant 1.png-c53d46125203f422290786f99ed8d3b3.ctex"
+uid="uid://b2lvycpvte427"
+path="res://.godot/imported/gummy worm pops.png-79a8c55ce40b061d86f33ab0f04fc385.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/gummy worm plant 1.png"
-dest_files=["res://.godot/imported/gummy worm plant 1.png-c53d46125203f422290786f99ed8d3b3.ctex"]
+source_file="res://Assets/Product Assets/gummy worm pops.png"
+dest_files=["res://.godot/imported/gummy worm pops.png-79a8c55ce40b061d86f33ab0f04fc385.ctex"]
 
 [params]
 

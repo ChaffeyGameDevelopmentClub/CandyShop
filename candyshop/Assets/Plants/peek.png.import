@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ix50l6q8vmw7"
-path="res://.godot/imported/Gummy bear army.png-0715fc0aafd6469dd5e937fa5c922b68.ctex"
+uid="uid://dxth656yiuy84"
+path="res://.godot/imported/peek.png-8637e3142fc706e6e0b5e58877d0f64a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Ingredent Assets/Gummy bear army.png"
-dest_files=["res://.godot/imported/Gummy bear army.png-0715fc0aafd6469dd5e937fa5c922b68.ctex"]
+source_file="res://Assets/Plants/peek.png"
+dest_files=["res://.godot/imported/peek.png-8637e3142fc706e6e0b5e58877d0f64a.ctex"]
 
 [params]
 

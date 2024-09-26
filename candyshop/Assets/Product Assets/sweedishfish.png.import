@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cy77jx73gawuf"
-path="res://.godot/imported/smaller baby gummy worm plant.png-5bca2e52669e1a54d2a0df2f1e178b68.ctex"
+uid="uid://c2vk1144n46yq"
+path="res://.godot/imported/sweedishfish.png-b5e6d1ded5d12f468fd8b39ce02f98ef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/smaller baby gummy worm plant.png"
-dest_files=["res://.godot/imported/smaller baby gummy worm plant.png-5bca2e52669e1a54d2a0df2f1e178b68.ctex"]
+source_file="res://Assets/Product Assets/sweedishfish.png"
+dest_files=["res://.godot/imported/sweedishfish.png-b5e6d1ded5d12f468fd8b39ce02f98ef.ctex"]
 
 [params]
 

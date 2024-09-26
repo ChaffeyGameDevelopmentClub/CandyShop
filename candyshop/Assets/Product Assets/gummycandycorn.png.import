@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d20vd1xcemu21"
-path="res://.godot/imported/bear pop.png-ee957b16716d822fe983d1c1b4ba9fae.ctex"
+uid="uid://dmav8jcspuevs"
+path="res://.godot/imported/gummycandycorn.png-2e4ce471df817c1051b3265257c2f49f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Ingredent Assets/bear pop.png"
-dest_files=["res://.godot/imported/bear pop.png-ee957b16716d822fe983d1c1b4ba9fae.ctex"]
+source_file="res://Assets/Product Assets/gummycandycorn.png"
+dest_files=["res://.godot/imported/gummycandycorn.png-2e4ce471df817c1051b3265257c2f49f.ctex"]
 
 [params]
 
