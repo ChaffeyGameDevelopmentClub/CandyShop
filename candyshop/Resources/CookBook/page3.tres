@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CookBookPage" load_steps=6 format=3 uid="uid://c1nyci5qx44or"]
+
+[ext_resource type="Script" path="res://Script/Cook Book/Page.gd" id="1_31eyo"]
+[ext_resource type="Texture2D" uid="uid://crr3ufuxuo11x" path="res://Assets/Product Assets/strawberryfieldssprite.png" id="1_km6xn"]
+[ext_resource type="Texture2D" uid="uid://bmc0fdr8ak87c" path="res://Assets/Product Assets/chocolatelattee.png" id="2_hxiso"]
+[ext_resource type="Texture2D" uid="uid://dmav8jcspuevs" path="res://Assets/Product Assets/gummycandycorn.png" id="3_rwdwi"]
+[ext_resource type="Texture2D" uid="uid://c2vk1144n46yq" path="res://Assets/Product Assets/sweedishfish.png" id="4_xxvrt"]
+
+[resource]
+script = ExtResource("1_31eyo")
+icon1 = ExtResource("1_km6xn")
+text1 = "Strawberry Fields=Licorice + Gummy Worms +Lollipop"
+icon2 = ExtResource("2_hxiso")
+text2 = "Chocolate Latte=Chocolate + Chocolate Forest + Bear Pop"
+icon3 = ExtResource("3_rwdwi")
+text3 = "Gummy Candy Corn=Gummy Bears + Gummy Worms + Candy Corn"
+icon4 = ExtResource("4_xxvrt")
+text4 = "Swedish Fish=Strawberry Fields + Chocolate Forest + Bear Pop"

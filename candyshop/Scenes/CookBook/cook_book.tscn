@@ -1,0 +1,201 @@
+[gd_scene load_steps=12 format=3 uid="uid://6hfkwlnv0xj4"]
+
+[ext_resource type="Script" path="res://Script/Cook Book/cook_book.gd" id="1_1cmo6"]
+[ext_resource type="Resource" uid="uid://0lmgcrare03" path="res://Resources/CookBook/Book.tres" id="2_ajcfa"]
+[ext_resource type="Texture2D" uid="uid://bhmslgr73hvid" path="res://Assets/CookBook/book.png" id="2_phbx6"]
+[ext_resource type="Texture2D" uid="uid://d3wl2hngcqck0" path="res://Assets/CookBook/right.png" id="3_oq8v6"]
+[ext_resource type="Texture2D" uid="uid://c8bp2qox4wal2" path="res://Assets/CookBook/rightHover.png" id="4_463b0"]
+[ext_resource type="Texture2D" uid="uid://bubsnenc2ef3q" path="res://Assets/CookBook/left.png" id="5_deh6o"]
+[ext_resource type="Texture2D" uid="uid://bpag6tuins7wv" path="res://Assets/CookBook/leftHover.png" id="6_pyguf"]
+[ext_resource type="Theme" uid="uid://bwifx5peyypoc" path="res://Resources/CookBook/TextSize.tres" id="8_82e1b"]
+[ext_resource type="Texture2D" uid="uid://dg3o5m5lux8a2" path="res://Assets/Product Assets/popcorn.png" id="9_tdq1m"]
+[ext_resource type="Texture2D" uid="uid://kayexab56t0b" path="res://Assets/Product Assets/chocolate bears.png" id="10_sjsna"]
+[ext_resource type="Texture2D" uid="uid://b2lvycpvte427" path="res://Assets/Product Assets/gummy worm pops.png" id="11_m5k67"]
+
+[node name="CookBook" type="Control" node_paths=PackedStringArray("icon1", "text1", "icon2", "text2", "icon3", "text3", "icon4", "text4")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1cmo6")
+pages = ExtResource("2_ajcfa")
+icon1 = NodePath("Control/1/Icon1")
+text1 = NodePath("Control/1/Text1")
+icon2 = NodePath("Control/2/Icon2")
+text2 = NodePath("Control/2/Text2")
+icon3 = NodePath("Control/3/Icon3")
+text3 = NodePath("Control/3/Text3")
+icon4 = NodePath("Control/4/Icon4")
+text4 = NodePath("Control/4/Text4")
+
+[node name="Book" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CookBook" type="TextureRect" parent="Book"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 64.0
+offset_top = 116.0
+offset_right = 304.0
+offset_bottom = 251.0
+scale = Vector2(7.40094, 6.96597)
+texture = ExtResource("2_phbx6")
+
+[node name="Buttons" type="Control" parent="Book"]
+texture_filter = 1
+anchors_preset = 0
+offset_left = 5.0
+offset_top = -806.0
+offset_right = 83.0
+offset_bottom = -734.0
+
+[node name="Next Page" type="TextureButton" parent="Book/Buttons"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1739.0
+offset_top = 934.0
+offset_right = 1779.0
+offset_bottom = 974.0
+scale = Vector2(4, 4)
+texture_normal = ExtResource("3_oq8v6")
+texture_hover = ExtResource("4_463b0")
+
+[node name="Prev Pahe" type="TextureButton" parent="Book/Buttons"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 26.0
+offset_top = 932.0
+offset_right = 66.0
+offset_bottom = 972.0
+scale = Vector2(4, 4)
+texture_normal = ExtResource("5_deh6o")
+texture_hover = ExtResource("6_pyguf")
+
+[node name="Up_down" type="TextureButton" parent="Book"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 770.0
+offset_top = 12.0
+offset_right = 810.0
+offset_bottom = 52.0
+grow_horizontal = 2
+rotation = 1.5708
+scale = Vector2(2.69805, -10.0688)
+toggle_mode = true
+texture_normal = ExtResource("5_deh6o")
+texture_pressed = ExtResource("6_pyguf")
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="1" type="Control" parent="Control"]
+anchors_preset = 0
+offset_left = 175.0
+offset_top = 226.0
+offset_right = 215.0
+offset_bottom = 266.0
+
+[node name="Icon1" type="TextureRect" parent="Control/1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.27473, 5.72727)
+expand_mode = 1
+
+[node name="Text1" type="RichTextLabel" parent="Control/1"]
+layout_mode = 0
+offset_left = 281.0
+offset_top = -20.0
+offset_right = 710.0
+offset_bottom = 274.0
+theme = ExtResource("8_82e1b")
+text = "Bear Pop=
+Gummy Bear+LoliPop"
+
+[node name="2" type="Control" parent="Control"]
+anchors_preset = 0
+offset_left = 171.0
+offset_top = 641.0
+offset_right = 211.0
+offset_bottom = 681.0
+
+[node name="Icon2" type="TextureRect" parent="Control/2"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.28247, 5.77038)
+texture = ExtResource("9_tdq1m")
+expand_mode = 1
+
+[node name="Text2" type="RichTextLabel" parent="Control/2"]
+layout_mode = 0
+offset_left = 286.0
+offset_top = -18.0
+offset_right = 757.0
+offset_bottom = 265.0
+theme = ExtResource("8_82e1b")
+text = "Chocolate Popcorn=
+Chocolate+Candy Corn"
+
+[node name="3" type="Control" parent="Control"]
+anchors_preset = 0
+offset_left = 1476.0
+offset_top = 197.0
+offset_right = 1516.0
+offset_bottom = 237.0
+
+[node name="Icon3" type="TextureRect" parent="Control/3"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 14.0
+offset_right = 41.0
+offset_bottom = 54.0
+scale = Vector2(6.42444, 6.47569)
+texture = ExtResource("10_sjsna")
+expand_mode = 1
+
+[node name="Text3" type="RichTextLabel" parent="Control/3"]
+layout_mode = 0
+offset_left = -469.0
+offset_top = -2.0
+offset_right = -35.0
+offset_bottom = 303.0
+theme = ExtResource("8_82e1b")
+text = "Chocolate Bears=
+Gummy Bears+Chocolate"
+
+[node name="4" type="Control" parent="Control"]
+anchors_preset = 0
+offset_left = 1474.0
+offset_top = 616.0
+offset_right = 1514.0
+offset_bottom = 656.0
+
+[node name="Icon4" type="TextureRect" parent="Control/4"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.27553, 6.33693)
+texture = ExtResource("11_m5k67")
+expand_mode = 1
+
+[node name="Text4" type="RichTextLabel" parent="Control/4"]
+layout_mode = 0
+offset_left = -482.0
+offset_top = 12.0
+offset_right = -28.0
+offset_bottom = 297.0
+theme = ExtResource("8_82e1b")
+
+[connection signal="pressed" from="Book/Buttons/Next Page" to="." method="_on_next_page_pressed"]
+[connection signal="pressed" from="Book/Buttons/Prev Pahe" to="." method="_on_prev_pahe_pressed"]
+[connection signal="toggled" from="Book/Up_down" to="." method="_on_up_down_toggled"]
