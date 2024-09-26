@@ -32,7 +32,7 @@ var orders = 0
 @export var DialogueManager : Control
 @export var orderItem1 : Sprite2D
 @export var timeLimit : Timer
-
+@export var serveItem : Sprite2D
 @export var resourceArray : ShelfResource
 var items1 = []
 
@@ -137,6 +137,9 @@ func _on_serve_button_pressed():
 		#print("Order Failed")
 		Customer.failedOrder()
 		DialogueManager.failedOrder()
+	items2.clear()
+	serveItem.set_texture(null)
+	serveItem.scale = Vector2(100, 100) / orderItem1.texture.get_size()
 
 
 func _on_time_limit_timer_timeout():
@@ -156,3 +159,7 @@ func setItem1():
 func sendTo(nameOf):
 	#print("sendto: " + nameOf)
 	items2.append(nameOf)
+	for i in resourceArray.item_array.size():
+		if resourceArray.item_array[i].Name == nameOf:
+			serveItem.set_texture(resourceArray.item_array[i].image)
+			serveItem.scale = Vector2(100, 100) / orderItem1.texture.get_size()

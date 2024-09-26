@@ -13,7 +13,7 @@
 [ext_resource type="Theme" uid="uid://bwifx5peyypoc" path="res://Resources/CookBook/TextSize.tres" id="9_1list"]
 [ext_resource type="Texture2D" uid="uid://cbydsx0st8ixa" path="res://Assets/CookBook/OrderMenu.png" id="10_m034b"]
 
-[node name="ShopScreen" type="Node2D" node_paths=PackedStringArray("dayCounter", "Customer", "DialogueManager", "orderItem1", "timeLimit")]
+[node name="ShopScreen" type="Node2D" node_paths=PackedStringArray("dayCounter", "Customer", "DialogueManager", "orderItem1", "timeLimit", "serveItem")]
 position = Vector2(-1920, -2)
 script = ExtResource("1_hri7p")
 dayCounter = NodePath("Label")
@@ -21,6 +21,7 @@ Customer = NodePath("Customer")
 DialogueManager = NodePath("DialogueManager")
 orderItem1 = NodePath("OrderRect/OrderItem1")
 timeLimit = NodePath("TimeLimitTimer")
+serveItem = NodePath("ServeTray/ServeItem")
 resourceArray = ExtResource("2_sgpd6")
 
 [node name="Bg" type="TextureRect" parent="."]
@@ -92,7 +93,7 @@ scale = Vector2(1.40129, 1.76579)
 theme = ExtResource("9_1list")
 text = "BENNY"
 
-[node name="OrderRect" type="TextureRect" parent="." node_paths=PackedStringArray("NextButton", "ServeButton")]
+[node name="OrderRect" type="TextureRect" parent="." node_paths=PackedStringArray("NextButton", "ServeButton", "ServeTray")]
 visible = false
 texture_filter = 1
 offset_left = 111.0
@@ -103,6 +104,7 @@ texture = ExtResource("10_m034b")
 script = ExtResource("4_2n1j5")
 NextButton = NodePath("../NextButton")
 ServeButton = NodePath("../ServeButton")
+ServeTray = NodePath("../ServeTray")
 
 [node name="OrderLabel" type="Label" parent="OrderRect"]
 visible = false
@@ -136,6 +138,17 @@ texture = ExtResource("1_ikxkj")
 [node name="TimeLimitTimer" type="Timer" parent="."]
 wait_time = 60.0
 one_shot = true
+
+[node name="ServeTray" type="ColorRect" parent="."]
+visible = false
+offset_left = 1466.0
+offset_top = 932.0
+offset_right = 1885.0
+offset_bottom = 1061.0
+
+[node name="ServeItem" type="Sprite2D" parent="ServeTray"]
+position = Vector2(216, 68)
+scale = Vector2(0.5625, 0.554688)
 
 [connection signal="timeout" from="DialogueManager/dialogueStartTimer" to="DialogueManager" method="_on_dialogue_start_timer_timeout"]
 [connection signal="timeout" from="DialogueManager/WalkonTimer" to="DialogueManager" method="_on_walkon_timer_timeout"]

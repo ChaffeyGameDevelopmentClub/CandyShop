@@ -16,8 +16,8 @@
 [ext_resource type="Resource" uid="uid://b3fmu3rg8p68n" path="res://Resources/Dialogue Resources/Npc1/npc12.tres" id="13_1lv6g"]
 [ext_resource type="Resource" uid="uid://ciyi0fkj5kof3" path="res://Resources/Dialogue Resources/Npc1/npc13.tres" id="14_kpt8y"]
 [ext_resource type="Resource" uid="uid://q775ibvgsrfi" path="res://Resources/Dialogue Resources/Npc1/npc14.tres" id="15_rguuv"]
-[ext_resource type="Resource" uid="uid://ccpu7jjimj3cd" path="res://Resources/Dialogue Resources/Npc1/npcEgg.tres" id="16_w1ato"]
+[ext_resource type="Resource" uid="uid://bm7lt810lep4c" path="res://Resources/Dialogue Resources/Npc1/npc18.tres" id="16_rb88y"]
 
 [resource]
 script = ExtResource("2_nygpj")
-npc_array = Array[ExtResource("1_mify6")]([ExtResource("2_probk"), ExtResource("3_h5oyl"), ExtResource("4_pc07s"), ExtResource("5_1hxy4"), ExtResource("6_0feu8"), ExtResource("7_auiv6"), ExtResource("8_qcb8n"), ExtResource("9_neouv"), ExtResource("10_qla2l"), ExtResource("11_nbpy4"), ExtResource("12_g4x6o"), ExtResource("13_1lv6g"), ExtResource("14_kpt8y"), null, ExtResource("15_rguuv"), ExtResource("16_w1ato")])
+npc_array = Array[ExtResource("1_mify6")]([ExtResource("2_probk"), ExtResource("3_h5oyl"), ExtResource("4_pc07s"), ExtResource("5_1hxy4"), ExtResource("6_0feu8"), ExtResource("7_auiv6"), ExtResource("8_qcb8n"), ExtResource("9_neouv"), ExtResource("10_qla2l"), ExtResource("11_nbpy4"), ExtResource("12_g4x6o"), ExtResource("13_1lv6g"), ExtResource("14_kpt8y"), null, ExtResource("15_rguuv"), ExtResource("16_rb88y")])

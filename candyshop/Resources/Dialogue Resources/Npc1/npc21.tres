@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=3 format=3 uid="uid://ca3npa54c44mp"]
+
+[ext_resource type="Texture2D" uid="uid://db2knv6v8rjub" path="res://Assets/thesun.png" id="1_i3bwx"]
+[ext_resource type="Script" path="res://Script/Dialogue Machine/DialogueResource.gd" id="2_66fio"]
+
+[resource]
+script = ExtResource("2_66fio")
+Name = "The Sun"
+text = Array[String](["The sun has entered your shop", "Somehow you aren't burning to death", "Give the sun a "])
+image = ExtResource("1_i3bwx")
