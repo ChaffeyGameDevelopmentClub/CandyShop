@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=3 format=3 uid="uid://b7j2hxj3rd7f3"]
+
+[ext_resource type="Texture2D" uid="uid://by5c4d66tq6yx" path="res://Assets/candy miku.png" id="1_y7hjg"]
+[ext_resource type="Script" path="res://Script/Dialogue Machine/DialogueResource.gd" id="2_ovcdh"]
+
+[resource]
+script = ExtResource("2_ovcdh")
+Name = "Candy Miku"
+text = Array[String](["And now the moment you've all been waiting for!", "1... 2...3...4... ", "CANDY CANDY BEAM!! ", "That was fun! Can I have a "])
+image = ExtResource("1_y7hjg")

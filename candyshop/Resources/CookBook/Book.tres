@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CookBookArray" load_steps=7 format=3 uid="uid://0lmgcrare03"]
+
+[ext_resource type="Script" path="res://Script/Cook Book/CookBookArray.gd" id="1_2p8dk"]
+[ext_resource type="Script" path="res://Script/Cook Book/Page.gd" id="1_fv76m"]
+[ext_resource type="Resource" uid="uid://biom7v0j6r2a1" path="res://Resources/CookBook/Page1.tres" id="2_yteow"]
+[ext_resource type="Resource" uid="uid://c8iqxfmci1xv6" path="res://Resources/CookBook/page2.tres" id="3_un5k6"]
+[ext_resource type="Resource" uid="uid://c1nyci5qx44or" path="res://Resources/CookBook/page3.tres" id="4_dkslx"]
+[ext_resource type="Resource" uid="uid://dg4jrad0px26o" path="res://Resources/CookBook/page4.tres" id="5_xmqo0"]
+
+[resource]
+script = ExtResource("1_2p8dk")
+page_array = Array[ExtResource("1_fv76m")]([ExtResource("2_yteow"), ExtResource("3_un5k6"), ExtResource("4_dkslx"), ExtResource("5_xmqo0")])

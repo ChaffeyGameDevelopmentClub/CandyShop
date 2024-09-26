@@ -18,6 +18,6 @@ func _ready() -> void:
 	#GameManager.updateAmount(i,10)
 var num = 1
 func example(index):
-	print('hello' + str(index))
+	#print('hello' + str(index))
 	num += 1
-	print(num)
+	#print(num)

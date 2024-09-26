@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://412rd3bnf1xy"]
 
-[ext_resource type="Texture2D" uid="uid://brwfm50gyafys" path="res://Assets/icon.svg" id="1_20tja"]
 [ext_resource type="Script" path="res://Script/ShelfScripts/itemResources.gd" id="1_a42vt"]
+[ext_resource type="Texture2D" uid="uid://3hyd68a6cq15" path="res://Assets/Ingredent Assets/licorce.png" id="1_ub1u6"]
 
 [resource]
 script = ExtResource("1_a42vt")
-image = ExtResource("1_20tja")
+image = ExtResource("1_ub1u6")
 Name = "Licorice"
-Amount = 25
+Amount = 10
