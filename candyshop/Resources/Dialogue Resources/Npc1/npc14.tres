@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=3 format=3 uid="uid://brxnakeio2y0c"]
 
-[ext_resource type="Texture2D" uid="uid://xcnt7x5kb5ev" path="res://Resources/Dialogue Resources/Npc1/Peter Griffin.png" id="1_omiir"]
+[ext_resource type="Texture2D" uid="uid://xcnt7x5kb5ev" path="res://Assets/Peter Griffin.png" id="1_omiir"]
 [ext_resource type="Script" path="res://Script/Dialogue Machine/DialogueResource.gd" id="2_fblwu"]
 
 [resource]

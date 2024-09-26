@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://xcnt7x5kb5ev"
-path="res://.godot/imported/Peter Griffin.png-03b9909dbfa05ba37a6e880bbee37e64.ctex"
+path="res://.godot/imported/Peter Griffin.png-2d0739a36d38565430c00893b6a54b4d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Dialogue Resources/Npc1/Peter Griffin.png"
-dest_files=["res://.godot/imported/Peter Griffin.png-03b9909dbfa05ba37a6e880bbee37e64.ctex"]
+source_file="res://Assets/Peter Griffin.png"
+dest_files=["res://.godot/imported/Peter Griffin.png-2d0739a36d38565430c00893b6a54b4d.ctex"]
 
 [params]
 
