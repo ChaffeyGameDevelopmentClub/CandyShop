@@ -16,14 +16,9 @@
 [ext_resource type="Resource" uid="uid://b3fmu3rg8p68n" path="res://Resources/Dialogue Resources/Npc1/npc12.tres" id="13_1lv6g"]
 [ext_resource type="Resource" uid="uid://ciyi0fkj5kof3" path="res://Resources/Dialogue Resources/Npc1/npc13.tres" id="14_kpt8y"]
 [ext_resource type="Resource" uid="uid://brxnakeio2y0c" path="res://Resources/Dialogue Resources/Npc1/npc14.tres" id="15_rguuv"]
-[ext_resource type="Texture2D" uid="uid://by5c4d66tq6yx" path="res://Assets/candy miku.png" id="16_w1gkh"]
-
-[sub_resource type="Resource" id="Resource_3nfgu"]
-script = ExtResource("1_mify6")
-Name = "Candy Miku"
-text = Array[String](["And now the moment you've all been waiting for!", "1... 2...3...4... ", "CANDY CANDY BEAM!! ", "That was fun! Can I have a "])
-image = ExtResource("16_w1gkh")
+[ext_resource type="Resource" uid="uid://b7j2hxj3rd7f3" path="res://Resources/Dialogue Resources/Npc1/npc15.tres" id="16_oqm5u"]
+[ext_resource type="Resource" uid="uid://cuvk62wg6m2ey" path="res://Resources/Dialogue Resources/Npc1/npc16.tres" id="17_fn2po"]
 
 [resource]
 script = ExtResource("2_nygpj")
-npc_array = Array[ExtResource("1_mify6")]([ExtResource("2_probk"), ExtResource("3_h5oyl"), ExtResource("4_pc07s"), ExtResource("5_1hxy4"), ExtResource("6_0feu8"), ExtResource("7_auiv6"), ExtResource("8_qcb8n"), ExtResource("9_neouv"), ExtResource("10_qla2l"), ExtResource("11_nbpy4"), ExtResource("12_g4x6o"), ExtResource("13_1lv6g"), ExtResource("14_kpt8y"), ExtResource("15_rguuv"), SubResource("Resource_3nfgu")])
+npc_array = Array[ExtResource("1_mify6")]([ExtResource("2_probk"), ExtResource("3_h5oyl"), ExtResource("4_pc07s"), ExtResource("5_1hxy4"), ExtResource("6_0feu8"), ExtResource("7_auiv6"), ExtResource("8_qcb8n"), ExtResource("9_neouv"), ExtResource("10_qla2l"), ExtResource("11_nbpy4"), ExtResource("12_g4x6o"), ExtResource("13_1lv6g"), ExtResource("14_kpt8y"), ExtResource("15_rguuv"), ExtResource("16_oqm5u"), ExtResource("17_fn2po")])

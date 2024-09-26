@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=3 format=3 uid="uid://cuvk62wg6m2ey"]
+
+[ext_resource type="Texture2D" uid="uid://30bpar0erktn" path="res://Assets/mrworldwide.jpg" id="1_2tbcw"]
+[ext_resource type="Script" path="res://Script/Dialogue Machine/DialogueResource.gd" id="1_7dl7t"]
+
+[resource]
+script = ExtResource("1_7dl7t")
+Name = "Mr World Wide"
+text = Array[String](["It's Mr. World wide Mr. 305", "Live life, don't let life live you! Dale!", "Lemme get some of that "])
+image = ExtResource("1_2tbcw")
