@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://6hfkwlnv0xj4"]
+[gd_scene load_steps=7 format=3 uid="uid://6hfkwlnv0xj4"]
 
 [ext_resource type="Script" path="res://Script/Cook Book/cook_book.gd" id="1_1cmo6"]
+[ext_resource type="Texture2D" uid="uid://bhmslgr73hvid" path="res://Assets/CookBook/book.png" id="2_phbx6"]
+[ext_resource type="Texture2D" uid="uid://d3wl2hngcqck0" path="res://Assets/CookBook/right.png" id="3_oq8v6"]
+[ext_resource type="Texture2D" uid="uid://c8bp2qox4wal2" path="res://Assets/CookBook/rightHover.png" id="4_463b0"]
+[ext_resource type="Texture2D" uid="uid://bubsnenc2ef3q" path="res://Assets/CookBook/left.png" id="5_deh6o"]
+[ext_resource type="Texture2D" uid="uid://bpag6tuins7wv" path="res://Assets/CookBook/leftHover.png" id="6_pyguf"]
 
 [node name="CookBook" type="Control"]
 layout_mode = 3
@@ -11,17 +16,42 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1cmo6")
 
-[node name="CookBook" type="TextureRect" parent="."]
-layout_mode = 0
+[node name="Book" type="Control" parent="."]
+anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Next Page" type="TextureButton" parent="."]
+[node name="CookBook" type="TextureRect" parent="Book"]
+texture_filter = 1
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 64.0
+offset_top = 116.0
+offset_right = 304.0
+offset_bottom = 251.0
+scale = Vector2(7.40094, 6.96597)
+texture = ExtResource("2_phbx6")
 
-[node name="Prev Pahe" type="TextureButton" parent="."]
-layout_mode = 0
+[node name="Buttons" type="Control" parent="Book"]
+texture_filter = 1
+anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+scale = Vector2(3.44, 3.44)
+
+[node name="Next Page" type="TextureButton" parent="Book/Buttons"]
+layout_mode = 0
+offset_left = 488.954
+offset_top = 259.593
+offset_right = 528.953
+offset_bottom = 299.593
+texture_normal = ExtResource("3_oq8v6")
+texture_hover = ExtResource("4_463b0")
+
+[node name="Prev Pahe" type="TextureButton" parent="Book/Buttons"]
+layout_mode = 0
+offset_left = 30.8139
+offset_top = 260.174
+offset_right = 70.8139
+offset_bottom = 300.174
+texture_normal = ExtResource("5_deh6o")
+texture_hover = ExtResource("6_pyguf")
