@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://Script/Dialogue Machine/dialogue_manager.gd" id="1_2icc2"]
 [ext_resource type="Texture2D" uid="uid://cih1jdby83aeo" path="res://Assets/extra/candshopFRONT.png" id="1_12vlv"]
-[ext_resource type="Texture2D" uid="uid://g574hnxfs5yy" path="res://Assets/extra/chat test.png" id="2_ct2mw"]
 [ext_resource type="Resource" uid="uid://uwapsfnoi586" path="res://Resources/Dialogue Resources/Testing/npc_array.tres" id="2_xej0s"]
+[ext_resource type="Texture2D" uid="uid://de1yb6ane3a1t" path="res://Assets/TextBox.png" id="4_3mx5o"]
 
 [sub_resource type="Theme" id="Theme_u02hj"]
 default_font_size = 40
@@ -42,11 +42,15 @@ offset_right = 859.0
 offset_bottom = 105.0
 
 [node name="ChatBG" type="TextureRect" parent="Control"]
+z_index = -1
 layout_mode = 1
 anchors_preset = -1
-offset_right = 757.0
-offset_bottom = 252.0
-texture = ExtResource("2_ct2mw")
+offset_left = -287.0
+offset_top = -214.0
+offset_right = 470.0
+offset_bottom = 38.0
+scale = Vector2(1.65169, 3.27252)
+texture = ExtResource("4_3mx5o")
 expand_mode = 1
 
 [node name="DialogueText" type="RichTextLabel" parent="Control"]
@@ -56,7 +60,6 @@ offset_top = 74.0
 offset_right = 705.0
 offset_bottom = 283.0
 theme = SubResource("Theme_u02hj")
-theme_override_colors/default_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
 text = "[center]Hello I want a nice shake!
 please make it now!
@@ -67,7 +70,6 @@ layout_mode = 0
 offset_right = 234.0
 offset_bottom = 77.0
 theme = SubResource("Theme_3ilyw")
-theme_override_colors/default_color = Color(0, 0, 0, 1)
 text = "Name"
 
 [node name="dialogueTimer" type="Timer" parent="."]
