@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=3 format=3 uid="uid://unlsgvn24m87"]
+
+[ext_resource type="Texture2D" uid="uid://bmdwfo4gp0kyu" path="res://Assets/JohnFKennedy.png" id="1_llqsh"]
+[ext_resource type="Script" path="res://Script/Dialogue Machine/DialogueResource.gd" id="2_laqek"]
+
+[resource]
+script = ExtResource("2_laqek")
+Name = "John F Kennedy"
+text = Array[String](["Hello it is I John F Kennedy 35th president of the United States of America", "I would like to consume some food", "Give me a "])
+image = ExtResource("1_llqsh")

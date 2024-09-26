@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=3 format=3 uid="uid://b7hmsv18y7yu1"]
+
+[ext_resource type="Texture2D" uid="uid://chs84c5t7ybw7" path="res://Assets/Brian_Griffin.png" id="1_juy7g"]
+[ext_resource type="Script" path="res://Script/Dialogue Machine/DialogueResource.gd" id="2_tvubn"]
+
+[resource]
+script = ExtResource("2_tvubn")
+Name = "Brian Griffin"
+text = Array[String](["Brian Griffin", ""])
+image = ExtResource("1_juy7g")
