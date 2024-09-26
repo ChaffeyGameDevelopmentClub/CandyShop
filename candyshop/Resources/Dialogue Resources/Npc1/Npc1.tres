@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_qthqc")
-Name = "Candy Girl"
+Name = "Taffy"
 text = Array[String](["Hello I want ur stuff!", "Im hungry!", "I want a "])

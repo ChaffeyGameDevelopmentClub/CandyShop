@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_1u755")
-Name = "One Pop Man"
-text = Array[String](["Do you have my mothers cooking?", "No? Oh well.", "Give me a "])
+Name = "Star Popinum"
+text = Array[String](["Do you have my mothers cooking ora?", "No? Oh well ora.", "Give me a "])
