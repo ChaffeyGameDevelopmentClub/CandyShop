@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dw8j6pg76fxjd"]
+[gd_scene load_steps=8 format=3 uid="uid://dw8j6pg76fxjd"]
 
 [ext_resource type="Script" path="res://Scenes/Playscreen/play_screen.gd" id="1_shwib"]
 [ext_resource type="Texture2D" uid="uid://bdli5de6jykhm" path="res://Assets/extra/Cooking_Screen.png" id="2_m25bt"]
@@ -6,10 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://fhbg06io7grq" path="res://Scenes/UI/shelf_overlay.tscn" id="4_5qjal"]
 [ext_resource type="PackedScene" uid="uid://38pe832setc0" path="res://Scenes/shop_screen.tscn" id="4_6pvsj"]
 [ext_resource type="Script" path="res://Scenes/Playscreen/control.gd" id="5_ips3f"]
+[ext_resource type="AudioStream" uid="uid://d12o1xyuyfsdq" path="res://Assets/crunchsound.wav" id="7_ism6j"]
 
-[node name="PlayScreen" type="Node2D" node_paths=PackedStringArray("camera")]
+[node name="PlayScreen" type="Node2D" node_paths=PackedStringArray("buttonsound", "camera")]
 position = Vector2(-959.515, 536)
 script = ExtResource("1_shwib")
+buttonsound = NodePath("AudioStreamPlayer")
 camera = NodePath("Camera")
 
 [node name="CookingScreen" type="Sprite2D" parent="."]
@@ -75,6 +77,9 @@ visible = false
 offset_right = 8.0
 offset_bottom = 8.0
 metadata/_edit_use_anchors_ = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_ism6j")
 
 [connection signal="mouse_entered" from="ShelfOverlay/Control2/ColorRect" to="ShelfOverlay/Control2" method="_on_color_rect_mouse_entered"]
 [connection signal="mouse_exited" from="ShelfOverlay/Control2/ColorRect" to="ShelfOverlay/Control2" method="_on_color_rect_mouse_exited"]

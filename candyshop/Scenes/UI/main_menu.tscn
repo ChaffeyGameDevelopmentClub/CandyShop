@@ -108,6 +108,7 @@ stretch_mode = 0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_o0rm6")
+bus = &"SFX"
 
 [connection signal="pressed" from="Control/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="Control/OptionsButton" to="." method="_on_options_button_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cuh2picld1kjm"]
+[gd_scene load_steps=13 format=3 uid="uid://cuh2picld1kjm"]
 
 [ext_resource type="Script" path="res://Scenes/options_menu.gd" id="1_cdxxy"]
 [ext_resource type="Texture2D" uid="uid://darc6424mlf0x" path="res://Assets/Main Menu/BG.png" id="2_hgx7w"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dwvgto7d7h42l" path="res://Assets/Main Menu/overalllogo.png" id="6_4ocrr"]
 [ext_resource type="Texture2D" uid="uid://dwmqqcjqp57dq" path="res://Assets/Main Menu/sfxlogo.png" id="7_2b5pc"]
 [ext_resource type="Texture2D" uid="uid://5rbsvgo0cavv" path="res://Assets/Main Menu/volume.png" id="9_wa4vq"]
+[ext_resource type="Texture2D" uid="uid://bpag6tuins7wv" path="res://Assets/CookBook/leftHover.png" id="11_2erav"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7jm2r"]
 texture = ExtResource("3_xxmdf")
@@ -183,11 +184,17 @@ scale = Vector2(3.35169, 3.75)
 texture = ExtResource("9_wa4vq")
 
 [node name="back" type="TextureButton" parent="."]
+texture_filter = 1
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 70.0
+offset_top = 941.0
+offset_right = 312.0
+offset_bottom = 1054.0
+texture_normal = ExtResource("11_2erav")
+stretch_mode = 0
 
 [connection signal="mouse_exited" from="AudioOptions/Control/music/musicslider" to="." method="_on_musicslider_mouse_exited"]
 [connection signal="mouse_exited" from="AudioOptions/Control/overall/overallslider" to="." method="_on_overallslider_mouse_exited"]
 [connection signal="mouse_exited" from="AudioOptions/Control/sfx/sfxslider" to="." method="_on_sfxslider_mouse_exited"]
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
