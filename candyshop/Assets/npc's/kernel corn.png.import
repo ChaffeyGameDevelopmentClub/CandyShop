@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crr3ufuxuo11x"
-path="res://.godot/imported/strawberryfieldssprite.png-9d25dda8f33c24b43146293f807efb47.ctex"
+uid="uid://qe6oiubvxim6"
+path="res://.godot/imported/kernel corn.png-52dd2d1da1547dc48f64b7d638aecf91.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/strawberryfieldssprite.png"
-dest_files=["res://.godot/imported/strawberryfieldssprite.png-9d25dda8f33c24b43146293f807efb47.ctex"]
+source_file="res://Assets/npc's/kernel corn.png"
+dest_files=["res://.godot/imported/kernel corn.png-52dd2d1da1547dc48f64b7d638aecf91.ctex"]
 
 [params]
 

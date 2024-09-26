@@ -15,7 +15,7 @@ func _ready():
 	ordersFailed = 0
 	totalOrders = 0
 	customerMovementState = 1
-	
+	newCustomer()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -52,6 +52,7 @@ func failedOrder():
 	#print("customers: " + str(ordersCompleted))
 func newCustomer():
 	set_texture(custImg)
+	print_debug('newCustomer')
 	customerMovementState = 1
 	#print("yummers")
 func sendImage(textureName):
