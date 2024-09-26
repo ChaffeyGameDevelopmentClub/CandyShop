@@ -18,25 +18,52 @@ var page : int
 func _ready() -> void:
 	#1
 	icon1.texture = pages.page_array[0].icon1
-	text1.texture = pages.page_array[0].text1
+	text1.text = pages.page_array[0].text1
 	#2
 	icon2.texture = pages.page_array[0].icon2
-	text2.texture = pages.page_array[0].text2
+	text2.text = pages.page_array[0].text2
 	#3
 	icon3.texture = pages.page_array[0].icon3
-	text3.texture = pages.page_array[0].text3
+	text3.text = pages.page_array[0].text3
 	#4
 	icon4.texture = pages.page_array[0].icon4
-	text4.texture = pages.page_array[0].text4
+	text4.text = pages.page_array[0].text4
 
+var bookOn
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if self.position.y > 0 and bookOn:
+		self.position.y -= 15
+	elif self.position.y < 965 and !bookOn:
+		self.position.y += 15
 
 
 func _on_next_page_pressed() -> void:
-	page += 1
-
+	if page != 3:
+		page += 1
+		changePage()
 
 func _on_prev_pahe_pressed() -> void:
-	page -= 1
+	if page != 0:
+		page -= 1
+		changePage()
+
+func changePage():
+	icon1.texture = pages.page_array[page].icon1
+	text1.text = pages.page_array[page].text1
+	#2
+	icon2.texture = pages.page_array[page].icon2
+	text2.text = pages.page_array[page].text2
+	#3
+	icon3.texture = pages.page_array[page].icon3
+	text3.text = pages.page_array[page].text3
+	#4
+	icon4.texture = pages.page_array[page].icon4
+	text4.text = pages.page_array[page].text4
+
+
+func _on_up_down_toggled(toggled_on: bool) -> void:
+	if toggled_on:
+		bookOn = true
+	else:
+		bookOn = false #965

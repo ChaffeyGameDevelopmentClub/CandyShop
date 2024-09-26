@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://38pe832setc0"]
+[gd_scene load_steps=10 format=3 uid="uid://38pe832setc0"]
 
 [ext_resource type="Script" path="res://Script/shop_screen_script.gd" id="1_hri7p"]
 [ext_resource type="Texture2D" uid="uid://brwfm50gyafys" path="res://Assets/icon.svg" id="1_ikxkj"]
@@ -8,10 +8,12 @@
 [ext_resource type="Script" path="res://Script/order_rect.gd" id="4_2n1j5"]
 [ext_resource type="PackedScene" uid="uid://ckmwygrvgfwj" path="res://Scenes/UI/dialogue_manager.tscn" id="5_t5acm"]
 [ext_resource type="Texture2D" uid="uid://cih1jdby83aeo" path="res://Assets/extra/candshopFRONT.png" id="8_t346y"]
+[ext_resource type="Theme" uid="uid://bwifx5peyypoc" path="res://Resources/CookBook/TextSize.tres" id="9_1list"]
 
-[node name="ShopScreen" type="Node2D" node_paths=PackedStringArray("Customer", "DialogueManager", "orderItem1", "timeLimit")]
-position = Vector2(-1920, 0)
+[node name="ShopScreen" type="Node2D" node_paths=PackedStringArray("dayCounter", "Customer", "DialogueManager", "orderItem1", "timeLimit")]
+position = Vector2(-1920, -2)
 script = ExtResource("1_hri7p")
+dayCounter = NodePath("Label")
 Customer = NodePath("Customer")
 DialogueManager = NodePath("DialogueManager")
 orderItem1 = NodePath("OrderRect/OrderItem1")
@@ -66,6 +68,15 @@ offset_right = 1424.0
 offset_bottom = 1060.0
 theme_override_font_sizes/font_size = 35
 text = "Serve Order"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 42.0
+offset_top = 889.0
+offset_right = 177.0
+offset_bottom = 944.0
+scale = Vector2(1.40129, 1.76579)
+theme = ExtResource("9_1list")
+text = "BENNY"
 
 [node name="OrderRect" type="ColorRect" parent="." node_paths=PackedStringArray("NextButton", "ServeButton")]
 visible = false
