@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://6hfkwlnv0xj4"]
+[gd_scene load_steps=12 format=3 uid="uid://6hfkwlnv0xj4"]
 
 [ext_resource type="Script" path="res://Script/Cook Book/cook_book.gd" id="1_1cmo6"]
 [ext_resource type="Texture2D" uid="uid://bhmslgr73hvid" path="res://Assets/CookBook/book.png" id="2_phbx6"]
@@ -6,6 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://c8bp2qox4wal2" path="res://Assets/CookBook/rightHover.png" id="4_463b0"]
 [ext_resource type="Texture2D" uid="uid://bubsnenc2ef3q" path="res://Assets/CookBook/left.png" id="5_deh6o"]
 [ext_resource type="Texture2D" uid="uid://bpag6tuins7wv" path="res://Assets/CookBook/leftHover.png" id="6_pyguf"]
+[ext_resource type="Texture2D" uid="uid://d20vd1xcemu21" path="res://Assets/Product Assets/bear pop.png" id="7_w42er"]
+[ext_resource type="Theme" uid="uid://bwifx5peyypoc" path="res://Resources/CookBook/TextSize.tres" id="8_82e1b"]
+[ext_resource type="Texture2D" uid="uid://dg3o5m5lux8a2" path="res://Assets/Product Assets/popcorn.png" id="9_tdq1m"]
+[ext_resource type="Texture2D" uid="uid://kayexab56t0b" path="res://Assets/Product Assets/chocolate bears.png" id="10_sjsna"]
+[ext_resource type="Texture2D" uid="uid://b2lvycpvte427" path="res://Assets/Product Assets/gummy worm pops.png" id="11_m5k67"]
 
 [node name="CookBook" type="Control"]
 layout_mode = 3
@@ -55,3 +60,126 @@ offset_right = 70.8139
 offset_bottom = 300.174
 texture_normal = ExtResource("5_deh6o")
 texture_hover = ExtResource("6_pyguf")
+
+[node name="Up_down" type="TextureButton" parent="Book"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 770.0
+offset_top = 12.0
+offset_right = 810.0
+offset_bottom = 52.0
+grow_horizontal = 2
+rotation = 1.5708
+scale = Vector2(2.69805, -10.0688)
+toggle_mode = true
+texture_normal = ExtResource("5_deh6o")
+texture_pressed = ExtResource("6_pyguf")
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="1" type="Control" parent="Control"]
+anchors_preset = 0
+offset_left = 175.0
+offset_top = 226.0
+offset_right = 215.0
+offset_bottom = 266.0
+
+[node name="Icon1" type="TextureRect" parent="Control/1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.27473, 5.72727)
+texture = ExtResource("7_w42er")
+expand_mode = 1
+
+[node name="Text1" type="RichTextLabel" parent="Control/1"]
+layout_mode = 0
+offset_left = 281.0
+offset_top = -20.0
+offset_right = 710.0
+offset_bottom = 227.0
+theme = ExtResource("8_82e1b")
+text = "Bear Pop=
+Gummy Bear+LoliPop"
+
+[node name="2" type="Control" parent="Control"]
+anchors_preset = 0
+offset_left = 171.0
+offset_top = 641.0
+offset_right = 211.0
+offset_bottom = 681.0
+
+[node name="Icon2" type="TextureRect" parent="Control/2"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.28247, 5.77038)
+texture = ExtResource("9_tdq1m")
+expand_mode = 1
+
+[node name="Text2" type="RichTextLabel" parent="Control/2"]
+layout_mode = 0
+offset_left = 286.0
+offset_top = -18.0
+offset_right = 757.0
+offset_bottom = 208.0
+theme = ExtResource("8_82e1b")
+text = "Chocolate Popcorn=
+Chocolate+Candy Corn"
+
+[node name="3" type="Control" parent="Control"]
+anchors_preset = 0
+offset_left = 1476.0
+offset_top = 197.0
+offset_right = 1516.0
+offset_bottom = 237.0
+
+[node name="Icon3" type="TextureRect" parent="Control/3"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 14.0
+offset_right = 41.0
+offset_bottom = 54.0
+scale = Vector2(6.42444, 6.47569)
+texture = ExtResource("10_sjsna")
+expand_mode = 1
+
+[node name="Text3" type="RichTextLabel" parent="Control/3"]
+layout_mode = 0
+offset_left = -469.0
+offset_top = -2.0
+offset_right = -35.0
+offset_bottom = 242.0
+theme = ExtResource("8_82e1b")
+text = "Chocolate Bears=
+Gummy Bears+Chocolate"
+
+[node name="4" type="Control" parent="Control"]
+anchors_preset = 0
+offset_left = 1474.0
+offset_top = 616.0
+offset_right = 1514.0
+offset_bottom = 656.0
+
+[node name="Icon4" type="TextureRect" parent="Control/4"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.130292, 0.130919)
+texture = ExtResource("11_m5k67")
+
+[node name="Text4" type="RichTextLabel" parent="Control/4"]
+layout_mode = 0
+offset_left = -482.0
+offset_top = 12.0
+offset_right = -28.0
+offset_bottom = 248.0
+theme = ExtResource("8_82e1b")
+text = "Gummy-Pops=
+Gummy worms+Loli-pop"
