@@ -73,6 +73,7 @@ theme_override_icons/grabber = ExtResource("5_wh5en")
 theme_override_icons/grabber_highlight = ExtResource("5_wh5en")
 theme_override_icons/grabber_disabled = ExtResource("5_wh5en")
 theme_override_styles/slider = SubResource("StyleBoxTexture_7jm2r")
+value = 50.0
 
 [node name="Musiclogo" type="Sprite2D" parent="AudioOptions/Control/music"]
 position = Vector2(231, 124)
@@ -110,6 +111,7 @@ theme_override_icons/grabber = ExtResource("5_wh5en")
 theme_override_icons/grabber_highlight = ExtResource("5_wh5en")
 theme_override_icons/grabber_disabled = ExtResource("5_wh5en")
 theme_override_styles/slider = SubResource("StyleBoxTexture_7jm2r")
+value = 50.0
 
 [node name="Overalllogo" type="Sprite2D" parent="AudioOptions/Control/overall"]
 position = Vector2(217, 125)
@@ -147,6 +149,7 @@ theme_override_icons/grabber = ExtResource("5_wh5en")
 theme_override_icons/grabber_highlight = ExtResource("5_wh5en")
 theme_override_icons/grabber_disabled = ExtResource("5_wh5en")
 theme_override_styles/slider = SubResource("StyleBoxTexture_7jm2r")
+value = 50.0
 
 [node name="Sfxlogo" type="Sprite2D" parent="AudioOptions/Control/sfx"]
 position = Vector2(230, 126)
@@ -178,6 +181,11 @@ texture = ExtResource("3_xxmdf")
 position = Vector2(905, 133)
 scale = Vector2(3.35169, 3.75)
 texture = ExtResource("9_wa4vq")
+
+[node name="back" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [connection signal="mouse_exited" from="AudioOptions/Control/music/musicslider" to="." method="_on_musicslider_mouse_exited"]
 [connection signal="mouse_exited" from="AudioOptions/Control/overall/overallslider" to="." method="_on_overallslider_mouse_exited"]
