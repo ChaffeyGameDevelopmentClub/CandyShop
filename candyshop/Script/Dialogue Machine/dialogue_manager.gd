@@ -21,9 +21,10 @@ var npcName
 func orderStart():
 	#print('orderStart')
 	#how many npcs we have in Dialogue Array
-	npc = randi_range(0,14)
+	npc = randi_range(0,15)
 	#kenny only mode
 	#npc = 8
+	
 	var name = dialogueArray.npc_array[npc].Name
 	var arrayamount = dialogueArray.npc_array[npc].text.size()
 	npcName = dialogueArray.npc_array[npc].Name
@@ -71,7 +72,7 @@ func completeOrder():
 	textLabel.text = '[center]' + "yummers" + '[/center]'
 
 func failedOrder():
-	textLabel.text = "you failed me"
+	textLabel.text = '[center]' + "you have failed me" + '[/center]'
 
 func _on_dialogue_timer_timeout() -> void:
 	#print_debug('timeout')
