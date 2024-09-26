@@ -13,11 +13,11 @@ func _process(delta):
 	pass
 func _summonOrder():
 	visible = true
-	NextButton.visible = true
+	#NextButton.visible = true
 	ServeButton.visible = true
 	
 
 func _hideOrder():
 	visible = false
-	NextButton.visible = false
+	#NextButton.visible = false
 	ServeButton.visible = false

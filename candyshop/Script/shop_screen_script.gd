@@ -52,6 +52,19 @@ func endDay():
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	#print("hello")
+	GameManager.connect('sendOut',sendTo)
+	for i in resourceArray.item_array.size():
+		items1.append(resourceArray.item_array[i].Name)
+	#print(items1)
+	#print(resourceArray.item_array[0].Amount)
+func makeOrder():
+	itemOrdered = items1[rng.randf_range(0,4)]
+	#print("ordered: " + itemOrdered)
+	setItem1()
+	#print_debug(itemOrdered)
+	return itemOrdered
+	
 	print("hello")
 	dayCounter.text = "day: " + str(day) + " money: " + str(money) + " money needed:" + str(moneyNeed)
 	GameManager.connect('sendOut',sendTo)
@@ -116,13 +129,13 @@ func _on_serve_button_pressed():
 		Customer.completeOrder()
 		DialogueManager.completeOrder()
 	else:
-		print("Order Failed")
+		#print("Order Failed")
 		Customer.failedOrder()
 		DialogueManager.failedOrder()
 
 
 func _on_time_limit_timer_timeout():
-	print("Order Failed")
+	#print("Order Failed")
 	Customer.failedOrder()
 	DialogueManager.failedOrder()
 
@@ -132,21 +145,21 @@ func setItem1():
 	
 	
 	if(itemOrdered == "Bear Pop"):
-		orderItem1.set_texture(preload("res://Assets/Ingredent Assets/bear pop.png"))
+		orderItem1.set_texture(resourceArray.item_array[1].image)
 	elif(itemOrdered == "Candy Corn"):
-		orderItem1.set_texture(preload("res://Assets/Ingredent Assets/candy corn.png"))
+		orderItem1.set_texture(resourceArray.item_array[1].image)
 	elif(itemOrdered == "Chocolate Bears"):
-		orderItem1.set_texture(preload("res://Assets/Ingredent Assets/chocolate bears.png"))
+		orderItem1.set_texture(resourceArray.item_array[0].image)
 	elif(itemOrdered == "Gummy Bear Army"):
-		orderItem1.set_texture(preload("res://Assets/Ingredent Assets/Gummy bear army.png"))
+		orderItem1.set_texture(resourceArray.item_array[7].image)
 	elif(itemOrdered == "Gummy Sharks"):
-		orderItem1.set_texture(preload("res://Assets/Ingredent Assets/gummy sharks.png"))
+		orderItem1.set_texture(resourceArray.item_array[4].image)
 	elif(itemOrdered == "Gummy Worm Pops"):
-		orderItem1.set_texture(preload("res://Assets/Ingredent Assets/gummy worm pops.png"))
+		orderItem1.set_texture(resourceArray.item_array[3].image)
 	else:
 		orderItem1.set_texture(preload("res://Assets/icon.svg"))
 	orderItem1.scale = Vector2(100, 100) / orderItem1.texture.get_size()
 
 func sendTo(nameOf):
-	print("sendto: " + nameOf)
+	#print("sendto: " + nameOf)
 	items2.append(nameOf)

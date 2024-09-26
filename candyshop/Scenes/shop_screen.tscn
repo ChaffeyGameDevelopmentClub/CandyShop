@@ -1,89 +1,52 @@
-[gd_scene load_steps=8 format=3 uid="uid://38pe832setc0"]
+[gd_scene load_steps=9 format=3 uid="uid://38pe832setc0"]
 
 [ext_resource type="Script" path="res://Script/shop_screen_script.gd" id="1_hri7p"]
 [ext_resource type="Texture2D" uid="uid://brwfm50gyafys" path="res://Assets/icon.svg" id="1_ikxkj"]
 [ext_resource type="Script" path="res://Script/shopCustomer.gd" id="2_6vssm"]
-[ext_resource type="Resource" uid="uid://dpqceg5trpq1e" path="res://Resources/Shelf Items/ShelfProdResource.tres" id="2_kv0lh"]
+[ext_resource type="Resource" uid="uid://dpqceg5trpq1e" path="res://Resources/Shelf Items/ShelfProdResource.tres" id="2_sgpd6"]
 [ext_resource type="Script" path="res://Script/next_button.gd" id="3_60a7r"]
 [ext_resource type="Script" path="res://Script/order_rect.gd" id="4_2n1j5"]
 [ext_resource type="PackedScene" uid="uid://ckmwygrvgfwj" path="res://Scenes/UI/dialogue_manager.tscn" id="5_t5acm"]
+[ext_resource type="Texture2D" uid="uid://cih1jdby83aeo" path="res://Assets/extra/candshopFRONT.png" id="8_t346y"]
 
-[node name="ShopScreen" type="Node2D" node_paths=PackedStringArray("dayCounter", "Customer", "DialogueManager", "orderItem1", "timeLimit")]
-position = Vector2(-1925, 5)
+[node name="ShopScreen" type="Node2D" node_paths=PackedStringArray("Customer", "DialogueManager", "orderItem1", "timeLimit")]
+position = Vector2(-1920, 0)
 script = ExtResource("1_hri7p")
-dayCounter = NodePath("Money&day")
 Customer = NodePath("Customer")
 DialogueManager = NodePath("DialogueManager")
 orderItem1 = NodePath("OrderRect/OrderItem1")
-timeLimit = NodePath("TimerLimitTimer")
-resourceArray = ExtResource("2_kv0lh")
+timeLimit = NodePath("TimeLimitTimer")
+resourceArray = ExtResource("2_sgpd6")
 
-[node name="BGRect" type="ColorRect" parent="."]
-offset_right = 1152.0
-offset_bottom = 648.0
-color = Color(0, 0.588235, 0.588235, 1)
-metadata/_edit_use_anchors_ = true
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("8_t346y")
 
-[node name="CounterRect" type="ColorRect" parent="."]
-offset_top = 450.0
-offset_right = 1152.0
-offset_bottom = 550.0
-color = Color(0, 1, 0, 1)
-metadata/_edit_use_anchors_ = true
-
-[node name="TableRect" type="ColorRect" parent="."]
-offset_top = 550.0
-offset_right = 1152.0
-offset_bottom = 648.0
-color = Color(0, 0.588235, 0, 1)
-metadata/_edit_use_anchors_ = true
-
-[node name="DialogueManager" parent="." node_paths=PackedStringArray("timer", "Customer") instance=ExtResource("5_t5acm")]
-offset_left = 959.0
-offset_top = 541.0
-offset_right = 959.0
-offset_bottom = 541.0
-timer = NodePath("dialogueStartTimer")
+[node name="DialogueManager" parent="." node_paths=PackedStringArray("Customer", "walkOnTimer") instance=ExtResource("5_t5acm")]
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 2.0
+offset_bottom = 2.0
 Customer = NodePath("../Customer")
-metadata/_edit_use_anchors_ = true
-
-[node name="Del Later" parent="DialogueManager" index="0"]
-metadata/_edit_use_anchors_ = true
-
-[node name="Control" parent="DialogueManager" index="1"]
-metadata/_edit_use_anchors_ = true
-
-[node name="ChatBG" parent="DialogueManager/Control" index="0"]
-offset_left = -1170.0
-offset_top = -547.0
-offset_right = -413.0
-offset_bottom = -295.0
-metadata/_edit_use_anchors_ = true
-
-[node name="DialogueText" parent="DialogueManager/Control" index="1"]
-offset_left = -1139.0
-offset_top = -506.0
-offset_right = -465.0
-offset_bottom = -297.0
-metadata/_edit_use_anchors_ = true
-
-[node name="dialogueTimer" parent="DialogueManager" index="2"]
-wait_time = 60.0
-one_shot = true
+walkOnTimer = NodePath("WalkonTimer")
 
 [node name="dialogueStartTimer" type="Timer" parent="DialogueManager"]
 wait_time = 3.0
 one_shot = true
 
+[node name="WalkonTimer" type="Timer" parent="DialogueManager"]
+one_shot = true
+
 [node name="Customer" type="Sprite2D" parent="." node_paths=PackedStringArray("order", "dialogueManager", "shopScreen", "timeLimit")]
-position = Vector2(-200, 444)
-scale = Vector2(2, 2)
+position = Vector2(-200, 580)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("1_ikxkj")
 script = ExtResource("2_6vssm")
 order = NodePath("../OrderRect")
 dialogueManager = NodePath("../DialogueManager")
 shopScreen = NodePath("..")
-timeLimit = NodePath("../TimerLimitTimer")
+timeLimit = NodePath("../TimeLimitTimer")
 
 [node name="NextButton" type="Button" parent="."]
 visible = false
@@ -115,7 +78,6 @@ NextButton = NodePath("../NextButton")
 ServeButton = NodePath("../ServeButton")
 
 [node name="OrderLabel" type="Label" parent="OrderRect"]
-visible = false
 layout_mode = 0
 offset_left = 52.0
 offset_top = 21.0
@@ -123,7 +85,7 @@ offset_right = 262.0
 offset_bottom = 96.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 60
-text = "Order: "
+text = "Order:"
 
 [node name="OrderItem1" type="Sprite2D" parent="OrderRect"]
 visible = false
@@ -143,22 +105,11 @@ position = Vector2(150, 371)
 scale = Vector2(0.5625, 0.554688)
 texture = ExtResource("1_ikxkj")
 
-[node name="TimerLimitTimer" type="Timer" parent="."]
+[node name="TimeLimitTimer" type="Timer" parent="."]
 wait_time = 60.0
 one_shot = true
 
-[node name="Money&day" type="Label" parent="."]
-offset_left = 542.0
-offset_top = 378.0
-offset_right = 1036.0
-offset_bottom = 474.0
-theme_override_font_sizes/font_size = 30
-text = "dawdaw"
-horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
-
 [connection signal="timeout" from="DialogueManager/dialogueStartTimer" to="DialogueManager" method="_on_dialogue_start_timer_timeout"]
+[connection signal="timeout" from="DialogueManager/WalkonTimer" to="DialogueManager" method="_on_walkon_timer_timeout"]
 [connection signal="pressed" from="NextButton" to="NextButton" method="_on_pressed"]
 [connection signal="pressed" from="ServeButton" to="." method="_on_serve_button_pressed"]
-
-[editable path="DialogueManager"]

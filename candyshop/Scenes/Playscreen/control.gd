@@ -11,7 +11,8 @@ func _process(delta: float) -> void:
 	pass
 
 func sendTo(name):
-	print("yues yes :"+name)
+	#print("yues yes :"+name)
+	pass
 	
 
 func _on_color_rect_mouse_entered() -> void:

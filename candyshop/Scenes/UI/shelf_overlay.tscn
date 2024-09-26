@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Script/ShelfScripts/ShelfOverlayContainer.gd" id="1_78kgt"]
 [ext_resource type="Script" path="res://Script/ShelfScripts/MouseSensorPot.gd" id="1_amly7"]
-[ext_resource type="Texture2D" uid="uid://bdli5de6jykhm" path="res://Assets/Cooking_Screen.png" id="1_gs24o"]
+[ext_resource type="Texture2D" uid="uid://crlu1gtdl6nhv" path="res://Assets/CookingScreen2.png" id="1_mcm0i"]
 [ext_resource type="Resource" uid="uid://druc3sg2s4krw" path="res://Resources/Shelf Items/ShelfResource.tres" id="2_68g84"]
 [ext_resource type="Resource" uid="uid://dpqceg5trpq1e" path="res://Resources/Shelf Items/ShelfProdResource.tres" id="3_vkqmb"]
 [ext_resource type="Script" path="res://Script/ShelfScripts/itemResources.gd" id="4_c5av3"]
@@ -32,8 +32,8 @@
 [ext_resource type="Texture2D" uid="uid://dqyv3ti44chvq" path="res://Assets/Plants/chocolate plant reup.png" id="27_4j4fx"]
 [ext_resource type="Texture2D" uid="uid://btfpsqi5dk4ws" path="res://Assets/Plants/baby gummy bear plant.png" id="28_nxxrr"]
 [ext_resource type="Texture2D" uid="uid://bhihv5eqyucnx" path="res://Assets/Plants/adult gummy bear plant.png" id="29_pf0au"]
-[ext_resource type="Texture2D" uid="uid://ckhhwordm2b0n" path="res://Assets/gummy worm plant 2.png" id="30_wee36"]
-[ext_resource type="Texture2D" uid="uid://bdq5e12iab8l3" path="res://Assets/gummy worm plant 1.png" id="31_chqfr"]
+[ext_resource type="Texture2D" uid="uid://ckhhwordm2b0n" path="res://Assets/Plants/gummy worm plant 2.png" id="30_wee36"]
+[ext_resource type="Texture2D" uid="uid://bdq5e12iab8l3" path="res://Assets/Plants/gummy worm plant 1.png" id="31_chqfr"]
 [ext_resource type="Texture2D" uid="uid://cc2176h2ome1s" path="res://Assets/Plants/baby licorice plant.png" id="32_fqhlk"]
 [ext_resource type="Texture2D" uid="uid://decn3so7nwwbo" path="res://Assets/Plants/adult licorice plant.png" id="33_t8ilc"]
 [ext_resource type="Texture2D" uid="uid://ctrxihn1g6f2j" path="res://Assets/Plants/baby lollipop plant.png" id="34_jmb3q"]
@@ -60,8 +60,7 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("1_gs24o")
-metadata/_edit_use_anchors_ = true
+texture = ExtResource("1_mcm0i")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
