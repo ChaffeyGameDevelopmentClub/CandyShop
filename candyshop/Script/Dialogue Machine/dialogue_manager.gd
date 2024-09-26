@@ -4,6 +4,7 @@ extends Control
 @export var timer : Timer
 @export var Customer : Sprite2D
 @export var nameText : RichTextLabel
+@export var walkOnTimer : Timer
 
 var itemName
 # Called when the node enters the scene tree for the first time.
@@ -25,11 +26,12 @@ func orderStart():
 	var name = dialogueArray.npc_array[npc].Name
 	var arrayamount = dialogueArray.npc_array[npc].text.size()
 	npcName = dialogueArray.npc_array[npc].Name
-	
-	playText()
-	print_debug(npcName)
 	nameText.text = npcName
+	
+	print_debug(npcName)
+	
 	Customer.texture = dialogueArray.npc_array[npc].image
+	walkOnTimer.start()
 	#print_debug("orderStart Done")
 	return npcName
 	
@@ -77,3 +79,7 @@ func _on_dialogue_timer_timeout() -> void:
 
 func _on_dialogue_start_timer_timeout():
 	orderStart()
+
+
+func _on_walkon_timer_timeout() -> void:
+	playText()

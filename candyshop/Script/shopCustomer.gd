@@ -35,6 +35,7 @@ func _process(delta):
 	if(position.x<-199 and customerMovementState == 2):
 		customerMovementState = 0
 		dialogueManager.orderStart()
+		customerMovementState = 1
 	
 func dialogueEnd():
 	order._summonOrder()
@@ -52,7 +53,7 @@ func failedOrder():
 	totalOrders+=1
 	#print("customers: " + str(ordersCompleted))
 func newCustomer():
-	set_texture(custImg)
+	#set_texture(custImg)
 	print_debug('newCustomer')
 	customerMovementState = 1
 	#print("yummers")

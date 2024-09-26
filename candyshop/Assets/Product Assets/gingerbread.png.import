@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lteqlqeham21"
-path="res://.godot/imported/taffey smaller.png-3fa37a9399c5248725e6d4c5f4b35a6d.ctex"
+uid="uid://dniun4me2eg35"
+path="res://.godot/imported/gingerbread.png-7834ac0d280cd62bd4cf479e4c958969.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/taffey smaller.png"
-dest_files=["res://.godot/imported/taffey smaller.png-3fa37a9399c5248725e6d4c5f4b35a6d.ctex"]
+source_file="res://Assets/Product Assets/gingerbread.png"
+dest_files=["res://.godot/imported/gingerbread.png-7834ac0d280cd62bd4cf479e4c958969.ctex"]
 
 [params]
 

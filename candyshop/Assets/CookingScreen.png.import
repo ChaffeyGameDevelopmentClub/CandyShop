@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnkis5dm4o7tf"
-path="res://.godot/imported/kernel corn smaller.png-8251d08e154939c0f6bb7a9a9d56e1c9.ctex"
+uid="uid://bgjpdydv235vu"
+path="res://.godot/imported/CookingScreen.png-4c0db54f67319c379ad33d6d8f15b40e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/kernel corn smaller.png"
-dest_files=["res://.godot/imported/kernel corn smaller.png-8251d08e154939c0f6bb7a9a9d56e1c9.ctex"]
+source_file="res://Assets/CookingScreen.png"
+dest_files=["res://.godot/imported/CookingScreen.png-4c0db54f67319c379ad33d6d8f15b40e.ctex"]
 
 [params]
 

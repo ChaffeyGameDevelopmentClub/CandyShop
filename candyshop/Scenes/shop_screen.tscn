@@ -22,19 +22,20 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("8_t346y")
 
-[node name="DialogueManager" parent="." node_paths=PackedStringArray("Customer") instance=ExtResource("5_t5acm")]
+[node name="DialogueManager" parent="." node_paths=PackedStringArray("Customer", "walkOnTimer") instance=ExtResource("5_t5acm")]
 offset_left = 2.0
 offset_top = 2.0
 offset_right = 2.0
 offset_bottom = 2.0
 Customer = NodePath("../Customer")
+walkOnTimer = NodePath("WalkonTimer")
 
 [node name="dialogueStartTimer" type="Timer" parent="DialogueManager"]
 wait_time = 3.0
 one_shot = true
 
 [node name="WalkonTimer" type="Timer" parent="DialogueManager"]
-wait_time = 2.0
+one_shot = true
 
 [node name="Customer" type="Sprite2D" parent="." node_paths=PackedStringArray("order", "dialogueManager", "shopScreen", "timeLimit")]
 position = Vector2(-200, 444)
@@ -108,5 +109,6 @@ wait_time = 60.0
 one_shot = true
 
 [connection signal="timeout" from="DialogueManager/dialogueStartTimer" to="DialogueManager" method="_on_dialogue_start_timer_timeout"]
+[connection signal="timeout" from="DialogueManager/WalkonTimer" to="DialogueManager" method="_on_walkon_timer_timeout"]
 [connection signal="pressed" from="NextButton" to="NextButton" method="_on_pressed"]
 [connection signal="pressed" from="ServeButton" to="." method="_on_serve_button_pressed"]
