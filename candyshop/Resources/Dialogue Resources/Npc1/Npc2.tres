@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=3 format=3 uid="uid://dwn0vd6syh7ot"]
 
 [ext_resource type="Script" path="res://Script/Dialogue Machine/DialogueResource.gd" id="1_o1w47"]
-[ext_resource type="Texture2D" uid="uid://bnkis5dm4o7tf" path="res://Assets/npc's/kernel corn smaller.png" id="1_s7kmy"]
+[ext_resource type="Texture2D" uid="uid://qe6oiubvxim6" path="res://Assets/npc's/kernel corn.png" id="1_txvwr"]
 
 [resource]
 script = ExtResource("1_o1w47")
 Name = "Kernal Corn"
 text = Array[String](["Oh my GYAT I gotta get a piece of dat", "Hey little mama wanna give me free food? ", "Na dam you can't handle the alpha anyway. Give me a "])
-image = ExtResource("1_s7kmy")
+image = ExtResource("1_txvwr")
